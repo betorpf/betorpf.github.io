@@ -14,7 +14,9 @@
 <meta property="og:image" content="https://betorpf.com.br/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -62,46 +64,51 @@
   .tagline .handle{color:var(--pulp)}
   .bio{max-width:40ch;margin:14px auto 0;color:var(--dim);font-size:16px}
 
-  /* ---------- destaque ---------- */
-  .featured{
-    display:block;text-decoration:none;color:inherit;
-    border:1px solid var(--seam);
-    background:linear-gradient(100deg,rgba(139,156,255,.16),rgba(255,180,58,.16));
-    padding:clamp(22px,4vw,32px);
+  /* ---------- os dois destaques ---------- */
+  .highlights{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:clamp(14px,2.5vw,22px);
     margin-bottom:clamp(32px,6vw,52px);
+  }
+  @media (max-width:700px){.highlights{grid-template-columns:1fr}}
+
+  .featured{
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    border:1px solid var(--seam);
+    padding:clamp(20px,3.5vw,28px);
     transition:border-color .15s ease,transform .15s ease;
   }
+  .featured--app{background:linear-gradient(150deg,rgba(139,156,255,.20),rgba(139,156,255,.05))}
+  .featured--blog{background:linear-gradient(150deg,rgba(255,180,58,.20),rgba(255,180,58,.05))}
   .featured:hover,.featured:focus-visible{border-color:var(--chalk);transform:translateY(-3px)}
   .featured:focus-visible{outline:2px solid var(--chalk);outline-offset:4px}
   .featured .kicker{
     font-family:"IBM Plex Mono",monospace;font-size:11px;
-    letter-spacing:.18em;text-transform:uppercase;color:var(--pulp);
+    letter-spacing:.18em;text-transform:uppercase;
   }
+  .featured--app .kicker{color:var(--code)}
+  .featured--blog .kicker{color:var(--pulp)}
   .featured h2{
     font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
-    font-size:clamp(28px,6vw,42px);letter-spacing:-.03em;margin:8px 0 10px;
+    font-size:clamp(26px,4.5vw,34px);letter-spacing:-.03em;margin:8px 0 10px;
   }
-  .featured p{color:var(--dim);max-width:52ch;font-size:15px}
+  .featured p{color:var(--dim);font-size:15px;flex:1}
   .featured .go{
-    display:inline-block;margin-top:16px;
-    font-family:"IBM Plex Mono",monospace;font-size:13px;
-    border-bottom:2px solid var(--pulp);padding-bottom:2px;
+    display:inline-block;margin-top:18px;align-self:flex-start;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;padding-bottom:2px;
   }
+  .featured--app .go{border-bottom:2px solid var(--code)}
+  .featured--blog .go{border-bottom:2px solid var(--pulp)}
 
   /* ---------- três colunas, separadas pela costura ---------- */
   .split{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:clamp(24px,4vw,40px);
+    grid-template-columns:1fr 1fr;
+    gap:clamp(28px,5vw,52px);
     align-items:start;
   }
-  .col + .col{padding-left:clamp(24px,4vw,40px);border-left:1px dashed var(--seam)}
-  @media (max-width:860px){
-    .split{grid-template-columns:1fr 1fr}
-    .col + .col{padding-left:clamp(24px,4vw,40px)}
-    .col:nth-child(3){border-left:0;padding-left:0;grid-column:1 / -1;padding-top:24px;border-top:1px dashed var(--seam)}
-  }
-  @media (max-width:600px){
+  .col + .col{padding-left:clamp(28px,5vw,52px);border-left:1px dashed var(--seam)}
+  @media (max-width:700px){
     .split{grid-template-columns:1fr}
     .col + .col{border-left:0;padding-left:0;padding-top:24px;border-top:1px dashed var(--seam)}
   }
@@ -114,13 +121,11 @@
     border-bottom:1px solid var(--seam);
   }
   .col--work h3{color:var(--code)}
-  .col--read h3{color:var(--pulp)}
   .col--play h3{color:var(--pop)}
 
   /* texturas discretas: malha técnica, meio-tom, hachura */
   .col::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45}
   .col--work::before{background-image:repeating-linear-gradient(0deg,rgba(139,156,255,.07) 0 1px,transparent 1px 22px)}
-  .col--read::before{background-image:radial-gradient(rgba(255,180,58,.13) 1px,transparent 1.2px);background-size:8px 8px}
   .col--play::before{background-image:repeating-linear-gradient(135deg,rgba(255,92,138,.07) 0 1px,transparent 1px 12px)}
   .col > *{position:relative;z-index:1}
 
@@ -133,7 +138,6 @@
   .item:hover,.item:focus-visible{padding-left:20px}
   .item:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
   .col--work .item:hover,.col--work .item:focus-visible{border-left-color:var(--code);background:rgba(139,156,255,.09)}
-  .col--read .item:hover,.col--read .item:focus-visible{border-left-color:var(--pulp);background:rgba(255,180,58,.09)}
   .col--play .item:hover,.col--play .item:focus-visible{border-left-color:var(--pop);background:rgba(255,92,138,.09)}
 
   .item .name{font-family:"IBM Plex Sans",sans-serif;font-weight:500;font-size:17px;letter-spacing:-.005em}
@@ -177,12 +181,20 @@
     <p class="bio">Dev .NET há 15 anos, pai, leitor de quadrinhos e board gamer.</p>
   </header>
 
-  <a class="featured" href="https://www.narrador.app.br">
-    <span class="kicker">Projeto autoral</span>
-    <h2>Narrador App</h2>
-    <p>Narrador digital para Lobisomem por Uma Noite e The Resistance. Abre no navegador e conduz a partida sozinho, sem tirar ninguém do jogo pra narrar.</p>
-    <span class="go">Abrir o narrador →</span>
-  </a>
+  <div class="highlights">
+    <a class="featured featured--blog" href="https://viagememquadros.blogspot.com/">
+      <span class="kicker">Blog</span>
+      <h2>Viagem em Quadros</h2>
+      <p>Onde eu escrevo sobre quadrinhos, as leituras que ficam e as viagens que elas rendem. Resenhas, achados de sebo e caminhos que só aparecem depois de virar a página.</p>
+      <span class="go">Ler o blog →</span>
+    </a>
+    <a class="featured featured--app" href="https://www.narrador.app.br">
+      <span class="kicker">Projeto autoral</span>
+      <h2>Narrador App</h2>
+      <p>Narrador digital para Lobisomem por Uma Noite e The Resistance. Abre no navegador e conduz a partida sozinho, sem tirar ninguém do jogo pra narrar.</p>
+      <span class="go">Abrir o narrador →</span>
+    </a>
+  </div>
 
   <div class="split">
 
@@ -204,14 +216,6 @@
       <a class="item" href="https://www.credly.com/users/roberto-passareti-filho/badges">
         <span class="name">Credly</span>
         <span class="desc">Certificações verificadas, incluindo as de Azure.</span>
-      </a>
-    </section>
-
-    <section class="col col--read">
-      <h3>Leituras</h3>
-      <a class="item" href="https://viagememquadros.blogspot.com/">
-        <span class="name">Viagem em Quadros</span>
-        <span class="desc">Blog sobre quadrinhos, leituras e as viagens que eles rendem.</span>
       </a>
       <a class="item" href="https://medium.com/@betorpf">
         <span class="name">Medium</span>
