@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roberto Passareti Filho — betorpf</title>
+<title>betorpf — Roberto Passareti Filho</title>
 <meta name="description" content="Roberto Passareti Filho (@betorpf), dev .NET em São Paulo. Projetos, artigos, quadrinhos e board games.">
-<meta name="theme-color" content="#171b2e">
+<meta name="theme-color" content="#102c26">
 
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://betorpf.com.br/">
@@ -16,6 +16,7 @@
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,14 +24,14 @@
 
 <style>
   :root{
-    --night:#171b2e;
-    --chalk:#eceaf5;
-    --code:#8b9cff;   /* profissional */
-    --pulp:#ffb43a;   /* leituras */
-    --pop:#ff5c8a;    /* jogos */
-    --dim:rgba(236,234,245,.62);
+    --night:#102c26;
+    --chalk:#f3efe5;
+    --code:#91b6a0;   /* profissional */
+    --pulp:#e79a56;   /* leituras */
+    --pop:#e79a56;    /* jogos */
+    --dim:rgba(243,239,229,.74);
     --gap:14px;
-    --seam:rgba(236,234,245,.22);
+    --seam:rgba(243,239,229,.22);
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -40,35 +41,63 @@
     color:var(--chalk);
     font-family:"IBM Plex Sans",system-ui,sans-serif;
     line-height:1.5;
-    padding:clamp(24px,6vw,64px) clamp(16px,5vw,32px);
+    padding:28px clamp(20px,5vw,48px) 40px;
   }
 
-  .wrap{max-width:980px;margin:0 auto}
+  .wrap{max-width:1120px;margin:0 auto}
 
   /* ---------- cabeçalho ---------- */
-  header{text-align:center;padding-bottom:clamp(28px,6vw,44px)}
+  .site-header{display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:inline-flex;align-items:center;gap:13px;color:var(--chalk);text-decoration:none}
+  .brand img{width:38px;height:42px}
+  .brand-name{font-family:"Bricolage Grotesque",sans-serif;font-size:32px;font-weight:800;letter-spacing:-.045em}
+  .brand-dot{color:var(--pulp)}
+  .site-nav{display:flex;gap:clamp(16px,3vw,32px);align-items:center}
+  .site-nav a,.site-nav button{font:inherit;font-size:14px;color:var(--chalk);text-decoration:none;background:none;border:0;padding:10px 0;cursor:pointer}
+  .site-nav a:hover,.site-nav button:hover{color:var(--pulp)}
+  .brand:focus-visible,.site-nav a:focus-visible,.site-nav button:focus-visible,.hero-actions a:focus-visible{outline:2px solid var(--pulp);outline-offset:6px}
+  .hero{display:grid;grid-template-columns:1.13fr 1fr;align-items:center;gap:12px;padding:32px 0 40px}
+  .hero-copy{position:relative;z-index:1;padding:24px 0}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--code);margin-bottom:23px}
   h1{
     font-family:"Bricolage Grotesque",sans-serif;
     font-weight:800;
-    font-size:clamp(36px,8vw,72px);
-    line-height:.92;letter-spacing:-.035em;
-    max-width:14ch;margin:0 auto;
+    font-size:clamp(40px,5.5vw,70px);
+    line-height:1.02;letter-spacing:-.04em;
+    max-width:15ch;
   }
   h1 .i{color:var(--code)}
 
-  .tagline{
-    font-family:"IBM Plex Mono",monospace;font-size:12px;
-    letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
-    margin-top:20px;
+  .hero-art{width:100%;max-width:470px;height:auto;display:block;justify-self:end;
+    -webkit-mask-image:radial-gradient(ellipse 65% 64% at 50% 50%,#000 60%,transparent 100%);
+    mask-image:radial-gradient(ellipse 65% 64% at 50% 50%,#000 60%,transparent 100%)}
+  .bio{max-width:40ch;margin-top:24px;color:var(--dim);font-size:17px;line-height:1.65}
+  .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:24px;margin-top:30px}
+  .hero-actions a{font-size:14px;font-weight:500;text-decoration:none}
+  .primary-link{background:var(--pulp);color:var(--night);padding:13px 20px;border:1px solid var(--pulp)}
+  .primary-link:hover{background:var(--chalk);border-color:var(--chalk)}
+  .secondary-link{color:var(--chalk);padding:8px 0;border-bottom:1px solid var(--code)}
+  .secondary-link:hover{color:var(--pulp);border-color:var(--pulp)}
+  .location{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim);margin-top:25px}
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;gap:0;padding:32px 0}
+    .hero-copy{padding:12px 0 0}
+    h1{font-size:clamp(40px,8.5vw,64px)}
+    .hero-art{justify-self:center;max-width:360px;margin-top:16px}
+    .eyebrow{font-size:12px;letter-spacing:.1em;margin-bottom:18px}
   }
-  .tagline .handle{color:var(--pulp)}
-  .bio{max-width:40ch;margin:14px auto 0;color:var(--dim);font-size:16px}
+  @media (max-width:420px){
+    .brand{gap:8px}.brand-name{font-size:27px}.brand img{width:30px;height:34px}
+    .site-header{gap:12px}.site-nav{gap:16px}.site-nav a,.site-nav button{font-size:13px}
+    .hero-actions{gap:20px}
+  }
 
   /* ---------- os dois destaques ---------- */
   .highlights{
     display:grid;grid-template-columns:1fr 1fr;
     gap:clamp(14px,2.5vw,22px);
     margin-bottom:clamp(32px,6vw,52px);
+    border-top:1px solid var(--seam);padding-top:28px;scroll-margin-top:24px;
   }
   @media (max-width:700px){.highlights{grid-template-columns:1fr}}
 
@@ -78,8 +107,8 @@
     padding:clamp(20px,3.5vw,28px);
     transition:border-color .15s ease,transform .15s ease;
   }
-  .featured--app{background:linear-gradient(150deg,rgba(139,156,255,.20),rgba(139,156,255,.05))}
-  .featured--blog{background:linear-gradient(150deg,rgba(255,180,58,.20),rgba(255,180,58,.05))}
+  .featured--app{background:linear-gradient(150deg,rgba(145,182,160,.20),rgba(145,182,160,.05))}
+  .featured--blog{background:linear-gradient(150deg,rgba(231,154,86,.20),rgba(231,154,86,.05))}
   .featured:hover,.featured:focus-visible{border-color:var(--chalk);transform:translateY(-3px)}
   .featured:focus-visible{outline:2px solid var(--chalk);outline-offset:4px}
   .featured .kicker{
@@ -125,8 +154,8 @@
 
   /* texturas discretas: malha técnica, meio-tom, hachura */
   .col::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.45}
-  .col--work::before{background-image:repeating-linear-gradient(0deg,rgba(139,156,255,.07) 0 1px,transparent 1px 22px)}
-  .col--play::before{background-image:repeating-linear-gradient(135deg,rgba(255,92,138,.07) 0 1px,transparent 1px 12px)}
+  .col--work::before{background-image:repeating-linear-gradient(0deg,rgba(145,182,160,.07) 0 1px,transparent 1px 22px)}
+  .col--play::before{background-image:repeating-linear-gradient(135deg,rgba(231,154,86,.07) 0 1px,transparent 1px 12px)}
   .col > *{position:relative;z-index:1}
 
   .item{
@@ -137,8 +166,8 @@
   }
   .item:hover,.item:focus-visible{padding-left:20px}
   .item:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
-  .col--work .item:hover,.col--work .item:focus-visible{border-left-color:var(--code);background:rgba(139,156,255,.09)}
-  .col--play .item:hover,.col--play .item:focus-visible{border-left-color:var(--pop);background:rgba(255,92,138,.09)}
+  .col--work .item:hover,.col--work .item:focus-visible{border-left-color:var(--code);background:rgba(145,182,160,.09)}
+  .col--play .item:hover,.col--play .item:focus-visible{border-left-color:var(--pop);background:rgba(231,154,86,.09)}
 
   .item .name{font-family:"IBM Plex Sans",sans-serif;font-weight:500;font-size:17px;letter-spacing:-.005em}
   .item .desc{display:block;color:var(--dim);font-size:13.5px;margin-top:3px}
@@ -150,9 +179,9 @@
     background:var(--night);color:var(--chalk);padding:0;overflow:auto;
     box-shadow:0 24px 80px rgba(0,0,0,.5);
   }
-  .contact-modal::backdrop{background:rgba(8,10,20,.78);backdrop-filter:blur(7px)}
+  .contact-modal::backdrop{background:rgba(6,18,15,.78);backdrop-filter:blur(7px)}
   .contact-shell{
-    background:linear-gradient(150deg,rgba(139,156,255,.14),rgba(139,156,255,.025));
+    background:linear-gradient(150deg,rgba(145,182,160,.14),rgba(145,182,160,.025));
     padding:clamp(22px,5vw,38px);
   }
   .contact-head{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:24px}
@@ -190,9 +219,9 @@
   .field input{min-height:48px}
   .field textarea{min-height:150px;resize:vertical}
   .field input:focus,.field textarea:focus{
-    outline:0;border-color:var(--code);box-shadow:0 0 0 3px rgba(139,156,255,.2);
+    outline:0;border-color:var(--code);box-shadow:0 0 0 3px rgba(145,182,160,.2);
   }
-  .field input::placeholder,.field textarea::placeholder{color:rgba(236,234,245,.48)}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(243,239,229,.48)}
   .submit{
     justify-self:start;min-height:46px;border:1px solid var(--code);
     background:var(--code);color:var(--night);padding:10px 18px;
@@ -242,13 +271,33 @@
 <body>
 <div class="wrap">
 
-  <header>
-    <h1><span class="i">R</span>oberto <span class="i">P</span>assareti <span class="i">F</span>ilho</h1>
-    <p class="tagline"><span class="handle">@betorpf</span> · São Paulo / Brasil</p>
-    <p class="bio">Dev .NET há 15 anos, pai, leitor de quadrinhos e board gamer.</p>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="betorpf — início">
+      <img src="assets/logo-b.svg" width="38" height="42" alt="">
+      <span class="brand-name">betorpf<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <button type="button" data-open-contact>Contato</button>
+    </nav>
   </header>
 
-  <div class="highlights">
+  <main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Roberto Passareti Filho</p>
+      <h1 id="hero-title"><span class="i">Código,</span><br>histórias e<br>boas partidas<span class="brand-dot">.</span></h1>
+      <p class="bio">Dev .NET há 15 anos, pai, leitor de quadrinhos e board gamer.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#projetos">Explorar projetos</a>
+        <a class="secondary-link" href="/portfolio/">Sobre mim</a>
+      </div>
+      <p class="location">@betorpf · São Paulo / Brasil</p>
+    </div>
+    <img class="hero-art" src="assets/ilustracao-verde.png" width="1176" height="1338" fetchpriority="high" alt="Ilustração de quadrinhos, livros de código e jogos, chaves de programação e um dado de vinte lados, em verde e laranja.">
+  </section>
+
+  <div class="highlights" id="projetos">
     <a class="featured featured--blog" href="https://viagememquadros.blogspot.com/">
       <span class="kicker">Blog</span>
       <h2>Viagem em Quadros</h2>
@@ -271,7 +320,6 @@
         <span class="name">LinkedIn</span>
         <span class="desc">Trajetória profissional e contato para trabalho.</span>
       </a>
-      <!-- TODO: se este arquivo virar a home, mova o portfólio atual para /portfolio/ -->
       <a class="item" href="/portfolio/">
         <span class="name">Portfólio</span>
         <span class="desc">Projetos, experimentos e o que ando construindo.</span>
@@ -313,7 +361,9 @@
 
   </div>
 
-  <div class="bottom">
+  </main>
+
+  <footer class="bottom">
     <div class="chips">
       <button class="chip" type="button" data-open-contact>Contato</button>
       <a class="chip" href="https://www.instagram.com/betorpf/">Instagram</a>
@@ -323,7 +373,7 @@
       <a class="chip chip--kofi" href="https://ko-fi.com/betorpf">Me pague um café</a>
     </div>
     <p class="meta">betorpf · <span id="ano">2026</span></p>
-  </div>
+  </footer>
 
   <dialog class="contact-modal" id="contato" aria-labelledby="contact-title">
     <div class="contact-shell">

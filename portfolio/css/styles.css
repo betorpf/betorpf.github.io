@@ -8,12 +8,12 @@
 
 /* Variables */
 :root {
-    --main-color: #54b689;
-    --main-text-color: #FFFFFF;
-    --border-color: #999;
-    --bio-bg-color: #1e2a3a;
-    --bio-border-color: #293544;
-    --about-bg-color: #111821;
+    --main-color: #91b6a0;
+    --main-text-color: #f3efe5;
+    --border-color: #526b60;
+    --bio-bg-color: #16382f;
+    --bio-border-color: #294c3e;
+    --about-bg-color: #102c26;
 
 }
 
@@ -60,9 +60,14 @@
 }
 
 #bio-image {
-    width: 175px;
-    height: 175px;
-    border-radius: 50%;
+    display: block;
+    width: min(100%, 300px);
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: 50% 46%;
+    border-radius: 8px;
+    margin: 0 auto;
     margin-bottom: 25px;
 }
 
@@ -192,6 +197,89 @@
 .skills-box i {
     font-size: 45px;
     margin-right: 10px;
+}
+
+.skills-box--ai {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.ai-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 36px;
+    list-style: none;
+}
+
+.ai-skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.ai-skills img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.codex-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Certifications */
+#certificacoes {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    text-align: left;
+}
+
+#certifications-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.certifications-list {
+    list-style: none;
+}
+
+.certification {
+    padding: 0 0 24px;
+}
+
+.certification + .certification {
+    border-top: 1px solid var(--bio-border-color);
+    padding-top: 24px;
+}
+
+.certification h3 {
+    color: #e79a56;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    overflow-wrap: anywhere;
+}
+
+.certification-issuer {
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.certification-detail {
+    color: rgba(243, 239, 229, .78);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.credential-id {
+    overflow-wrap: anywhere;
 }
 
 /* Mobile */
