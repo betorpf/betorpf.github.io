@@ -86,26 +86,31 @@
     text-decoration: none;
 }
 
-#email-container {
+#contact-link {
     display: flex;
-    justify-content: left;
-}
-
-#email-container ion-icon
-#email-container a {
-    flex: 1 1 0;
-}
-
-#email-container a {
+    justify-content: center;
+    align-items: center;
     color: var(--main-text-color);
     text-decoration: none;
-    max-width: 225px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
 }
 
-#email-container ion-icon {
+#contact-link:hover,
+#contact-link:focus-visible {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+#contact-link:focus-visible {
+    outline: 2px solid var(--main-text-color);
+    outline-offset: 3px;
+}
+
+#contact-link ion-icon {
     color: var(--main-color);
     font-size: 20px;
-    margin-right: 5px;
+    margin-right: 8px;
     max-width: 20px;
 }
 

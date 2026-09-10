@@ -143,6 +143,72 @@
   .item .name{font-family:"IBM Plex Sans",sans-serif;font-weight:500;font-size:17px;letter-spacing:-.005em}
   .item .desc{display:block;color:var(--dim);font-size:13.5px;margin-top:3px}
 
+  /* ---------- contato ---------- */
+  .contact-modal{
+    width:min(680px,calc(100% - 32px));max-height:calc(100dvh - 32px);
+    margin:auto;border:1px solid var(--seam);border-radius:0;
+    background:var(--night);color:var(--chalk);padding:0;overflow:auto;
+    box-shadow:0 24px 80px rgba(0,0,0,.5);
+  }
+  .contact-modal::backdrop{background:rgba(8,10,20,.78);backdrop-filter:blur(7px)}
+  .contact-shell{
+    background:linear-gradient(150deg,rgba(139,156,255,.14),rgba(139,156,255,.025));
+    padding:clamp(22px,5vw,38px);
+  }
+  .contact-head{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:24px}
+  .contact-copy .kicker{
+    display:block;color:var(--code);
+    font-family:"IBM Plex Mono",monospace;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;
+  }
+  .contact-copy h2{
+    font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+    font-size:clamp(28px,4.5vw,38px);letter-spacing:-.03em;
+    line-height:1.05;margin:9px 0 12px;
+  }
+  .contact-copy p{color:var(--dim);font-size:16px;max-width:48ch}
+  .modal-close{
+    flex:0 0 auto;border:1px solid var(--seam);background:transparent;color:var(--dim);
+    padding:8px 10px;font-family:"IBM Plex Mono",monospace;font-size:12px;
+    letter-spacing:.06em;text-transform:uppercase;cursor:pointer;
+  }
+  .modal-close:hover,.modal-close:focus-visible{border-color:var(--code);color:var(--code)}
+  .modal-close:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
+  .contact-form{display:grid;gap:16px}
+  .field{display:grid;gap:7px}
+  .field label{
+    font-family:"IBM Plex Mono",monospace;font-size:13px;
+    letter-spacing:.04em;color:var(--chalk);
+  }
+  .field .optional{color:var(--dim);font-family:"IBM Plex Sans",sans-serif;letter-spacing:0}
+  .field input,.field textarea{
+    width:100%;border:1px solid var(--seam);border-radius:0;
+    background:rgba(23,27,46,.72);color:var(--chalk);
+    font:inherit;font-size:16px;padding:12px 14px;
+    transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  .field input{min-height:48px}
+  .field textarea{min-height:150px;resize:vertical}
+  .field input:focus,.field textarea:focus{
+    outline:0;border-color:var(--code);box-shadow:0 0 0 3px rgba(139,156,255,.2);
+  }
+  .field input::placeholder,.field textarea::placeholder{color:rgba(236,234,245,.48)}
+  .submit{
+    justify-self:start;min-height:46px;border:1px solid var(--code);
+    background:var(--code);color:var(--night);padding:10px 18px;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+    transition:background .15s ease,color .15s ease,transform .15s ease;
+  }
+  .submit:hover{background:transparent;color:var(--code);transform:translateY(-2px)}
+  .submit:focus-visible{outline:2px solid var(--chalk);outline-offset:4px}
+  .privacy-note{color:var(--dim);font-size:13px}
+  @media (max-width:700px){
+    .contact-modal{width:min(100% - 20px,680px);max-height:calc(100dvh - 20px)}
+    .contact-head{gap:14px}
+    .submit{width:100%}
+  }
+
   /* ---------- rodapé ---------- */
   .bottom{
     margin-top:clamp(36px,7vw,60px);
@@ -152,7 +218,7 @@
   .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
   .chip{
     text-decoration:none;color:var(--chalk);
-    border:1px solid var(--seam);padding:8px 14px;
+    border:1px solid var(--seam);padding:8px 14px;background:transparent;cursor:pointer;
     font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
     transition:border-color .15s ease,color .15s ease,background .15s ease;
   }
@@ -168,6 +234,7 @@
     *{transition:none !important}
     .featured:hover{transform:none}
     .item:hover{padding-left:14px}
+    .submit:hover{transform:none}
   }
 </style>
 </head>
@@ -248,6 +315,7 @@
 
   <div class="bottom">
     <div class="chips">
+      <button class="chip" type="button" data-open-contact>Contato</button>
       <a class="chip" href="https://www.instagram.com/betorpf/">Instagram</a>
       <a class="chip" href="https://www.threads.net/@betorpf">Threads</a>
       <a class="chip" href="https://bsky.app/profile/betorpf.bsky.social">Bluesky</a>
@@ -257,10 +325,77 @@
     <p class="meta">betorpf · <span id="ano">2026</span></p>
   </div>
 
+  <dialog class="contact-modal" id="contato" aria-labelledby="contact-title">
+    <div class="contact-shell">
+      <div class="contact-head">
+        <div class="contact-copy">
+          <span class="kicker">Contato</span>
+          <h2 id="contact-title">Entre em contato</h2>
+          <p>Envie uma mensagem sobre trabalho, projetos ou outro assunto.</p>
+        </div>
+        <button class="modal-close" type="button" data-close-contact aria-label="Fechar formulário de contato">Fechar ×</button>
+      </div>
+
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="97578b9b-ad10-41a1-86e0-93b9ee09f44c">
+        <input type="hidden" name="subject" value="Contato via betorpf.com.br">
+        <input type="hidden" name="from_name" value="betorpf.com.br">
+        <input type="hidden" name="redirect" value="https://betorpf.com.br/obrigado.html">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+
+        <div class="field">
+          <label for="contact-name">Seu nome <span class="optional">(opcional)</span></label>
+          <input id="contact-name" type="text" name="name" autocomplete="name" maxlength="100" placeholder="Como posso chamar você?">
+        </div>
+
+        <div class="field">
+          <label for="contact-email">Seu e-mail <span class="optional">(opcional)</span></label>
+          <input id="contact-email" type="email" name="email" autocomplete="email" maxlength="254" placeholder="Se quiser receber uma resposta">
+        </div>
+
+        <div class="field">
+          <label for="contact-message">Mensagem</label>
+          <textarea id="contact-message" name="message" maxlength="5000" required placeholder="Escreva sua mensagem"></textarea>
+        </div>
+
+        <button class="submit" type="submit">Enviar mensagem</button>
+        <p class="privacy-note">Seu e-mail será usado somente para responder esta mensagem.</p>
+      </form>
+    </div>
+  </dialog>
+
 </div>
 
 <script>
   document.getElementById('ano').textContent = new Date().getFullYear();
+
+  const contactDialog = document.getElementById('contato');
+  const openContactDialog = () => {
+    if (!contactDialog.open) contactDialog.showModal();
+  };
+
+  document.querySelectorAll('[data-open-contact]').forEach((button) => {
+    button.addEventListener('click', openContactDialog);
+  });
+
+  document.querySelector('[data-close-contact]').addEventListener('click', () => {
+    contactDialog.close();
+  });
+
+  contactDialog.addEventListener('click', (event) => {
+    if (event.target === contactDialog) contactDialog.close();
+  });
+
+  contactDialog.addEventListener('close', () => {
+    if (window.location.hash === '#contato') {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  });
+
+  if (window.location.hash === '#contato') openContactDialog();
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#contato') openContactDialog();
+  });
 </script>
 
 <!-- Analytics: cole aqui o snippet do GoatCounter, Plausible ou Umami quando quiser medir cliques. -->
