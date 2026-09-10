@@ -19,7 +19,7 @@
     <main id="container">
         <aside id="bio-container">
             <h2>Roberto Passareti Filho</h2>
-            <img id="bio-image" src="img/profile-2025.jpg" alt="Roberto Passareti Filho" width="300" height="200">
+            <img id="bio-image" src="img/profile-2025-vertical-3x4.png" alt="Roberto Passareti Filho" width="1086" height="1448">
             <p>Bom dia/Boa tarde/Boa noite! Me chamo Roberto Passareti Filho, e sou <span class="highlight">Desenvolvedor Backend em .net</span></p>
             <p id="welcom-text">Seja bem-vindo!</p>
             <ul id="social-container">
@@ -37,23 +37,24 @@
 
             <h2 id="skills-section-title">Minhas Skills</h2>
             <p class="description">Conheça as tecnologias que domino:</p>
-            <div id="skills-container">
-                <div class="skills-box">
-                    <p class="skills-title">Back-end</p>
-                    <i class="devicon-csharp-plain colored"></i>
-                    <i class="devicon-dotnetcore-plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Databases</p>
-                    <i class="devicon-sqldeveloper-plain colored"></i>
-                    <i class="devicon-mongodb-plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Tools</p>
-                    <i class="devicon-postman-plain colored"></i>
-                </div>
-                <div class="skills-box skills-box--ai">
-                    <p class="skills-title">Ferramentas de IA</p>
+            <div id="skills-container" aria-label="Tecnologias e ferramentas">
+                <section class="skills-column" aria-labelledby="backend-title">
+                    <h3 id="backend-title">Back-end / Banco de dados</h3>
+                    <div class="skills-box">
+                        <p class="skills-title">Back-end</p>
+                        <i class="devicon-csharp-plain colored" title="C#" aria-label="C#"></i>
+                        <i class="devicon-dotnetcore-plain colored" title=".NET" aria-label=".NET"></i>
+                    </div>
+                    <div class="skills-box">
+                        <p class="skills-title">Banco de dados</p>
+                        <i class="devicon-sqldeveloper-plain colored" title="SQL Server" aria-label="SQL Server"></i>
+                        <i class="devicon-mongodb-plain colored" title="MongoDB" aria-label="MongoDB"></i>
+                    </div>
+                </section>
+                <section class="skills-column" aria-labelledby="ai-tools-title">
+                    <h3 id="ai-tools-title">IA / Ferramentas</h3>
+                    <div class="skills-box skills-box--ai">
+                        <p class="skills-title">Ferramentas de IA</p>
                     <ul class="ai-skills">
                         <li>
                             <img src="img/icons/claudecode-color.svg" alt="" width="45" height="45">
@@ -64,7 +65,12 @@
                             <span>Codex</span>
                         </li>
                     </ul>
-                </div>
+                    </div>
+                    <div class="skills-box">
+                        <p class="skills-title">Ferramentas</p>
+                        <i class="devicon-postman-plain colored" title="Postman" aria-label="Postman"></i>
+                    </div>
+                </section>
             </div>
 
             <section id="certificacoes" aria-labelledby="certifications-title">

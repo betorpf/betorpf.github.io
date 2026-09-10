@@ -253,8 +253,13 @@
   }
   .chip:hover,.chip:focus-visible{border-color:var(--code);color:var(--code)}
   .chip:focus-visible{outline:2px solid var(--chalk);outline-offset:3px}
-  .chip--kofi{border-color:var(--pulp);color:var(--pulp)}
-  .chip--kofi:hover,.chip--kofi:focus-visible{border-color:var(--pulp);color:var(--night);background:var(--pulp)}
+  .chip--icon{width:42px;height:40px;padding:0;display:grid;place-items:center}
+  .chip--icon img,.chip--icon svg{width:17px;height:17px;display:block}
+  .chip--icon img{transition:transform .15s ease}
+  .chip--icon:hover img,.chip--icon:focus-visible img{transform:scale(1.12)}
+  .chip--kofi{border-color:var(--pulp)}
+  .chip--kofi:hover,.chip--kofi:focus-visible{border-color:var(--pulp);background:var(--pulp)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
   .meta{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
   .meta a{color:inherit}
@@ -365,12 +370,16 @@
 
   <footer class="bottom">
     <div class="chips">
-      <button class="chip" type="button" data-open-contact>Contato</button>
-      <a class="chip" href="https://www.instagram.com/betorpf/">Instagram</a>
-      <a class="chip" href="https://www.threads.net/@betorpf">Threads</a>
-      <a class="chip" href="https://bsky.app/profile/betorpf.bsky.social">Bluesky</a>
-      <a class="chip" href="https://x.com/betorpf">X</a>
-      <a class="chip chip--kofi" href="https://ko-fi.com/betorpf">Me pague um café</a>
+      <button class="chip chip--icon" type="button" data-open-contact aria-label="Contato" title="Contato">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg>
+        <span class="sr-only">Contato</span>
+      </button>
+      <a class="chip chip--icon" href="https://www.instagram.com/betorpf/" aria-label="Instagram" title="Instagram"><img src="https://cdn.simpleicons.org/instagram/F3EFE5" width="17" height="17" alt=""></a>
+      <a class="chip chip--icon" href="https://www.threads.net/@betorpf" aria-label="Threads" title="Threads"><img src="https://cdn.simpleicons.org/threads/F3EFE5" width="17" height="17" alt=""></a>
+      <a class="chip chip--icon" href="https://bsky.app/profile/betorpf.bsky.social" aria-label="Bluesky" title="Bluesky"><img src="https://cdn.simpleicons.org/bluesky/F3EFE5" width="17" height="17" alt=""></a>
+      <a class="chip chip--icon" href="https://x.com/betorpf" aria-label="X" title="X"><img src="https://cdn.simpleicons.org/x/F3EFE5" width="17" height="17" alt=""></a>
+      <a class="chip chip--icon" href="https://substack.com/@betorpf" aria-label="Substack" title="Substack"><img src="https://cdn.simpleicons.org/substack/F3EFE5" width="17" height="17" alt=""></a>
+      <a class="chip chip--icon chip--kofi" href="https://ko-fi.com/betorpf" aria-label="Me pague um café no Ko-fi" title="Me pague um café"><img src="https://cdn.simpleicons.org/kofi/F3EFE5" width="17" height="17" alt=""></a>
     </div>
     <p class="meta">betorpf · <span id="ano">2026</span></p>
   </footer>
