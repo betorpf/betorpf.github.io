@@ -80,16 +80,37 @@
   .secondary-link:hover{color:var(--pulp);border-color:var(--pulp)}
   .location{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--dim);margin-top:25px}
   @media (max-width:760px){
-    .hero{grid-template-columns:1fr;gap:0;padding:32px 0}
-    .hero-copy{padding:12px 0 0}
-    h1{font-size:clamp(40px,8.5vw,64px)}
-    .hero-art{justify-self:center;max-width:360px;margin-top:16px}
-    .eyebrow{font-size:12px;letter-spacing:.1em;margin-bottom:18px}
+    .hero{
+      grid-template-columns:minmax(0,1fr) clamp(112px,30vw,150px);
+      grid-template-rows:auto auto auto auto auto;
+      column-gap:0;
+      padding:18px 0 16px;
+    }
+    .hero-copy{display:contents}
+    .eyebrow{grid-column:1/-1;grid-row:1;font-size:12px;letter-spacing:.1em;margin-bottom:18px}
+    h1{grid-column:1;grid-row:2;font-size:clamp(36px,10.25vw,54px);position:relative;z-index:1}
+    .hero-art{
+      grid-column:2;
+      grid-row:2;
+      align-self:center;
+      justify-self:end;
+      width:100%;
+      max-width:150px;
+      margin:0 -4px 0 0;
+    }
+    .bio{grid-column:1/-1;grid-row:3;margin-top:24px}
+    .hero-actions{grid-column:1/-1;grid-row:4}
+    .location{grid-column:1/-1;grid-row:5}
+    .highlights{padding-top:20px}
   }
   @media (max-width:420px){
     .brand{gap:8px}.brand-name{font-size:27px}.brand img{width:30px;height:34px}
     .site-header{gap:12px}.site-nav{gap:16px}.site-nav a,.site-nav button{font-size:13px}
     .hero-actions{gap:20px}
+  }
+  @media (max-width:360px){
+    .hero{grid-template-columns:minmax(0,1fr) 88px}
+    h1{font-size:32px}
   }
 
   /* ---------- os dois destaques ---------- */
