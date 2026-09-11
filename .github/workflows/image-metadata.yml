@@ -1,0 +1,21 @@
+name: Image metadata
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gps-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check versioned images
+        run: python scripts/check-image-metadata.py
+      - name: Verify GPS detection
+        run: python scripts/check-image-metadata.py --self-test
