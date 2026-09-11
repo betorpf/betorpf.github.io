@@ -66,7 +66,7 @@ Critérios de aceite:
 - [x] Preservar e concluir a remoção já iniciada dos parágrafos “Sou um desenvolvedor...” e “Tenho experiências...”.
 - [x] Corrigir `.Net` para `.NET` em todo o site.
 - [x] Escolher um idioma consistente para as categorias: português (`Back-end`, `Bancos de dados`, `IA`, `Ferramentas`) ou inglês em toda a página.
-- [ ] Substituir textos que envelhecem, como “há 15 anos”, por uma formulação durável, por exemplo “desde 2011”, se aprovado pelo usuário.
+- [x] Substituir textos que envelhecem, como “há 15 anos”, por uma formulação durável, por exemplo “desde 2011”, se aprovado pelo usuário.
 - [x] Revisar capitalização e terminologia: `.NET`, `API REST`, `Back-end` e nomes oficiais das tecnologias.
 
 Critérios de aceite:
