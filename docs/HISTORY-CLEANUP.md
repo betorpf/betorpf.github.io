@@ -48,7 +48,7 @@ Em 11/09/2026, a API e os refs públicos do GitHub confirmaram:
 - Não há releases.
 - Há artefatos temporários do GitHub Pages associados aos commits antigos `3f50109`, `95b80a3` e `4184505`, que continham fotos com GPS: `10172292581`, `10178043037` e `10178468465`.
 
-Os três artefatos identificados devem ser excluídos após autorização explícita para essa remoção externa. Os artefatos da versão sanitizada e da publicação atual não foram incluídos nessa lista.
+Após autorização explícita, os três artefatos foram excluídos em 11/09/2026. A API do GitHub confirmou HTTP 404 para cada ID após a remoção. Os artefatos da versão sanitizada e da publicação atual não foram incluídos nessa lista.
 
 ## Limitações e ações posteriores
 
