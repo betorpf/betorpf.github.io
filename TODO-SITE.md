@@ -36,8 +36,8 @@ Documento de acompanhamento das melhorias do site. O agent responsável deve mar
 
 - [x] Identificar todos os commits, branches e tags que ainda contêm versões das fotos com GPS.
 - [x] Preparar e documentar o procedimento de limpeza usando `git-filter-repo` ou ferramenta equivalente.
-- [ ] Solicitar autorização explícita do usuário antes de reescrever o histórico ou executar force-push.
-- [ ] Após a autorização, remover as versões sensíveis de todos os refs aplicáveis.
+- [x] Solicitar autorização explícita do usuário antes de reescrever o histórico ou executar force-push.
+- [x] Após a autorização, remover as versões sensíveis de todos os refs aplicáveis.
 - [ ] Confirmar que clones, forks, PRs ou caches não mantêm referências acessíveis; documentar limitações e eventual necessidade de suporte do GitHub.
 
 Critérios de aceite:
@@ -204,3 +204,4 @@ Critérios de aceite:
 | 10/09/2026 | `7d0f28a` | Otimização das imagens e metadados SEO/social do portfólio | Tamanho, dimensões, qualidade visual, EXIF/GPS, breakpoints e imagem social validados |
 | 10/09/2026 | `7ec4999` | Auditoria e plano de remoção das fotos com GPS do histórico | Todos os objetos, branches e tags auditados; nenhuma reescrita executada |
 | 11/09/2026 | `8c91437` | Formulação durável da experiência profissional | Cinco larguras, modal, foco, console e recursos revalidados |
+| 11/09/2026 | `be2fac7` | Reescrita autorizada do histórico e restauração da foto sanitizada | Auditoria de todos os blobs de imagem restantes sem GPS; envio protegido à `main` pendente |
