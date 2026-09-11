@@ -17,9 +17,9 @@ Auditoria executada em 10/09/2026 sobre todos os objetos alcançáveis por branc
 
 O arquivo ativo atual passou na verificação e não contém GPS. O problema está nas versões antigas ainda alcançáveis pelo histórico da branch principal.
 
-## Procedimento proposto
+## Procedimento executado
 
-Este procedimento reescreve IDs de commits e exige force-push. Ele só pode ser executado após autorização explícita.
+Em 11/09/2026, após autorização explícita, o procedimento foi executado. A `main` remota foi reescrita com `--force-with-lease`, e o checkout local foi recriado a partir desse histórico.
 
 1. Avisar colaboradores para interromper pushes e criar uma cópia de segurança do repositório.
 2. Guardar fora do clone uma cópia da foto ativa já sanitizada.
@@ -31,13 +31,24 @@ Este procedimento reescreve IDs de commits e exige force-push. Ele só pode ser 
      --path portfolio/img/profile-2025-2x3.jpg \
      --path portfolio/img/profile-2025-original.jpg \
      --path portfolio/img/profile-2025.jpg \
-     --path portfolio/img/profile.jpg
+    --path img/profile.jpg
    ```
 
 5. Em um clone de trabalho baseado no histórico limpo, recolocar somente `portfolio/img/profile-2025-2x3.jpg`, usando a cópia sanitizada, e criar um novo commit normal.
 6. Repetir a auditoria de todos os objetos e confirmar zero blobs com GPS.
-7. Com a autorização final já concedida, atualizar as branches e tags controladas pelo projeto com force-push explícito. Não usar `--mirror` sem revisar refs especiais.
+7. Atualizar a branch controlada pelo projeto com force-push explícito e protegido por lease. Não usar `--mirror` sem revisar refs especiais.
 8. Recriar clones e worktrees locais; colaboradores não devem fazer merge de branches antigas, pois isso pode reintroduzir os objetos removidos.
+
+## Verificação pública posterior
+
+Em 11/09/2026, a API e os refs públicos do GitHub confirmaram:
+
+- Apenas `main` está publicada, no commit `bfad424`; não há tags.
+- Não há forks nem pull requests.
+- Não há releases.
+- Há artefatos temporários do GitHub Pages associados aos commits antigos `3f50109`, `95b80a3` e `4184505`, que continham fotos com GPS: `10172292581`, `10178043037` e `10178468465`.
+
+Os três artefatos identificados devem ser excluídos após autorização explícita para essa remoção externa. Os artefatos da versão sanitizada e da publicação atual não foram incluídos nessa lista.
 
 ## Limitações e ações posteriores
 
@@ -48,4 +59,4 @@ A limpeza dos refs do repositório não garante remoção imediata de forks, clo
 - aguardar a coleta de lixo do GitHub e, se os objetos continuarem acessíveis, abrir uma solicitação ao GitHub Support informando os IDs dos blobs sensíveis;
 - trocar a foto por outra sem informação de localização caso exista risco de cópias externas permanentes.
 
-Nenhum comando de reescrita ou force-push foi executado durante esta auditoria.
+Não é possível confirmar ou apagar clones que já tenham sido feitos por terceiros, nem garantir a remoção imediata de caches internos do GitHub. Se os objetos continuarem acessíveis após a exclusão dos artefatos e a retenção normal do GitHub, a próxima ação é abrir uma solicitação ao GitHub Support com os IDs dos blobs sensíveis acima.
