@@ -204,4 +204,4 @@ Critérios de aceite:
 | 10/09/2026 | `7d0f28a` | Otimização das imagens e metadados SEO/social do portfólio | Tamanho, dimensões, qualidade visual, EXIF/GPS, breakpoints e imagem social validados |
 | 10/09/2026 | `7ec4999` | Auditoria e plano de remoção das fotos com GPS do histórico | Todos os objetos, branches e tags auditados; nenhuma reescrita executada |
 | 11/09/2026 | `8c91437` | Formulação durável da experiência profissional | Cinco larguras, modal, foco, console e recursos revalidados |
-| 11/09/2026 | `be2fac7` | Reescrita autorizada do histórico e restauração da foto sanitizada | Auditoria de todos os blobs de imagem restantes sem GPS; envio protegido à `main` pendente |
+| 11/09/2026 | `be2fac7` | Reescrita autorizada do histórico e restauração da foto sanitizada | Auditoria de todos os blobs de imagem restantes sem GPS; `main` atualizada com `force-with-lease` |
