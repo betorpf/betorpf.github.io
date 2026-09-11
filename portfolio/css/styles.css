@@ -87,9 +87,23 @@
 }
 
 #social-container li a {
+    display: inline-grid;
+    place-items: center;
     color: var(--main-color);
     font-size: 30px;
     text-decoration: none;
+}
+
+.social-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+#social-container li a:focus-visible {
+    color: var(--main-text-color);
+    outline: 2px solid var(--main-text-color);
+    outline-offset: 4px;
 }
 
 #contact-link {
@@ -113,11 +127,10 @@
     outline-offset: 3px;
 }
 
-#contact-link ion-icon {
+#contact-link .contact-icon {
     color: var(--main-color);
-    font-size: 20px;
     margin-right: 8px;
-    max-width: 20px;
+    flex: 0 0 20px;
 }
 
 /* About Container */
@@ -198,8 +211,11 @@
     border-left: 5px solid var(--main-color);
 }
 
-.skills-box i {
-    font-size: 45px;
+.skills-box .skill-icon {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
     margin-right: 10px;
 }
 

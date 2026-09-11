@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roberto Passareti Filho</title>
     <meta name="theme-color" content="#102c26">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Dev Icon Fonts-->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- CSS do Projeto-->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -24,16 +23,14 @@
             <p class="bio-intro">Desenvolvo soluções Back-end em <span class="highlight">.NET há 15 anos</span>, com experiência em APIs, integrações e bancos de dados.</p>
             <p id="welcom-text">Conheça minha trajetória, habilidades e projetos.</p>
             <ul id="social-container">
-                <li><a href="https://www.linkedin.com/in/roberto-passareti-filho-6681a279/" target="_blank"><i class="devicon-linkedin-plain"></i></a></li>
-                <li><a href="https://github.com/betorpf" target="_blank"><i class="devicon-github-original"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/roberto-passareti-filho-6681a279/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Roberto Passareti Filho"><img class="social-icon" src="img/icons/devicon/linkedin.svg" width="30" height="30" alt=""></a></li>
+                <li><a href="https://github.com/betorpf" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Roberto Passareti Filho"><img class="social-icon" src="img/icons/social/github.svg" width="30" height="30" alt=""></a></li>
             </ul>
-            <a id="contact-link" href="/#contato"><ion-icon name="mail-outline"></ion-icon><span>Fale comigo</span></a>
+            <a id="contact-link" href="/#contato"><svg class="contact-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg><span>Fale comigo</span></a>
         </aside>
         <section id="about-container">
             <h1 id="name">Roberto Passareti Filho</h1>
-            <p id="title"><span class="highlight">Desenvolvedor Back-end / .Net </span></p>
-            <p class="description">Sou um desenvolvedor Back-end em .NET.....</p>
-            <p class="description">Tenho experiências em API Rest, SQL Server, Services</p>
+            <p id="title"><span class="highlight">Desenvolvedor Back-end / .NET</span></p>
             <!-- <a href="#" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon><span>Ver Projetos</span></a> -->
 
             <h2 id="skills-section-title">Minhas Skills</h2>
@@ -42,13 +39,13 @@
                 <section class="skills-column" aria-label="Back-end e banco de dados">
                     <div class="skills-box">
                         <p class="skills-title">Back-end</p>
-                        <i class="devicon-csharp-plain colored" title="C#" aria-label="C#"></i>
-                        <i class="devicon-dotnetcore-plain colored" title=".NET" aria-label=".NET"></i>
+                        <img class="skill-icon" src="img/icons/devicon/csharp.svg" width="45" height="45" alt="C#" title="C#">
+                        <img class="skill-icon" src="img/icons/devicon/dotnet.svg" width="45" height="45" alt=".NET" title=".NET">
                     </div>
                     <div class="skills-box">
                         <p class="skills-title">Databases</p>
-                        <i class="devicon-sqldeveloper-plain colored" title="SQL Server" aria-label="SQL Server"></i>
-                        <i class="devicon-mongodb-plain colored" title="MongoDB" aria-label="MongoDB"></i>
+                        <img class="skill-icon" src="img/icons/devicon/sqlserver.svg" width="45" height="45" alt="SQL Server" title="SQL Server">
+                        <img class="skill-icon" src="img/icons/devicon/mongodb.svg" width="45" height="45" alt="MongoDB" title="MongoDB">
                     </div>
                 </section>
                 <section class="skills-column" aria-label="Inteligência artificial e ferramentas">
@@ -67,7 +64,7 @@
                     </div>
                     <div class="skills-box">
                         <p class="skills-title">Tools</p>
-                        <i class="devicon-postman-plain colored" title="Postman" aria-label="Postman"></i>
+                        <img class="skill-icon" src="img/icons/devicon/postman.svg" width="45" height="45" alt="Postman" title="Postman">
                     </div>
                 </section>
             </div>
@@ -91,8 +88,5 @@
         </section>
     </main>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <!-- Ion Icon -->
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
