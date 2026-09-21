@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coleção pessoal de jogos de tabuleiro de Roberto Passareti Filho.">
+  <meta name="theme-color" content="#F7F3E8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+  <title>Jogos de Tabuleiro | betorpf</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="betorpf — início">
+        <img src="../assets/logo-b.svg" width="38" height="42" alt="">
+        <span>betorpf<span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="../">Início</a>
+          <a href="../leituras/">Leituras</a>
+          <a href="../portfolio/">Sobre mim</a>
+        </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Alternar tema" aria-pressed="false">
+          <span aria-hidden="true">◐</span><span id="theme-label">Tema escuro</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Biblioteca pessoal</p>
+          <h1 id="page-title"><span aria-hidden="true">🎲</span> Jogos de Tabuleiro</h1>
+          <p class="subtitle">Boas companhias, grandes histórias.</p>
+          <p class="collection-count" id="collection-count" aria-live="polite">Carregando coleção…</p>
+        </div>
+        <p class="hero-quote">“Jogar também é colecionar boas memórias.”</p>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">Na mesa</p>
+            <h2 id="catalog-title">Escolha a próxima partida</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+
+        <form class="controls" id="controls" role="search" hidden>
+          <div class="search-field">
+            <label for="search">Buscar na coleção</label>
+            <input type="search" id="search" placeholder="Buscar jogo..." autocomplete="off">
+          </div>
+          <div class="filter-field">
+            <label for="players-filter">Jogadores</label>
+            <select id="players-filter">
+              <option value="">Todos</option>
+              <option value="solo">Solo</option>
+              <option value="two">2 jogadores</option>
+              <option value="three-four">3–4 jogadores</option>
+              <option value="five-plus">5+ jogadores</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="type-filter">Tipo</label>
+            <select id="type-filter">
+              <option value="">Todos</option>
+              <option value="Jogo">Jogos</option>
+              <option value="Expansão">Expansões</option>
+              <option value="Jogo + Expansão">Jogo + Expansão</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="category-filter">Mecânica/categoria</label>
+            <select id="category-filter"><option value="">Todas</option></select>
+          </div>
+          <div class="filter-field">
+            <label for="sort">Ordenar</label>
+            <select id="sort">
+              <option value="title-asc">Nome A–Z</option>
+              <option value="title-desc">Nome Z–A</option>
+              <option value="year-desc">Ano — mais recente</option>
+              <option value="year-asc">Ano — mais antigo</option>
+              <option value="duration-asc">Duração — menor primeiro</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="state-message" id="loading-state" role="status">Preparando a mesa…</div>
+        <div class="state-message state-message--error" id="error-state" role="alert" hidden>Não foi possível carregar a coleção.</div>
+        <div class="state-message" id="empty-state" hidden>
+          <strong>Nenhum jogo encontrado 🎲</strong>
+          <span>Tente outro nome ou altere os filtros.</span>
+        </div>
+        <div class="game-grid" id="game-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="../">← Voltar para betorpf</a>
+      <span>Alguns jogos terminam. As boas histórias continuam.</span>
+    </footer>
+  </div>
+
+  <dialog class="game-dialog" id="game-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" id="dialog-close" aria-label="Fechar detalhes">Fechar <span aria-hidden="true">×</span></button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+  <script src="script.js" defer></script>
+</body>
+</html>
