@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leituras — HQs &amp; Graphic Novels | betorpf</title>
   <meta name="description" content="Biblioteca pessoal de HQs, graphic novels e outras leituras de Roberto Passareti Filho.">
-  <meta name="theme-color" content="#11130f">
+  <meta name="theme-color" content="#F4F1E8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'; frame-src 'none'; upgrade-insecure-requests">
 
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="leituras.css">
 </head>
 <body>
@@ -23,10 +24,22 @@
         <img src="../assets/logo-b.svg" width="38" height="42" alt="">
         <span class="brand-name">betorpf<span class="brand-dot">.</span></span>
       </a>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <a href="../">Início</a>
-        <a href="../portfolio/">Sobre mim</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="Navegação principal">
+          <a href="../">Início</a>
+          <a href="../portfolio/">Sobre mim</a>
+        </nav>
+        <div class="theme-selector" role="group" aria-label="Tema visual">
+          <button type="button" data-theme-choice="light" aria-label="Usar tema claro" title="Tema claro">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg>
+            <span>Claro</span>
+          </button>
+          <button type="button" data-theme-choice="dark" aria-label="Usar tema escuro" title="Tema escuro">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></svg>
+            <span>Escuro</span>
+          </button>
+        </div>
+      </div>
     </header>
 
     <main>

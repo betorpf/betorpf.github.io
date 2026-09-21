@@ -5,6 +5,12 @@ const state = {
   dialogOpener: null,
 };
 
+const themeStorageKey = 'leituras-theme';
+const themeColors = {
+  light: '#F4F1E8',
+  dark: '#171A16',
+};
+
 const elements = {
   grid: document.getElementById('book-grid'),
   controls: document.getElementById('controls'),
@@ -23,6 +29,43 @@ const elements = {
 };
 
 const collator = new Intl.Collator('pt-BR', { sensitivity: 'base' });
+
+function setTheme(theme, persist = false) {
+  if (!['light', 'dark'].includes(theme)) return;
+
+  document.documentElement.dataset.theme = theme;
+  document.documentElement.style.colorScheme = theme;
+  document.querySelector('meta[name="theme-color"]').content = themeColors[theme];
+  document.querySelectorAll('[data-theme-choice]').forEach((button) => {
+    button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
+  });
+
+  if (persist) {
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      console.warn('Não foi possível salvar a preferência de tema:', error);
+    }
+  }
+}
+
+function initializeThemeSelector() {
+  const currentTheme = document.documentElement.dataset.theme || 'light';
+  setTheme(currentTheme);
+  document.querySelectorAll('[data-theme-choice]').forEach((button) => {
+    button.addEventListener('click', () => setTheme(button.dataset.themeChoice, true));
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    let hasSavedTheme = false;
+    try {
+      hasSavedTheme = ['light', 'dark'].includes(localStorage.getItem(themeStorageKey));
+    } catch {
+      hasSavedTheme = false;
+    }
+    if (!hasSavedTheme) setTheme(event.matches ? 'dark' : 'light');
+  });
+}
 
 function normalizeText(value = '') {
   return String(value)
@@ -87,57 +130,12 @@ function appendPill(container, text, status = false) {
   container.append(createElement('span', status ? 'pill pill--status' : 'pill', text));
 }
 
-function coverColors(title) {
-  const palettes = [
-    ['#53613f', '#242d20'],
-    ['#7a4d35', '#29211b'],
-    ['#3c5956', '#1c2927'],
-    ['#665b39', '#27251b'],
-    ['#554359', '#251f27'],
-  ];
-  const index = [...title].reduce((sum, char) => sum + char.codePointAt(0), 0) % palettes.length;
-  return palettes[index];
-}
-
-function createCover(book) {
-  const cover = createElement('div', 'cover');
-  const [colorA, colorB] = coverColors(book.titulo);
-  cover.style.setProperty('--cover-a', colorA);
-  cover.style.setProperty('--cover-b', colorB);
-  const coverUrl = validHttpUrl(book.capa);
-
-  if (coverUrl) {
-    const image = document.createElement('img');
-    image.src = coverUrl;
-    image.alt = `Capa de ${book.titulo}`;
-    image.loading = 'lazy';
-    image.addEventListener('error', () => {
-      image.remove();
-      appendPlaceholder(cover, book.titulo);
-    }, { once: true });
-    cover.append(image);
-  } else {
-    appendPlaceholder(cover, book.titulo);
-  }
-  return cover;
-}
-
-function appendPlaceholder(cover, title) {
-  if (cover.querySelector('.cover-initial')) return;
-  const firstCharacter = [...title.trim()][0] || '?';
-  cover.append(
-    createElement('span', 'cover-initial', firstCharacter.toLocaleUpperCase('pt-BR')),
-    createElement('span', 'cover-title', title),
-  );
-}
-
 function createBookCard(book) {
   const article = createElement('article', 'book-card');
   const main = createElement('button', 'card-main');
   main.type = 'button';
   main.ariaLabel = `Ver detalhes de ${book.titulo}`;
   main.addEventListener('click', () => openBookDetails(book, main));
-  main.append(createCover(book));
 
   const body = createElement('div', 'card-body');
   body.append(createElement('h3', '', book.titulo));
@@ -157,6 +155,10 @@ function createBookCard(book) {
     themes.forEach((theme) => tags.append(createElement('span', 'tag', theme)));
     body.append(tags);
   }
+
+  const description = getBookDescription(book);
+  if (description) body.append(createElement('p', 'card-description', description));
+
   main.append(body);
   article.append(main);
 
@@ -341,4 +343,5 @@ elements.dialog.addEventListener('close', () => {
   state.activeDialogBook = null;
 });
 
+initializeThemeSelector();
 loadData();
