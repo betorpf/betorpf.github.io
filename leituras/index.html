@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leituras — HQs &amp; Graphic Novels | betorpf</title>
+  <meta name="description" content="Biblioteca pessoal de HQs, graphic novels e outras leituras de Roberto Passareti Filho.">
+  <meta name="theme-color" content="#11130f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'; frame-src 'none'; upgrade-insecure-requests">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="leituras.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="betorpf — início">
+        <img src="../assets/logo-b.svg" width="38" height="42" alt="">
+        <span class="brand-name">betorpf<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="../">Início</a>
+        <a href="../portfolio/">Sobre mim</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Biblioteca pessoal</p>
+          <h1 id="page-title">Leituras<span class="brand-dot">.</span></h1>
+          <p class="subtitle" id="page-description">HQs &amp; Graphic Novels</p>
+        </div>
+        <div class="shelf-mark" aria-hidden="true"><span>HQ</span></div>
+      </section>
+
+      <section class="summary" aria-label="Resumo da biblioteca">
+        <div class="summary-item"><strong id="total-count">—</strong><span>Total</span></div>
+        <div class="summary-item"><strong id="read-count">—</strong><span>Lidos</span></div>
+        <div class="summary-item"><strong id="wishlist-count">—</strong><span>Quero ler</span></div>
+        <p class="updated" id="updated-at" hidden></p>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">Na estante</p>
+            <h2 id="catalog-title">Catálogo</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+
+        <form class="controls" id="controls" role="search">
+          <div class="search-field">
+            <label for="search">Buscar na biblioteca</label>
+            <input type="search" id="search" placeholder="Título, autor, tema…" autocomplete="off">
+          </div>
+          <div class="filter-field">
+            <label for="status-filter">Status</label>
+            <select id="status-filter"><option value="">Todos</option></select>
+          </div>
+          <div class="filter-field">
+            <label for="country-filter">País</label>
+            <select id="country-filter"><option value="">Todos</option></select>
+          </div>
+          <div class="filter-field">
+            <label for="type-filter">Tipo</label>
+            <select id="type-filter"><option value="">Todos</option></select>
+          </div>
+          <div class="filter-field sort-field">
+            <label for="sort">Ordenar</label>
+            <select id="sort">
+              <option value="title-asc">Título A–Z</option>
+              <option value="title-desc">Título Z–A</option>
+              <option value="year-desc">Ano mais recente</option>
+              <option value="year-asc">Ano mais antigo</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="state-message" id="loading-state" role="status">Abrindo a biblioteca…</div>
+        <div class="state-message state-message--error" id="error-state" role="alert" hidden>
+          <strong>Não foi possível carregar a lista de leituras.</strong>
+          <span>Tente novamente em alguns instantes.</span>
+        </div>
+        <div class="state-message" id="empty-state" hidden>
+          <strong>Nenhuma leitura encontrada.</strong>
+          <span>Tente ajustar a busca ou os filtros.</span>
+        </div>
+        <div class="book-grid" id="book-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="../">← Voltar para betorpf</a>
+      <span>Uma estante em constante movimento.</span>
+    </footer>
+  </div>
+
+  <dialog class="book-dialog" id="book-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" id="dialog-close" aria-label="Fechar detalhes">Fechar ×</button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <script src="leituras.js" defer></script>
+</body>
+</html>

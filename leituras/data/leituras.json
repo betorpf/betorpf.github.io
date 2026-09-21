@@ -1,0 +1,2409 @@
+{
+  "metadata": {
+    "titulo": "Leituras — HQs & Graphic Novels",
+    "descricao": "Catálogo pessoal exportado do Notion para uso em site estático.",
+    "versao": 1,
+    "ultimaAtualizacao": "2026-09-21",
+    "total": 89
+  },
+  "leituras": [
+    {
+      "id": "chumbo",
+      "titulo": "Chumbo",
+      "autores": [
+        "Matthias Lehmann"
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Histórica",
+        "Política/Social",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "beco-do-rosario",
+      "titulo": "Beco do Rosário",
+      "autores": [
+        "Ana Luiza Koehler"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Histórica",
+        "Política/Social",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Urbanização, racismo e memória de Porto Alegre nos anos 1920.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "black-hole",
+      "titulo": "Black Hole",
+      "autores": [
+        "Charles Burns"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Horror",
+        "Psicológica",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Adolescência, isolamento e transformação corporal em uma história estranha e psicológica.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "angola-janga",
+      "titulo": "Angola Janga",
+      "autores": [
+        "Marcelo D'Salete"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle Unlimited"
+      ],
+      "temas": [
+        "Histórica",
+        "Política/Social",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "História, escravidão, resistência e Palmares.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "carolina",
+      "titulo": "Carolina",
+      "autores": [
+        "João Pinheiro",
+        "Sirlene Barbosa"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Biográfica",
+        "Histórica",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Biografia em quadrinhos de Carolina Maria de Jesus.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "bando-de-dois",
+      "titulo": "Bando de Dois",
+      "autores": [
+        "Danilo Beyruth"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Aventura",
+        "Histórica"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "balada-para-sophie",
+      "titulo": "Balada para Sophie",
+      "autores": [
+        "Filipe Melo",
+        "Juan Cavia"
+      ],
+      "pais": "Portugal",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Música, envelhecimento, rivalidade, arrependimentos e memória.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "epileptic",
+      "titulo": "Epileptic",
+      "autores": [
+        "David B."
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Autobiográfica",
+        "Experimental",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Autobiografia familiar pesada e extremamente imaginativa.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "labirinto",
+      "titulo": "Labirinto",
+      "autores": [
+        "Thiago Souto"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Existencial",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Amizade, sonhos, existência e perda.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "suzette-ou-o-grande-amor",
+      "titulo": "Suzette ou o Grande Amor",
+      "autores": [
+        "Fabien Toulmé"
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Romance",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-odisseia-de-hakim-vols-1-3",
+      "titulo": "A Odisseia de Hakim — vols. 1–3",
+      "autores": [
+        "Fabien Toulmé"
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Biográfica",
+        "Política/Social",
+        "Drama"
+      ],
+      "volumes": "1–3",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "Possui fisicamente apenas o volume 1; volumes 1–3 no backlog.",
+      "linkBlog": ""
+    },
+    {
+      "id": "jimmy-corrigan-o-menino-mais-esperto-do-mundo",
+      "titulo": "Jimmy Corrigan: O Menino Mais Esperto do Mundo",
+      "autores": [
+        "Chris Ware"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Existencial",
+        "Memória",
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Solidão, relações familiares, memória e construção visual muito elaborada.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "fun-home",
+      "titulo": "Fun Home",
+      "autores": [
+        "Alison Bechdel"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Autobiográfica",
+        "Memória",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Memória familiar, literatura e relação entre pai e filha.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "upgrade-soul",
+      "titulo": "Upgrade Soul",
+      "autores": [
+        "Ezra Claytan Daniels"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Ficção científica",
+        "Psicológica",
+        "Existencial"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Ficção científica para discutir identidade, corpo, envelhecimento e relacionamento.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "cages",
+      "titulo": "Cages",
+      "autores": [
+        "Dave McKean"
+      ],
+      "pais": "Reino Unido",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Experimental",
+        "Existencial",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4,
+      "porQueQueroLer": "Arte, criatividade, relacionamentos e filosofia, com forte experimentação visual.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "indivisivel",
+      "titulo": "Indivisível",
+      "autores": [
+        "Marília Marz"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Memória",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Memória negra e transformação urbana de São Paulo.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "escuta-formosa-marcia",
+      "titulo": "Escuta, Formosa Márcia",
+      "autores": [
+        "Marcello Quintanilha"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Cotidiano",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Família, periferia e relações humanas complexas.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "enterrei-todos-no-meu-quintal",
+      "titulo": "Enterrei Todos no Meu Quintal",
+      "autores": [
+        "Luckas Iohanathan"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Memória",
+        "Existencial"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "luzes-de-niteroi",
+      "titulo": "Luzes de Niterói",
+      "autores": [
+        "Marcello Quintanilha"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Memória",
+        "Drama",
+        "Histórica"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Amizade, memória, futebol e Brasil dos anos 1950.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "o-fim-da-noite",
+      "titulo": "O Fim da Noite",
+      "autores": [
+        "Rafael Calça",
+        "Diox"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Fantasia",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Fantasia urbana, identidade e questões sociais.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "habibi",
+      "titulo": "Habibi",
+      "autores": [
+        "Craig Thompson"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Romance"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4,
+      "porQueQueroLer": "Amor, religião, exploração e narrativa visual ambiciosa.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "building-stories",
+      "titulo": "Building Stories",
+      "autores": [
+        "Chris Ware"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Coleção",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Experimental",
+        "Existencial",
+        "Cotidiano"
+      ],
+      "volumes": "14 peças",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Narrativa experimental em fragmentos sobre vidas comuns, solidão e relações humanas.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "retalhos-blankets",
+      "titulo": "Retalhos (Blankets)",
+      "autores": [
+        "Craig Thompson"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Memória",
+        "Romance",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Memória, família, amor, culpa e amadurecimento; íntima e contemplativa.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "resta-um",
+      "titulo": "Resta Um",
+      "autores": [
+        "Jordan Crane"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Psicológica",
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "domingos",
+      "titulo": "Domingos",
+      "autores": [
+        "Sidney Gusman",
+        "Jefferson Costa"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Biográfica",
+        "Autobiográfica",
+        "Memória",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-adocao",
+      "titulo": "A Adoção",
+      "autores": [
+        "Zidrou",
+        "Arno Monin"
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-chegada-the-arrival",
+      "titulo": "A Chegada (The Arrival)",
+      "autores": [
+        "Shaun Tan"
+      ],
+      "pais": "Austrália",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Memória",
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Imigração e pertencimento contados praticamente sem palavras; forte identidade visual.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "ducks-two-years-in-the-oil-sands",
+      "titulo": "Ducks: Two Years in the Oil Sands",
+      "autores": [
+        "Kate Beaton"
+      ],
+      "pais": "Canadá",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Autobiográfica",
+        "Cotidiano",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Memórias de trabalho, isolamento e vida adulta, sem romantização.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "pilulas-azuis",
+      "titulo": "Pílulas Azuis",
+      "autores": [
+        "Frederik Peeters"
+      ],
+      "pais": "Suíça",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Autobiográfica",
+        "Drama",
+        "Romance"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "sabrina",
+      "titulo": "Sabrina",
+      "autores": [
+        "Nick Drnaso"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Psicológica",
+        "Drama",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Solidão, internet, paranoia e desinformação, com tom seco e contemporâneo.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "monica",
+      "titulo": "Monica",
+      "autores": [
+        "Daniel Clowes"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Psicológica",
+        "Memória",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4,
+      "porQueQueroLer": "Memória, família, paranoia e identidade em histórias interligadas.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "condado-de-essex-essex-county",
+      "titulo": "Condado de Essex (Essex County)",
+      "autores": [
+        "Jeff Lemire"
+      ],
+      "pais": "Canadá",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Memória",
+        "Existencial"
+      ],
+      "volumes": "1 (reúne a trilogia)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Família, envelhecimento, perda e memória; próximo do tom de O Soldador Subaquático.",
+      "similarA": "O Soldador Subaquático",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "traco-de-giz",
+      "titulo": "Traço de Giz",
+      "autores": [
+        "Miguelanxo Prado"
+      ],
+      "pais": "Espanha",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Drama",
+        "Existencial"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "silvestre",
+      "titulo": "Silvestre",
+      "autores": [
+        "Wagner Willian"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Quadrinho autoral com pegada visual singular.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "ulis",
+      "titulo": "Ulis",
+      "autores": [
+        "Fabien Toulmé"
+      ],
+      "pais": "França",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Política/Social",
+        "Drama",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "acting-class",
+      "titulo": "Acting Class",
+      "autores": [
+        "Nick Drnaso"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Psicológica",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4,
+      "porQueQueroLer": "Psicológica e inquietante, com estranheza crescente em um grupo de desconhecidos.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "cumbe",
+      "titulo": "Cumbe",
+      "autores": [
+        "Marcelo D'Salete"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Histórica",
+        "Política/Social",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Contos sobre resistência negra durante a escravidão.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "mukanda-tiodora",
+      "titulo": "Mukanda Tiodora",
+      "autores": [
+        "Marcelo D'Salete"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Histórica",
+        "Política/Social",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "São Paulo do século XIX, escravidão, liberdade e memória histórica.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "diomedes",
+      "titulo": "Diomedes",
+      "autores": [
+        "Lourenço Mutarelli"
+      ],
+      "pais": "Brasil",
+      "status": "Backlog",
+      "formato": "Coleção",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Crime",
+        "Psicológica",
+        "Mistério"
+      ],
+      "volumes": "4 álbuns reunidos",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "the-nao-of-brown",
+      "titulo": "The Nao of Brown",
+      "autores": [
+        "Glyn Dillon"
+      ],
+      "pais": "Reino Unido",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Psicológica",
+        "Drama",
+        "Romance"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Relações, obsessões, saúde mental e identidade, com arte marcante.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "minha-coisa-favorita-e-monstro",
+      "titulo": "Minha Coisa Favorita é Monstro",
+      "autores": [
+        "Emil Ferris"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Mistério",
+        "Psicológica",
+        "Horror"
+      ],
+      "volumes": "2",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 4.5,
+      "porQueQueroLer": "Trauma, arte, investigação, infância e monstros; visual muito singular.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "aqui-here",
+      "titulo": "Aqui (Here)",
+      "autores": [
+        "Richard McGuire"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Experimental",
+        "Memória",
+        "Existencial"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Sugestão ChatGPT",
+      "prioridade": "",
+      "afinidadeSugerida": 5,
+      "porQueQueroLer": "Experimento visual sobre tempo, memória e um mesmo espaço em diferentes épocas.",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-arte-de-voar",
+      "titulo": "A Arte de Voar",
+      "autores": [
+        "Antonio Altarriba",
+        "Kim"
+      ],
+      "pais": "Espanha",
+      "status": "Backlog",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Autobiográfica",
+        "Histórica",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "bulldogma",
+      "titulo": "Bulldogma",
+      "autores": [
+        "Wagner Willian"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Psicológica",
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-diferenca-invisivel",
+      "titulo": "A Diferença Invisível",
+      "autores": [
+        "Julie Dachez",
+        "Mademoiselle Caroline"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Psicológica",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "lavagem",
+      "titulo": "Lavagem",
+      "autores": [
+        "Shiko"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Horror",
+        "Drama",
+        "Psicológica"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "sementes",
+      "titulo": "Sementes",
+      "autores": [
+        "Ann Nocenti",
+        "David Aja"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Política/Social",
+        "Romance"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "odilo",
+      "titulo": "Odilo",
+      "autores": [
+        "Wagner Diesel"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Existencial",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "sweet-tooth",
+      "titulo": "Sweet Tooth",
+      "autores": [
+        "Jeff Lemire"
+      ],
+      "pais": "Canadá",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Drama",
+        "Aventura"
+      ],
+      "volumes": "6",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "naukan",
+      "titulo": "Naukan",
+      "autores": [
+        "Thiago Souto"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Existencial",
+        "Psicológica",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "apocalipse-por-favor",
+      "titulo": "Apocalipse, Por Favor",
+      "autores": [
+        "Felipe Parucci"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Humor",
+        "Drama",
+        "Política/Social"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "quadrinho-dos-anos-20",
+      "titulo": "Quadrinho dos Anos 20",
+      "autores": [
+        "André Dahmer"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Coleção",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Humor",
+        "Política/Social",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "tungstenio",
+      "titulo": "Tungstênio",
+      "autores": [
+        "Marcello Quintanilha"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Crime",
+        "Drama",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "seconds",
+      "titulo": "Seconds",
+      "autores": [
+        "Bryan Lee O'Malley"
+      ],
+      "pais": "Canadá",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Fantasia",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "daytripper",
+      "titulo": "Daytripper",
+      "autores": [
+        "Fábio Moon",
+        "Gabriel Bá"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico",
+        "Digital"
+      ],
+      "temas": [
+        "Existencial",
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "open-bar",
+      "titulo": "Open Bar",
+      "autores": [
+        "Eduardo Medeiros"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Humor",
+        "Cotidiano",
+        "Drama"
+      ],
+      "volumes": "1 (edição definitiva)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "dois-irmaos",
+      "titulo": "Dois Irmãos",
+      "autores": [
+        "Fábio Moon",
+        "Gabriel Bá"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "intrusos",
+      "titulo": "Intrusos",
+      "autores": [
+        "Adrian Tomine"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Cotidiano",
+        "Psicológica"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "boca-de-siri",
+      "titulo": "Boca de Siri",
+      "autores": [
+        "Paulo Moreira"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle Unlimited"
+      ],
+      "temas": [
+        "Humor",
+        "Cotidiano",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "asterios-polyp",
+      "titulo": "Asterios Polyp",
+      "autores": [
+        "David Mazzucchelli"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Existencial",
+        "Experimental",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": "https://www.viagememquadros.blog.br/2025/08/asterios-polyp-20250820.html"
+    },
+    {
+      "id": "y-o-ultimo-homem",
+      "titulo": "Y: O Último Homem",
+      "autores": [
+        "Brian K. Vaughan",
+        "Pia Guerra"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Aventura"
+      ],
+      "volumes": "10 (ou 5 edições de luxo)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "mare",
+      "titulo": "Maré",
+      "autores": [],
+      "pais": "",
+      "status": "Já li",
+      "formato": "",
+      "formatoQuePossuo": [
+        "Social Comics"
+      ],
+      "temas": [],
+      "volumes": "",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "koko-be-good",
+      "titulo": "Koko Be Good",
+      "autores": [
+        "Jen Wang"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "a-casa-ao-lado",
+      "titulo": "A Casa ao Lado",
+      "autores": [
+        "Diogo Cesar",
+        "Pablo Mayer"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Mistério",
+        "Horror"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "duo-tone",
+      "titulo": "Duo.Tone",
+      "autores": [
+        "Vitor Cafaggi"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Cotidiano",
+        "Drama",
+        "Romance"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "nao-era-voce-que-eu-esperava",
+      "titulo": "Não Era Você que Eu Esperava",
+      "autores": [
+        "Fabien Toulmé"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "solitario",
+      "titulo": "Solitário",
+      "autores": [
+        "Christophe Chabouté"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Existencial",
+        "Drama",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "o-eternauta",
+      "titulo": "O Eternauta",
+      "autores": [
+        "Héctor Germán Oesterheld",
+        "Francisco Solano López"
+      ],
+      "pais": "Argentina",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Aventura"
+      ],
+      "volumes": "1 (edição integral)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "jorge-tirinhas",
+      "titulo": "Jorge (Tirinhas)",
+      "autores": [
+        "Caetano Cury"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Coleção",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Humor",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "persepolis",
+      "titulo": "Persépolis",
+      "autores": [
+        "Marjane Satrapi"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Histórica",
+        "Política/Social",
+        "Memória"
+      ],
+      "volumes": "1 (edição integral)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "zdm",
+      "titulo": "ZDM",
+      "autores": [
+        "Brian Wood",
+        "Riccardo Burchielli"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Política/Social",
+        "Aventura"
+      ],
+      "volumes": "7 (edição brasileira clássica)",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "sao-paulo-dos-mortos-volume-4",
+      "titulo": "São Paulo dos Mortos - Volume 4",
+      "autores": [
+        "Daniel Esteves",
+        "Sueli Mendes",
+        "Al Stefano"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Horror",
+        "Aventura"
+      ],
+      "volumes": "4",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "castanha-do-para",
+      "titulo": "Castanha do Pará",
+      "autores": [
+        "Gidalti Jr."
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Política/Social",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "duas-vidas",
+      "titulo": "Duas Vidas",
+      "autores": [
+        "Fabien Toulmé"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Existencial",
+        "Aventura"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "maus",
+      "titulo": "Maus",
+      "autores": [
+        "Art Spiegelman"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Coleção",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Histórica",
+        "Memória"
+      ],
+      "volumes": "2 (também existe edição integral)",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": "https://www.viagememquadros.blog.br/2025/06/maus-art-spiegelman.html"
+    },
+    {
+      "id": "devaneios-a-estrada-ate-aqui",
+      "titulo": "Devaneios: A Estrada Até Aqui",
+      "autores": [
+        "Yorhán Araújo"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Coleção",
+      "formatoQuePossuo": [],
+      "temas": [
+        "Humor",
+        "Cotidiano"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "chew-vols-1-6",
+      "titulo": "Chew — vols. 1–6",
+      "autores": [
+        "John Layman",
+        "Rob Guillory"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Humor",
+        "Crime"
+      ],
+      "volumes": "1–6",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "o-soldador-subaquatico",
+      "titulo": "O Soldador Subaquático",
+      "autores": [
+        "Jeff Lemire"
+      ],
+      "pais": "Canadá",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Existencial",
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "o-palhaco-ninja",
+      "titulo": "O Palhaço Ninja",
+      "autores": [
+        "Fran Soares"
+      ],
+      "pais": "",
+      "status": "Já li",
+      "formato": "",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [],
+      "volumes": "",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "o-monstro-debaixo-da-minha-cama",
+      "titulo": "O Monstro debaixo da minha cama",
+      "autores": [
+        "Luckas Iohanathan"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Drama",
+        "Psicológica",
+        "Fantasia"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "talco-de-vidro",
+      "titulo": "Talco de Vidro",
+      "autores": [
+        "Marcello Quintanilha"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Psicológica",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "voce-nao-me-conhece",
+      "titulo": "Você não me conhece",
+      "autores": [
+        "Guilherme de Sousa"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Autobiográfica",
+        "Drama",
+        "Memória"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "paper-girls",
+      "titulo": "Paper Girls",
+      "autores": [
+        "Brian K. Vaughan",
+        "Cliff Chiang"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Ficção científica",
+        "Aventura"
+      ],
+      "volumes": "6",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "fence-vol-1",
+      "titulo": "Fence — Vol. 1",
+      "autores": [
+        "C.S. Pacat",
+        "Johanna the Mad"
+      ],
+      "pais": "Estados Unidos",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Drama",
+        "Romance",
+        "Aventura"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "um-pedaco-de-madeira-e-aco",
+      "titulo": "Um pedaço de madeira e aço",
+      "autores": [
+        "Christophe Chabouté"
+      ],
+      "pais": "França",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Kindle"
+      ],
+      "temas": [
+        "Cotidiano",
+        "Drama",
+        "Experimental"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "diario-de-um-so",
+      "titulo": "Diário de um só",
+      "autores": [
+        "Catalina Bu"
+      ],
+      "pais": "Chile",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Humor",
+        "Cotidiano",
+        "Existencial"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "t-a-t-t-o-o-a-flor-da-pele",
+      "titulo": "T.A.T.T.O.O - A Flor da Pele",
+      "autores": [
+        "André Diniz"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Psicológica",
+        "Existencial",
+        "Drama"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": 2025,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "scott-pilgrim",
+      "titulo": "Scott Pilgrim",
+      "autores": [
+        "Bryan Lee O'Malley"
+      ],
+      "pais": "Canadá",
+      "status": "Já li",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Humor",
+        "Romance",
+        "Aventura"
+      ],
+      "volumes": "6",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    },
+    {
+      "id": "feliz-aniversario-feliz-obituario",
+      "titulo": "Feliz aniversário, feliz obituário",
+      "autores": [
+        "Rafael Calça",
+        "Jefferson Costa"
+      ],
+      "pais": "Brasil",
+      "status": "Já li",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "temas": [
+        "Existencial",
+        "Psicológica",
+        "Crime"
+      ],
+      "volumes": "1",
+      "anoDaLeitura": null,
+      "independente": false,
+      "fonte": "Minha lista",
+      "prioridade": "",
+      "afinidadeSugerida": null,
+      "porQueQueroLer": "",
+      "similarA": "",
+      "observacoes": "",
+      "linkBlog": ""
+    }
+  ]
+}

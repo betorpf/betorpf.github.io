@@ -81,6 +81,7 @@
   @media (max-width:420px){
     .brand{gap:8px}.brand-name{font-size:27px}.brand img{width:30px;height:34px}
     .site-header{gap:12px}.site-nav{gap:16px}.site-nav a,.site-nav button{font-size:13px}
+    .site-nav .nav-projects{display:none}
     .hero-actions{gap:20px}
   }
   @media (max-width:360px){
