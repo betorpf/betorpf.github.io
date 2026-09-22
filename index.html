@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>betorpf — Roberto Passareti Filho</title>
 <meta name="description" content="Roberto Passareti Filho (@betorpf), dev .NET em São Paulo. Projetos, artigos, quadrinhos e board games.">
-<meta name="theme-color" content="#102c26">
+<meta name="theme-color" content="#F7F6F2">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action https://api.web3forms.com; frame-src 'none'; upgrade-insecure-requests">
 
 <meta property="og:type" content="profile">
@@ -23,23 +23,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 
+<script src="assets/js/theme.js"></script>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body>
-<div class="wrap">
+<body class="section-home">
+<div class="container wrap">
 
-  <header class="site-header">
+  <header class="global-header">
     <a class="brand" href="/" aria-label="betorpf — início">
       <img src="assets/logo-b.svg" width="38" height="42" alt="">
       <span class="brand-name">betorpf<span class="brand-dot">.</span></span>
     </a>
-    <nav class="site-nav" aria-label="Navegação principal">
-      <a class="nav-projects" href="#projetos">Projetos</a>
-      <a href="/leituras/">Leituras</a>
-      <a href="/boardgames/">Jogos</a>
-      <button type="button" data-open-contact>Contato</button>
-    </nav>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Navegação principal" data-open="false">
+        <a href="/" aria-current="page">Início</a>
+        <a href="/portfolio/">Projetos</a>
+        <a href="/leituras/">Leituras</a>
+        <a href="/boardgames/">Jogos</a>
+        <button type="button" data-open-contact>Contato</button>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema" aria-pressed="false">◐</button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir navegação" aria-expanded="false">☰</button>
+    </div>
   </header>
 
   <main>
@@ -123,7 +132,7 @@
 
   </main>
 
-  <footer class="bottom">
+  <footer class="global-footer bottom">
     <div class="chips">
       <button class="chip chip--icon" type="button" data-open-contact aria-label="Contato" title="Contato">
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m4 7 8 6 8-6"></path></svg>
@@ -136,7 +145,7 @@
       <a class="chip chip--icon" href="https://substack.com/@betorpf" aria-label="Substack" title="Substack"><img src="assets/icons/social/substack.svg" width="17" height="17" alt=""></a>
       <a class="chip chip--icon chip--kofi" href="https://ko-fi.com/betorpf" aria-label="Me pague um café no Ko-fi" title="Me pague um café"><img src="assets/icons/social/kofi.svg" width="17" height="17" alt=""></a>
     </div>
-    <p class="meta">betorpf · <span id="ano">2026</span></p>
+    <div><p class="footer-brand">betorpf<span class="brand-dot">.</span> · <span id="ano">2026</span></p><p>Código, histórias e boas partidas.</p></div>
   </footer>
 
   <dialog class="contact-modal" id="contato" aria-labelledby="contact-title">
@@ -180,6 +189,7 @@
 
 </div>
 
+<script src="assets/js/site-shell.js" defer></script>
 <script src="assets/site.js" defer></script>
 
 <!-- Analytics: cole aqui o snippet do GoatCounter, Plausible ou Umami quando quiser medir cliques. -->

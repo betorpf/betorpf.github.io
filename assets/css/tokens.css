@@ -1,0 +1,64 @@
+:root {
+  --brand-green: #496B5A;
+  --brand-green-strong: #365345;
+  --brand-green-soft: #DDE8E1;
+  --brand-orange: #C96F3B;
+  --brand-orange-strong: #A95429;
+  --brand-orange-soft: #F4E2D6;
+  --bg: #F7F6F2;
+  --surface: #FFFFFF;
+  --surface-alt: #EFEEE9;
+  --text: #202421;
+  --text-soft: #626963;
+  --text-muted: #858B86;
+  --border: #DDDFDA;
+  --border-strong: #C8CBC5;
+  --brand: var(--brand-green);
+  --brand-hover: var(--brand-green-strong);
+  --secondary: var(--brand-orange);
+  --section-accent: var(--brand);
+  --section-accent-soft: var(--brand-green-soft);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --container: 1180px;
+  --content: 760px;
+  --shadow-sm: 0 1px 2px rgba(24, 31, 27, .05);
+  --shadow-md: 0 8px 28px rgba(24, 31, 27, .08);
+  --font-sans: "IBM Plex Sans", Inter, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", Inter, "Segoe UI", system-ui, sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #151917;
+  --surface: #1D231F;
+  --surface-alt: #252C27;
+  --text: #F0F2EF;
+  --text-soft: #B5BDB7;
+  --text-muted: #8E9891;
+  --border: #323B35;
+  --border-strong: #455048;
+  --brand: #83AD95;
+  --brand-hover: #A1C4AF;
+  --secondary: #E49362;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .18);
+  --shadow-md: 0 10px 32px rgba(0, 0, 0, .24);
+}
+
+.section-home { --section-accent: var(--brand); --section-accent-soft: var(--brand-green-soft); }
+.section-portfolio { --section-accent: #416C87; --section-accent-soft: #DFEAF0; }
+.section-readings { --section-accent: #8A5A44; --section-accent-soft: #EFE2DA; }
+.section-boardgames { --section-accent: #B56D32; --section-accent-soft: #F3E4D4; }
+[data-theme="dark"] .section-portfolio, .section-portfolio[data-theme="dark"] { --section-accent: #78A9C4; --section-accent-soft: #21333D; }
+[data-theme="dark"] .section-readings, .section-readings[data-theme="dark"] { --section-accent: #C88A6C; --section-accent-soft: #382820; }
+[data-theme="dark"] .section-boardgames, .section-boardgames[data-theme="dark"] { --section-accent: #D99A61; --section-accent-soft: #3B2B1F; }

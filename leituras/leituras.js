@@ -5,12 +5,6 @@ const state = {
   dialogOpener: null,
 };
 
-const themeStorageKey = 'leituras-theme';
-const themeColors = {
-  light: '#F4F1E8',
-  dark: '#171A16',
-};
-
 const elements = {
   grid: document.getElementById('book-grid'),
   controls: document.getElementById('controls'),
@@ -29,43 +23,6 @@ const elements = {
 };
 
 const collator = new Intl.Collator('pt-BR', { sensitivity: 'base' });
-
-function setTheme(theme, persist = false) {
-  if (!['light', 'dark'].includes(theme)) return;
-
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.style.colorScheme = theme;
-  document.querySelector('meta[name="theme-color"]').content = themeColors[theme];
-  document.querySelectorAll('[data-theme-choice]').forEach((button) => {
-    button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
-  });
-
-  if (persist) {
-    try {
-      localStorage.setItem(themeStorageKey, theme);
-    } catch (error) {
-      console.warn('Não foi possível salvar a preferência de tema:', error);
-    }
-  }
-}
-
-function initializeThemeSelector() {
-  const currentTheme = document.documentElement.dataset.theme || 'light';
-  setTheme(currentTheme);
-  document.querySelectorAll('[data-theme-choice]').forEach((button) => {
-    button.addEventListener('click', () => setTheme(button.dataset.themeChoice, true));
-  });
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-    let hasSavedTheme = false;
-    try {
-      hasSavedTheme = ['light', 'dark'].includes(localStorage.getItem(themeStorageKey));
-    } catch {
-      hasSavedTheme = false;
-    }
-    if (!hasSavedTheme) setTheme(event.matches ? 'dark' : 'light');
-  });
-}
 
 function normalizeText(value = '') {
   return String(value)
@@ -327,6 +284,8 @@ async function loadData() {
     console.error('Erro ao carregar a biblioteca:', error);
     elements.loading.hidden = true;
     elements.error.hidden = false;
+    elements.empty.hidden = true;
+    elements.grid.replaceChildren();
     elements.controls.hidden = true;
   }
 }
@@ -343,5 +302,4 @@ elements.dialog.addEventListener('close', () => {
   state.activeDialogBook = null;
 });
 
-initializeThemeSelector();
 loadData();

@@ -1,6 +1,4 @@
 const state = { games: [], filteredGames: [], dialogOpener: null };
-const themeStorageKey = 'boardgames-theme';
-const themeColors = { light: '#F7F3E8', dark: '#171A1F' };
 const collator = new Intl.Collator('pt-BR', { sensitivity: 'base' });
 
 const elements = {
@@ -11,16 +9,17 @@ const elements = {
   type: document.getElementById('type-filter'),
   category: document.getElementById('category-filter'),
   sort: document.getElementById('sort'),
-  collectionCount: document.getElementById('collection-count'),
+  totalCount: document.getElementById('total-count'),
+  gamesCount: document.getElementById('games-count'),
+  expansionsCount: document.getElementById('expansions-count'),
   resultCount: document.getElementById('result-count'),
   loading: document.getElementById('loading-state'),
   error: document.getElementById('error-state'),
+  errorMessage: document.getElementById('error-message'),
   empty: document.getElementById('empty-state'),
   dialog: document.getElementById('game-dialog'),
   dialogContent: document.getElementById('dialog-content'),
   dialogClose: document.getElementById('dialog-close'),
-  themeToggle: document.getElementById('theme-toggle'),
-  themeLabel: document.getElementById('theme-label'),
 };
 
 function cleanText(value) {
@@ -49,11 +48,6 @@ function validHttpUrl(value) {
   } catch {
     return null;
   }
-}
-
-function localImagePath(value) {
-  const path = cleanText(value);
-  return path && /^(?:images\/games\/)[a-z0-9][a-z0-9._/-]*$/i.test(path) ? path : null;
 }
 
 function parsePlayerRange(value) {
@@ -95,40 +89,12 @@ function createExternalLink(url, label, className = 'game-link') {
   return link;
 }
 
-function createCover(game) {
-  const imagePath = localImagePath(game.imagem);
-  if (imagePath) {
-    const image = createElement('img', 'game-cover');
-    image.src = imagePath;
-    image.alt = `Capa do jogo ${game.titulo}`;
-    image.loading = 'lazy';
-    image.addEventListener('error', () => {
-      const placeholder = createPlaceholder(game);
-      image.replaceWith(placeholder);
-    }, { once: true });
-    return image;
-  }
-  return createPlaceholder(game);
-}
-
-function createPlaceholder(game) {
-  const choices = ['♟', '⚄', '▰', '⬡'];
-  const charSum = [...cleanText(game.titulo)].reduce((sum, char) => sum + char.charCodeAt(0), 0);
-  const placeholder = createElement('div', `game-cover placeholder placeholder--${charSum % 4}`);
-  placeholder.setAttribute('aria-hidden', 'true');
-  placeholder.append(createElement('span', 'placeholder-symbol', choices[charSum % choices.length]));
-  placeholder.append(createElement('span', 'placeholder-title', cleanText(game.titulo).slice(0, 28)));
-  return placeholder;
-}
-
 function createGameCard(game) {
   const article = createElement('article', 'game-card');
   const main = createElement('button', 'card-main');
   main.type = 'button';
   main.ariaLabel = `Ver detalhes de ${game.titulo}`;
   main.addEventListener('click', () => openGameDetails(game, main));
-  main.append(createCover(game));
-
   const content = createElement('div', 'card-content');
   const badge = getBadgeLabel(game);
   if (badge) content.append(createElement('span', 'type-badge', badge));
@@ -211,8 +177,9 @@ function renderCategoryFilters() {
 }
 
 function updateCollectionCounter() {
-  const total = state.games.length;
-  elements.collectionCount.textContent = `${total} ${total === 1 ? 'item na coleção' : 'itens na coleção'} • Mais do que jogos, são momentos.`;
+  elements.totalCount.textContent = state.games.length;
+  elements.gamesCount.textContent = state.games.filter((game) => gameType(game) === 'Jogo').length;
+  elements.expansionsCount.textContent = state.games.filter((game) => gameType(game) !== 'Jogo').length;
 }
 
 function appendDetail(list, label, value) {
@@ -264,26 +231,6 @@ function closeGameDetails() {
   if (elements.dialog.open) elements.dialog.close();
 }
 
-function getTheme() {
-  return document.documentElement.dataset.theme || 'light';
-}
-
-function setTheme(theme, persist = false) {
-  if (!['light', 'dark'].includes(theme)) return;
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.style.colorScheme = theme;
-  document.querySelector('meta[name="theme-color"]').content = themeColors[theme];
-  elements.themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
-  elements.themeLabel.textContent = theme === 'dark' ? 'Tema claro' : 'Tema escuro';
-  if (persist) {
-    try { localStorage.setItem(themeStorageKey, theme); } catch (error) { console.warn('Não foi possível salvar o tema:', error); }
-  }
-}
-
-function toggleTheme() {
-  setTheme(getTheme() === 'dark' ? 'light' : 'dark', true);
-}
-
 async function loadGames() {
   try {
     const response = await fetch('./boardgames.json');
@@ -301,6 +248,11 @@ async function loadGames() {
     console.error('Erro ao carregar a coleção:', error);
     elements.loading.hidden = true;
     elements.error.hidden = false;
+    elements.empty.hidden = true;
+    elements.grid.replaceChildren();
+    if (window.location.protocol === 'file:') {
+      elements.errorMessage.textContent = 'Abra esta página por um servidor local ou pelo GitHub Pages; navegadores não permitem carregar o JSON diretamente de um arquivo local.';
+    }
   }
 }
 
@@ -309,10 +261,4 @@ elements.controls.addEventListener('change', filterGames);
 elements.dialogClose.addEventListener('click', closeGameDetails);
 elements.dialog.addEventListener('click', (event) => { if (event.target === elements.dialog) closeGameDetails(); });
 elements.dialog.addEventListener('close', () => { state.dialogOpener?.focus(); state.dialogOpener = null; });
-elements.themeToggle.addEventListener('click', toggleTheme);
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-  try { if (!localStorage.getItem(themeStorageKey)) setTheme(event.matches ? 'dark' : 'light'); } catch { setTheme(event.matches ? 'dark' : 'light'); }
-});
-
-setTheme(getTheme());
 loadGames();
