@@ -90,7 +90,7 @@ function createExternalLink(url, label, className = 'game-link') {
 }
 
 function createGameCard(game) {
-  const article = createElement('article', 'game-card');
+  const article = createElement('article', 'collection-card game-card');
   const main = createElement('button', 'card-main');
   main.type = 'button';
   main.ariaLabel = `Ver detalhes de ${game.titulo}`;

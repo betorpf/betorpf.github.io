@@ -102,7 +102,7 @@ function appendPill(container, text, status = false) {
 }
 
 function createBookCard(book) {
-  const article = createElement('article', 'book-card');
+  const article = createElement('article', 'collection-card book-card');
   const main = createElement('button', 'card-main');
   main.type = 'button';
   main.ariaLabel = `Ver detalhes de ${book.titulo}`;
