@@ -5,7 +5,7 @@ main { flex: 1; }
 h1, h2, h3 { font-family: var(--font-display); }
 h1 { max-width: 12ch; margin: 0; font-size: clamp(3rem, 7vw, 5.8rem); line-height: .96; letter-spacing: -.065em; }
 h1 .i { color: var(--brand); }
-.hero-art { width: min(100%, 460px); justify-self: end; border-radius: var(--radius-lg); filter: saturate(.82); }
+.hero-art { width: min(100%, 460px); height: auto; justify-self: end; border-radius: var(--radius-lg); object-fit: contain; filter: saturate(.82); }
 .bio { max-width: 44ch; margin: var(--space-5) 0 0; color: var(--text-soft); font-size: 1.08rem; line-height: 1.65; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
 .primary-link, .secondary-link { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; border-radius: var(--radius-md); font-size: .9rem; font-weight: 700; text-decoration: none; }

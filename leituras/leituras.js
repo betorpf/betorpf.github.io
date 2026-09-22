@@ -39,6 +39,20 @@ function cleanList(value) {
   return Array.isArray(value) ? value.map(cleanText).filter(Boolean) : [];
 }
 
+function normalizeAuthors(value) {
+  if (Array.isArray(value)) return cleanList(value);
+  const author = cleanText(value);
+  return author ? [author] : [];
+}
+
+function getBookThemes(book) {
+  return cleanList(book.temas ?? book.generos);
+}
+
+function getBlogUrl(book) {
+  return validHttpUrl(book.linkBlog ?? book.postViagemEmQuadros);
+}
+
 function getBookType(book) {
   return cleanText(book.tipo) || cleanText(book.formato);
 }
@@ -96,7 +110,7 @@ function createBookCard(book) {
 
   const body = createElement('div', 'card-body');
   body.append(createElement('h3', '', book.titulo));
-  const authors = cleanList(book.autores);
+  const authors = normalizeAuthors(book.autores);
   if (authors.length) body.append(createElement('p', 'authors', authors.join(' & ')));
 
   const facts = createElement('div', 'facts');
@@ -106,7 +120,7 @@ function createBookCard(book) {
   appendPill(facts, getBookType(book));
   if (facts.childElementCount) body.append(facts);
 
-  const themes = cleanList(book.temas).slice(0, 3);
+  const themes = getBookThemes(book).slice(0, 3);
   if (themes.length) {
     const tags = createElement('div', 'tags');
     themes.forEach((theme) => tags.append(createElement('span', 'tag', theme)));
@@ -119,7 +133,7 @@ function createBookCard(book) {
   main.append(body);
   article.append(main);
 
-  const blogUrl = validHttpUrl(book.linkBlog);
+  const blogUrl = getBlogUrl(book);
   if (blogUrl) article.append(createBlogIconLink(blogUrl));
   return article;
 }
@@ -159,8 +173,8 @@ function filterBooks() {
   const filtered = state.books.filter((book) => {
     const searchable = [
       book.titulo,
-      ...cleanList(book.autores),
-      ...cleanList(book.temas),
+      ...normalizeAuthors(book.autores),
+      ...getBookThemes(book),
       book.pais,
       book.editora,
       getBookType(book),
@@ -231,7 +245,7 @@ function openBookDetails(book, opener) {
   title.id = 'dialog-title';
   content.append(title);
 
-  const authors = cleanList(book.autores);
+  const authors = normalizeAuthors(book.autores);
   if (authors.length) content.append(createElement('p', 'dialog-authors', authors.join(' & ')));
   const description = getBookDescription(book);
   if (description) content.append(createElement('p', 'dialog-description', description));
@@ -245,10 +259,10 @@ function openBookDetails(book, opener) {
   appendDetail(details, 'Editora', cleanText(book.editora));
   appendDetail(details, 'Formato', cleanText(book.formato));
   appendDetail(details, 'Volumes', cleanText(book.volumes));
-  appendDetail(details, 'Temas', cleanList(book.temas).join(' · '));
+  appendDetail(details, 'Temas', getBookThemes(book).join(' · '));
   if (details.childElementCount) content.append(details);
 
-  const blogUrl = validHttpUrl(book.linkBlog);
+  const blogUrl = getBlogUrl(book);
   if (blogUrl) {
     const link = createElement('a', 'dialog-blog', 'Ler publicação no blog ↗');
     link.href = blogUrl;
@@ -270,12 +284,13 @@ async function loadData() {
     const response = await fetch('./data/leituras.json');
     if (!response.ok) throw new Error(`HTTP ${response.status} ao carregar leituras.json`);
     const data = await response.json();
-    if (!Array.isArray(data.leituras)) throw new TypeError('O JSON não contém uma lista "leituras" válida.');
+    const books = Array.isArray(data.leituras) ? data.leituras : data.itens;
+    if (!Array.isArray(books)) throw new TypeError('O JSON não contém uma lista de leituras válida.');
 
-    state.books = data.leituras
+    state.books = books
       .filter((book) => book && cleanText(book.titulo))
       .map((book) => ({ ...book, titulo: cleanText(book.titulo) }));
-    renderSummary(data.metadata);
+    renderSummary(data.metadata ?? {});
     renderFilters();
     filterBooks();
     elements.controls.hidden = false;
