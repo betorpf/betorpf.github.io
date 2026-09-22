@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR" data-color-theme="soft-sage" data-mode="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F7F3">
+  <meta name="description" content="Acompanhe sua constância na academia com um toque, calendário e metas semanais. Seus dados ficam no seu navegador.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'">
+  <title>Academia — constância em cada semana</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.mjs"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand-mark" href="../" aria-label="Voltar para betorpf.com.br"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" aria-hidden="true"><path d="M9 16h14M5 11v10M9 9v14M23 9v14M27 11v10"/></svg></a>
+      <div class="app-identity">
+        <p class="eyebrow">SEU RITMO, SUA JORNADA</p>
+        <h1>Academia<span class="title-dot">.</span></h1>
+        <p>Constância hoje, evolução sempre.</p>
+      </div>
+      <button class="icon-button settings-button" id="open-settings" type="button" aria-label="Abrir configurações" title="Configurações">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.99l.06.06-1.77 1.77-.06-.06A1.8 1.8 0 0 0 16 18.4a1.8 1.8 0 0 0-1.5 1.76V21h-5v-.84A1.8 1.8 0 0 0 8 18.4a1.8 1.8 0 0 0-1.99.36l-.06.06-1.77-1.77.06-.06A1.8 1.8 0 0 0 4.6 15a1.8 1.8 0 0 0-1.76-1.5H2v-3h.84A1.8 1.8 0 0 0 4.6 9a1.8 1.8 0 0 0-.36-1.99l-.06-.06 1.77-1.77.06.06A1.8 1.8 0 0 0 8 5.6a1.8 1.8 0 0 0 1.5-1.76V3h5v.84A1.8 1.8 0 0 0 16 5.6a1.8 1.8 0 0 0 1.99-.36l.06-.06 1.77 1.77-.06.06A1.8 1.8 0 0 0 19.4 9a1.8 1.8 0 0 0 1.76 1.5H22v3h-.84A1.8 1.8 0 0 0 19.4 15Z"/></svg>
+      </button>
+    </header>
+
+    <main id="main-content">
+      <section id="view-home" class="view active" aria-labelledby="home-heading">
+        <div class="page-intro">
+          <div><p class="eyebrow">VISÃO GERAL</p><h2 id="home-heading">Um treino de cada vez.</h2></div>
+          <p id="today-label" class="date-pill"></p>
+        </div>
+
+        <section class="weekly-card" aria-labelledby="weekly-title">
+          <div class="weekly-top"><p class="section-kicker" id="weekly-title">ESTA SEMANA</p><span id="weekly-percent" class="percent-badge">0%</span></div>
+          <p class="weekly-count"><strong id="weekly-count">0</strong><span id="weekly-target"> de 4 treinos</span></p>
+          <div class="progress-track" id="weekly-progress" role="progressbar" aria-label="Progresso da meta semanal" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="weekly-bar"></span></div>
+          <p id="weekly-message" class="weekly-message">Sua jornada começa aqui.</p>
+        </section>
+
+        <div class="summary-grid" aria-label="Resumo de treinos">
+          <article class="summary-card"><span class="summary-icon" aria-hidden="true">↗</span><strong id="streak-count">0</strong><span>semanas de<br>constância</span></article>
+          <article class="summary-card"><span class="summary-icon" aria-hidden="true">▦</span><strong id="month-count">0</strong><span>treinos no<br>mês exibido</span></article>
+          <article class="summary-card"><span class="summary-icon" aria-hidden="true">◷</span><strong id="year-count">0</strong><span>treinos em<br><span id="year-label"></span></span></article>
+        </div>
+
+        <button class="today-button" id="today-button" type="button"><span class="today-check" aria-hidden="true">✓</span><span id="today-button-text">Treinei hoje</span><span class="today-arrow" aria-hidden="true">↗</span></button>
+        <p class="today-hint" id="today-hint">Um toque para registrar. O descanso também faz parte.</p>
+
+        <section class="panel calendar-panel" aria-labelledby="calendar-heading">
+          <div class="panel-heading"><div><p class="eyebrow">SEU HISTÓRICO</p><h3 id="calendar-heading">Calendário</h3></div><span class="heading-symbol" aria-hidden="true">✳</span></div>
+          <div class="month-control"><button class="month-arrow" id="previous-month" type="button" aria-label="Mês anterior">‹</button><h4 id="calendar-month"></h4><button class="month-arrow" id="next-month" type="button" aria-label="Próximo mês">›</button></div>
+          <div class="weekday-row" aria-hidden="true"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+          <div class="calendar-grid" id="calendar-grid" aria-label="Dias do mês"></div>
+          <div class="calendar-legend"><span><i class="legend-training"></i> Treino registrado</span><span><i class="legend-today"></i> Hoje</span></div>
+        </section>
+      </section>
+
+      <section id="view-stats" class="view" aria-labelledby="stats-heading" hidden>
+        <div class="page-intro"><div><p class="eyebrow">OLHE O CAMINHO</p><h2 id="stats-heading">Sua constância.</h2></div></div>
+        <div class="segmented" role="group" aria-label="Período das estatísticas"><button type="button" data-period="week">Semana</button><button type="button" data-period="month">Mês</button><button type="button" data-period="year" aria-pressed="true">Ano</button></div>
+        <section class="panel stats-hero" aria-labelledby="stats-period-title"><p class="eyebrow" id="stats-period-title">ESTE ANO</p><p class="stats-big"><strong id="stats-total">0</strong><span>treinos</span></p><p id="stats-subtitle" class="muted"></p></section>
+        <div class="streak-grid"><article class="panel"><p class="eyebrow">SEQUÊNCIA ATUAL</p><strong id="stats-current">0</strong><span>semanas com meta cumprida</span></article><article class="panel"><p class="eyebrow">MELHOR SEQUÊNCIA</p><strong id="stats-best">0</strong><span>semanas com meta cumprida</span></article></div>
+        <section class="panel heatmap-panel" id="heatmap-panel" aria-labelledby="heatmap-heading"><div class="panel-heading"><div><p class="eyebrow">DIA A DIA</p><h3 id="heatmap-heading">Atividade em <span id="heatmap-year"></span></h3></div></div><p class="muted small">Deslize para ver o ano inteiro.</p><div class="heatmap-scroll"><div class="heatmap-months" id="heatmap-months"></div><div class="heatmap-grid" id="heatmap-grid" role="img"></div></div><div class="calendar-legend"><span><i class="legend-training"></i> Treino</span><span><i class="legend-empty"></i> Sem registro</span></div></section>
+        <section class="panel recent-panel" aria-labelledby="recent-heading"><div class="panel-heading"><div><p class="eyebrow">RITMO RECENTE</p><h3 id="recent-heading">Últimas 12 semanas</h3></div></div><div class="recent-grid" id="recent-weeks"></div></section>
+      </section>
+
+      <section id="view-history" class="view" aria-labelledby="history-heading" hidden><div class="page-intro"><div><p class="eyebrow">CADA DIA CONTA</p><h2 id="history-heading">Histórico.</h2></div></div><p class="muted intro-copy">Se precisar corrigir um registro, remova aqui ou toque no dia pelo calendário.</p><div id="history-list" class="history-list"></div></section>
+
+      <section id="view-backup" class="view" aria-labelledby="backup-heading" hidden><div class="page-intro"><div><p class="eyebrow">SEUS DADOS</p><h2 id="backup-heading">Backup.</h2></div></div><section class="panel backup-panel"><span class="backup-icon" aria-hidden="true">⇩</span><h3>Leve seu progresso com você.</h3><p>Os treinos ficam guardados neste navegador. Exporte um arquivo para salvar uma cópia ou restaurar em outro dispositivo.</p><div class="backup-actions"><button id="export-button" class="button-primary" type="button">Exportar JSON</button><button id="import-button" class="button-secondary" type="button">Importar JSON</button></div><input id="import-file" type="file" accept=".json,application/json" hidden></section><p class="privacy-note">Sem conta e sem sincronização automática. Guarde seu backup em um lugar seguro.</p></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegação do aplicativo"><button type="button" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span>Início</button><button type="button" data-view="stats"><span aria-hidden="true">▥</span>Estatísticas</button><button type="button" data-view="history"><span aria-hidden="true">◷</span>Histórico</button><button type="button" data-view="backup"><span aria-hidden="true">⇩</span>Backup</button></nav>
+  </div>
+
+  <dialog id="settings-dialog" class="app-dialog" aria-labelledby="settings-title"><div class="dialog-header"><div><p class="eyebrow">DO SEU JEITO</p><h2 id="settings-title">Configurações</h2></div><button type="button" class="dialog-close" data-close="settings-dialog" aria-label="Fechar configurações">×</button></div><div class="dialog-body"><section class="setting-group"><h3>Meta semanal</h3><p>Quantos dias você quer treinar por semana?</p><div class="goal-stepper"><button id="goal-minus" type="button" aria-label="Diminuir meta semanal">−</button><output id="goal-value" aria-live="polite">4</output><button id="goal-plus" type="button" aria-label="Aumentar meta semanal">+</button><span>treinos por semana</span></div></section><section class="setting-group"><h3>Tema</h3><div class="choice-grid" id="theme-choices"><button type="button" data-theme-mode="auto">Automático</button><button type="button" data-theme-mode="light">Claro</button><button type="button" data-theme-mode="dark">Escuro</button></div></section><section class="setting-group"><h3>Escolha seu estilo</h3><div class="style-choices" id="style-choices"><button type="button" data-color-style="soft-sage"><i class="swatch sage"></i>Soft Sage</button><button type="button" data-color-style="cloudy-sky"><i class="swatch sky"></i>Cloudy Sky</button><button type="button" data-color-style="lemon-chiffon"><i class="swatch lemon"></i>Lemon Chiffon</button><button type="button" data-color-style="cyprus"><i class="swatch cyprus"></i>Cyprus</button><button type="button" data-color-style="vulcanico"><i class="swatch vulcanico"></i>Vulcanico</button></div></section></div><div class="dialog-footer"><button type="button" class="button-primary" data-close="settings-dialog">Concluir</button></div></dialog>
+
+  <dialog id="confirm-dialog" class="app-dialog confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-header"><h2 id="confirm-title"></h2><button type="button" class="dialog-close" data-close="confirm-dialog" aria-label="Cancelar">×</button></div><p id="confirm-message"></p><div class="dialog-footer"><button type="button" class="button-secondary" data-close="confirm-dialog">Cancelar</button><button type="button" class="button-primary" id="confirm-action">Confirmar</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
