@@ -88,7 +88,7 @@ function renderCalendar() {
   $('#next-month').disabled = year === new Date().getFullYear() && month === new Date().getMonth();
   const grid = $('#calendar-grid');
   grid.replaceChildren();
-  const offset = (displayedMonth.getDay() + 6) % 7;
+  const offset = displayedMonth.getDay();
   for (let index = 0; index < offset; index++) grid.append(document.createElement('span'));
   const days = new Date(year, month + 1, 0).getDate();
   for (let day = 1; day <= days; day++) {
@@ -120,16 +120,16 @@ function renderHeatmap(dates, today) {
   labels.style.gridTemplateColumns = `repeat(${weeks}, 14px)`;
   grid.setAttribute('aria-label', `${countYear(dates, year)} treinos registrados em ${year}. Cada célula representa um dia.`);
   for (let index = 0; index < weeks; index++) {
-    const monday = addDays(start, index * 7);
+    const sunday = addDays(start, index * 7);
     for (let offset = 0; offset < 7; offset++) {
-      const date = addDays(monday, offset);
+      const date = addDays(sunday, offset);
       const key = localDateKey(date);
       const cell = document.createElement('span');
       cell.className = `heatmap-day${date.getFullYear() !== year ? ' is-outside' : ''}${dates.has(key) ? ' is-trained' : ''}${key > localDateKey(today) ? ' is-future' : ''}`;
       cell.title = `${date.toLocaleDateString('pt-BR')}: ${dates.has(key) ? 'treino' : 'sem registro'}`;
       grid.append(cell);
     }
-    const monthStart = Array.from({ length: 7 }, (_, offset) => addDays(monday, offset)).find(date => date.getFullYear() === year && date.getDate() === 1);
+    const monthStart = Array.from({ length: 7 }, (_, offset) => addDays(sunday, offset)).find(date => date.getFullYear() === year && date.getDate() === 1);
     if (monthStart) {
       const label = document.createElement('span');
       label.style.gridColumn = index + 1;

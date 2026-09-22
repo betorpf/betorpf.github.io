@@ -13,7 +13,9 @@ test('datas locais, ano bissexto e semanas que cruzam o ano', () => {
   assert.equal(localDateKey(at('2024-02-29')), '2024-02-29');
   assert.equal(validDateKey('2024-02-29'), true);
   assert.equal(validDateKey('2025-02-29'), false);
-  assert.equal(localDateKey(weekStart(at('2027-01-01'))), '2026-12-28');
+  assert.equal(localDateKey(weekStart(at('2027-01-01'))), '2026-12-27');
+  assert.equal(localDateKey(weekStart(at('2027-01-03'))), '2027-01-03');
+  assert.equal(localDateKey(weekStart(at('2027-01-04'))), '2027-01-03');
 });
 
 test('registro único por dia, sem datas futuras', () => {
@@ -26,7 +28,8 @@ test('registro único por dia, sem datas futuras', () => {
 
 test('contagens semanais, mensais e anuais atravessam períodos corretamente', () => {
   const dates = workoutDates(withDates('2026-12-28', '2026-12-31', '2027-01-01', '2027-01-03'));
-  assert.equal(countWeek(dates, at('2027-01-01')), 4);
+  assert.equal(countWeek(dates, at('2027-01-01')), 3);
+  assert.equal(countWeek(dates, at('2027-01-03')), 1);
   assert.equal(countMonth(dates, 2026, 11), 2);
   assert.equal(countYear(dates, 2027), 2);
 });
@@ -39,7 +42,7 @@ test('sequência atual ignora semana em curso incompleta e melhor sequência inc
   assert.deepEqual(consistency(dates, 2, at('2026-09-16')), { current: 3, best: 3 });
   const weeks = lastWeeks(dates, 2, at('2026-09-16'));
   assert.equal(weeks.length, 12);
-  assert.deepEqual(weeks.at(-1), { start: '2026-09-14', count: 2, reached: true });
+  assert.deepEqual(weeks.at(-1), { start: '2026-09-13', count: 2, reached: true });
   const withGap = workoutDates(withDates('2026-08-31', '2026-09-01', '2026-09-14', '2026-09-15'));
   assert.deepEqual(consistency(withGap, 2, at('2026-09-23')), { current: 1, best: 1 });
 });

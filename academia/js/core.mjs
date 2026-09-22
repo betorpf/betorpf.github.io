@@ -28,7 +28,7 @@ export function addDays(date, days) {
 }
 
 export function weekStart(date) {
-  return addDays(date, -((date.getDay() + 6) % 7));
+  return addDays(date, -date.getDay());
 }
 
 export function validateBackup(value, today = new Date()) {
