@@ -8,6 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'">
   <title>Academia — constância em cada semana</title>
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="themes.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="js/app.mjs"></script>
 </head>
@@ -47,6 +48,7 @@
 
         <button class="today-button" id="today-button" type="button"><span class="today-check" aria-hidden="true">✓</span><span id="today-button-text">Treinei hoje</span><span class="today-arrow" aria-hidden="true">↗</span></button>
         <p class="today-hint" id="today-hint">Um toque para registrar. O descanso também faz parte.</p>
+        <button class="other-date-button" id="other-date-button" type="button"><span aria-hidden="true">＋</span> Registrar outra data</button>
 
         <section class="panel calendar-panel" aria-labelledby="calendar-heading">
           <div class="panel-heading"><div><p class="eyebrow">SEU HISTÓRICO</p><h3 id="calendar-heading">Calendário</h3></div><span class="heading-symbol" aria-hidden="true">✳</span></div>
@@ -74,7 +76,27 @@
     <nav class="bottom-nav" aria-label="Navegação do aplicativo"><button type="button" data-view="home" aria-current="page"><span aria-hidden="true">⌂</span>Início</button><button type="button" data-view="stats"><span aria-hidden="true">▥</span>Estatísticas</button><button type="button" data-view="history"><span aria-hidden="true">◷</span>Histórico</button><button type="button" data-view="backup"><span aria-hidden="true">⇩</span>Backup</button></nav>
   </div>
 
-  <dialog id="settings-dialog" class="app-dialog" aria-labelledby="settings-title"><div class="dialog-header"><div><p class="eyebrow">DO SEU JEITO</p><h2 id="settings-title">Configurações</h2></div><button type="button" class="dialog-close" data-close="settings-dialog" aria-label="Fechar configurações">×</button></div><div class="dialog-body"><section class="setting-group"><h3>Meta semanal</h3><p>Quantos dias você quer treinar por semana?</p><div class="goal-stepper"><button id="goal-minus" type="button" aria-label="Diminuir meta semanal">−</button><output id="goal-value" aria-live="polite">4</output><button id="goal-plus" type="button" aria-label="Aumentar meta semanal">+</button><span>treinos por semana</span></div></section><section class="setting-group"><h3>Tema</h3><div class="choice-grid" id="theme-choices"><button type="button" data-theme-mode="auto">Automático</button><button type="button" data-theme-mode="light">Claro</button><button type="button" data-theme-mode="dark">Escuro</button></div></section><section class="setting-group"><h3>Escolha seu estilo</h3><div class="style-choices" id="style-choices"><button type="button" data-color-style="soft-sage"><i class="swatch sage"></i>Soft Sage</button><button type="button" data-color-style="cloudy-sky"><i class="swatch sky"></i>Cloudy Sky</button><button type="button" data-color-style="lemon-chiffon"><i class="swatch lemon"></i>Lemon Chiffon</button><button type="button" data-color-style="cyprus"><i class="swatch cyprus"></i>Cyprus</button><button type="button" data-color-style="vulcanico"><i class="swatch vulcanico"></i>Vulcanico</button></div></section></div><div class="dialog-footer"><button type="button" class="button-primary" data-close="settings-dialog">Concluir</button></div></dialog>
+  <dialog id="settings-dialog" class="app-dialog" aria-labelledby="settings-title">
+    <div class="dialog-header"><div><p class="eyebrow">DO SEU JEITO</p><h2 id="settings-title">Configurações</h2></div><button type="button" class="dialog-close" data-close="settings-dialog" aria-label="Fechar configurações">×</button></div>
+    <div class="dialog-body">
+      <section class="setting-group"><h3>Meta semanal</h3><p>Quantos dias você quer treinar por semana?</p><div class="goal-stepper"><button id="goal-minus" type="button" aria-label="Diminuir meta semanal">−</button><output id="goal-value" aria-live="polite">4</output><button id="goal-plus" type="button" aria-label="Aumentar meta semanal">+</button><span>treinos por semana</span></div></section>
+      <section class="setting-group"><h3>Tema</h3><div class="choice-grid" id="theme-choices"><button type="button" data-theme-mode="auto">Automático</button><button type="button" data-theme-mode="light">Claro</button><button type="button" data-theme-mode="dark">Escuro</button></div></section>
+      <section class="setting-group">
+        <h3>Escolha seu estilo</h3>
+        <div class="style-choices" id="style-choices">
+          <button type="button" data-color-style="soft-sage"><span class="style-card-title">Soft Sage<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" data-color-style="cloudy-sky"><span class="style-card-title">Cloudy Sky<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" data-color-style="lemon-chiffon"><span class="style-card-title">Lemon Chiffon<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" data-color-style="cyprus"><span class="style-card-title">Cyprus<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" data-color-style="vulcanico"><span class="style-card-title">Vulcanico<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+          <button type="button" data-color-style="cactus"><span class="style-card-title">Cactus<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" data-color-style="mediterranean"><span class="style-card-title">Mediterranean<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button type="button" data-color-style="glacier-red"><span class="style-card-title">Glacier Red<span class="style-card-check" aria-hidden="true">✓</span></span><span class="palette-samples" aria-hidden="true"><i></i><i></i></span></button>
+        </div>
+      </section>
+    </div>
+    <div class="dialog-footer"><button type="button" class="button-primary" data-close="settings-dialog">Concluir</button></div>
+  </dialog>
 
   <dialog id="confirm-dialog" class="app-dialog confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-header"><h2 id="confirm-title"></h2><button type="button" class="dialog-close" data-close="confirm-dialog" aria-label="Cancelar">×</button></div><p id="confirm-message"></p><div class="dialog-footer"><button type="button" class="button-secondary" data-close="confirm-dialog">Cancelar</button><button type="button" class="button-primary" id="confirm-action">Confirmar</button></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>

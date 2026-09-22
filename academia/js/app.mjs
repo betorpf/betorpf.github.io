@@ -62,6 +62,7 @@ function renderDashboard() {
   $('#weekly-count').textContent = weekCount;
   $('#weekly-target').textContent = ` de ${goal} ${goal === 1 ? 'treino' : 'treinos'}`;
   $('#weekly-percent').textContent = `${Math.min(percent, 100)}%${weekCount > goal ? '+' : ''}`;
+  $('.weekly-card').classList.toggle('is-achieved', weekCount >= goal);
   $('#weekly-progress').setAttribute('aria-valuemax', goal);
   $('#weekly-progress').setAttribute('aria-valuenow', Math.min(weekCount, goal));
   $('#weekly-progress').setAttribute('aria-valuetext', `${weekCount} de ${goal} treinos`);
@@ -254,6 +255,12 @@ $('#today-button').addEventListener('click', () => {
   const today = localDateKey();
   if (workoutDates(data).has(today)) confirmAction('Remover o treino de hoje?', 'Esse registro será retirado do seu histórico.', 'Remover', () => update(toggleWorkout(data, today), 'Treino de hoje removido.'));
   else update(toggleWorkout(data, today), 'Treino de hoje registrado!');
+});
+$('#other-date-button').addEventListener('click', () => {
+  const heading = $('#calendar-heading');
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+  $('.calendar-panel').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
 });
 $('#calendar-grid').addEventListener('click', event => {
   const button = event.target.closest('[data-date]');

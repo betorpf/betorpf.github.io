@@ -1,5 +1,5 @@
 export const STORAGE_KEY = 'academiaTrackerData';
-export const COLOR_STYLES = ['soft-sage', 'cloudy-sky', 'lemon-chiffon', 'cyprus', 'vulcanico'];
+export const COLOR_STYLES = ['soft-sage', 'cloudy-sky', 'lemon-chiffon', 'cyprus', 'vulcanico', 'cactus', 'mediterranean', 'glacier-red'];
 export const THEME_MODES = ['auto', 'light', 'dark'];
 
 export function defaultData() {

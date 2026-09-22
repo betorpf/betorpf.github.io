@@ -1,0 +1,143 @@
+:root {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  color-scheme: light;
+  --background: #F5F7F3;
+  --surface: #FFFFFF;
+  --surface-alt: #E8EEE5;
+  --primary: #78956F;
+  --primary-soft: #ACC8A2;
+  --primary-strong: #5A7652;
+  --accent: #416C37;
+  --success: #78956F;
+  --text: #172017;
+  --text-secondary: #667066;
+  --empty: #E3E8E1;
+  --border: #DDE5D9;
+  --on-primary: #172017;
+  --shadow: 0 10px 34px rgba(22, 35, 19, .055);
+}
+
+html[data-mode="dark"] { color-scheme: dark; --shadow: none; }
+
+html[data-color-theme="soft-sage"][data-mode="dark"] {
+  --background: #10160F; --surface: #1A2517; --surface-alt: #22301F;
+  --primary: #ACC8A2; --primary-soft: #8FC583; --primary-strong: #A3D796;
+  --accent: #A3D796; --success: #ACC8A2;
+  --text: #F1F5EF; --text-secondary: #AAB5A7; --empty: #354032;
+  --border: #354531; --on-primary: #172017;
+}
+
+html[data-color-theme="cloudy-sky"][data-mode="light"] {
+  --background: #F4F8FB; --surface: #FFFFFF; --surface-alt: #E6F0F6;
+  --primary: #2872A1; --primary-soft: #CBDDE9; --primary-strong: #21658D;
+  --accent: #21658D; --success: #2872A1;
+  --text: #142531; --text-secondary: #607582; --empty: #DFE8ED;
+  --border: #D5E4ED; --on-primary: #FFFFFF;
+}
+html[data-color-theme="cloudy-sky"][data-mode="dark"] {
+  --background: #091722; --surface: #102536; --surface-alt: #173348;
+  --primary: #52A7DE; --primary-soft: #2872A1; --primary-strong: #52A7DE;
+  --accent: #7CC4F0; --success: #52A7DE;
+  --text: #EDF7FC; --text-secondary: #A9C1D0; --empty: #294153;
+  --border: #2A4658; --on-primary: #071A26;
+}
+
+html[data-color-theme="lemon-chiffon"][data-mode="light"] {
+  --background: #FFFDF0; --surface: #FFFFFF; --surface-alt: #FEFACD;
+  --primary: #5F4A8B; --primary-soft: #E8DFF5; --primary-strong: #5F4A8B;
+  --accent: #5F4A8B; --success: #5F4A8B;
+  --text: #292332; --text-secondary: #70677C; --empty: #EEEAD8;
+  --border: #E8E2CA; --on-primary: #FFFFFF;
+}
+html[data-color-theme="lemon-chiffon"][data-mode="dark"] {
+  --background: #171321; --surface: #241C35; --surface-alt: #302344;
+  --primary: #A985E4; --primary-soft: #5F4A8B; --primary-strong: #A985E4;
+  --accent: #C7A9F5; --success: #A985E4;
+  --text: #FFFBE4; --text-secondary: #C8BCD6; --empty: #413650;
+  --border: #483859; --on-primary: #21162F;
+}
+
+html[data-color-theme="cyprus"][data-mode="light"] {
+  --background: #F5F3ED; --surface: #FFFFFF; --surface-alt: #F0EDE4;
+  --primary: #004741; --primary-soft: #C7D9D4; --primary-strong: #004741;
+  --accent: #004741; --success: #004741;
+  --text: #16302D; --text-secondary: #65736F; --empty: #E2E0D8;
+  --border: #DEDCD2; --on-primary: #FFFFFF;
+}
+html[data-color-theme="cyprus"][data-mode="dark"] {
+  --background: #002B28; --surface: #004741; --surface-alt: #075A53;
+  --primary: #F0EDE4; --primary-soft: #DAD6C9; --primary-strong: #F0EDE4;
+  --accent: #F0EDE4; --success: #F0EDE4;
+  --text: #F7F4EC; --text-secondary: #C4CEC9; --empty: #27645F;
+  --border: #33716A; --on-primary: #073B36;
+}
+
+html[data-color-theme="vulcanico"][data-mode="light"] {
+  --background: #F8F5F2; --surface: #FFFFFF; --surface-alt: #FFF0EA;
+  --primary: #FF4103; --primary-soft: #FFD3C5; --primary-strong: #C73200;
+  --accent: #C73200; --success: #FF4103;
+  --text: #001621; --text-secondary: #59666C; --empty: #E7E4E1;
+  --border: #E9DDD6; --on-primary: #001621;
+}
+html[data-color-theme="vulcanico"][data-mode="dark"] {
+  --background: #000E15; --surface: #001621; --surface-alt: #082532;
+  --primary: #FF4103; --primary-soft: #FF7950; --primary-strong: #FF7950;
+  --accent: #FF7950; --success: #FF4103;
+  --text: #F6F8F9; --text-secondary: #A7B3B8; --empty: #263943;
+  --border: #29404D; --on-primary: #001621;
+}
+
+html[data-color-theme="cactus"][data-mode="light"] {
+  --background: #F5FAFC; --surface: #FFFFFF; --surface-alt: #E7F5FA;
+  --primary: #1786B4; --primary-soft: #55C8EE; --primary-strong: #0D668D;
+  --accent: #FF791A; --success: #55C8EE;
+  --text: #102A36; --text-secondary: #607984; --empty: #DDECF1;
+  --border: #CDE6EF; --on-primary: #001018;
+}
+html[data-color-theme="cactus"][data-mode="dark"] {
+  --background: #071820; --surface: #0D2935; --surface-alt: #123A49;
+  --primary: #55C8EE; --primary-soft: #1786B4; --primary-strong: #55C8EE;
+  --accent: #FF8B36; --success: #55C8EE;
+  --text: #F1FAFD; --text-secondary: #A9C6D1; --empty: #294A57;
+  --border: #2D5362; --on-primary: #071820;
+}
+
+html[data-color-theme="mediterranean"][data-mode="light"] {
+  --background: #FFF9EB; --surface: #FFFFFF; --surface-alt: #FFE8B2;
+  --primary: #718F62; --primary-soft: #91B47F; --primary-strong: #536E47;
+  --accent: #AD361F; --success: #718F62;
+  --text: #293225; --text-secondary: #6C7566; --empty: #EAE5D6;
+  --border: #E6DDC6; --on-primary: #101D0B;
+}
+html[data-color-theme="mediterranean"][data-mode="dark"] {
+  --background: #11180F; --surface: #1D2919; --surface-alt: #293824;
+  --primary: #A8CB97; --primary-soft: #91B47F; --primary-strong: #A8CB97;
+  --accent: #E36B52; --success: #A8CB97;
+  --text: #FFF5DE; --text-secondary: #C8CDBE; --empty: #3B4935;
+  --border: #405339; --on-primary: #182511;
+}
+
+html[data-color-theme="glacier-red"][data-mode="light"] {
+  --background: #F5F9FC; --surface: #FFFFFF; --surface-alt: #E6F2F8;
+  --primary: #720117; --primary-soft: #97C4DE; --primary-strong: #720117;
+  --accent: #A51D37; --success: #720117;
+  --text: #24151A; --text-secondary: #6E6267; --empty: #DEE8ED;
+  --border: #D9E5EB; --on-primary: #FFFFFF;
+}
+html[data-color-theme="glacier-red"][data-mode="dark"] {
+  --background: #100D11; --surface: #1D171B; --surface-alt: #2A2025;
+  --primary: #97C4DE; --primary-soft: #6A9FBE; --primary-strong: #97C4DE;
+  --accent: #A51D37; --success: #97C4DE;
+  --text: #F5F7F8; --text-secondary: #BDB4B8; --empty: #40343A;
+  --border: #4B3E44; --on-primary: #100D11;
+}
+
+.style-choices [data-color-style="soft-sage"] { --sample-1: #ACC8A2; --sample-2: #1A2517; }
+.style-choices [data-color-style="cloudy-sky"] { --sample-1: #CBDDE9; --sample-2: #2872A1; }
+.style-choices [data-color-style="lemon-chiffon"] { --sample-1: #FEFACD; --sample-2: #5F4A8B; }
+.style-choices [data-color-style="cyprus"] { --sample-1: #004741; --sample-2: #F0EDE4; }
+.style-choices [data-color-style="vulcanico"] { --sample-1: #FF4103; --sample-2: #001621; }
+.style-choices [data-color-style="cactus"] { --sample-1: #1786B4; --sample-2: #55C8EE; --sample-3: #FF791A; }
+.style-choices [data-color-style="mediterranean"] { --sample-1: #91B47F; --sample-2: #AD361F; --sample-3: #FFE8B2; }
+.style-choices [data-color-style="glacier-red"] { --sample-1: #97C4DE; --sample-2: #720117; }

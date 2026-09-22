@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  defaultData, localDateKey, validDateKey, dateFromKey, weekStart,
+  COLOR_STYLES, defaultData, localDateKey, validDateKey, dateFromKey, weekStart,
   validateBackup, toggleWorkout, workoutDates, countWeek, countMonth,
   countYear, lastWeeks, consistency, saveData, loadData, STORAGE_KEY
 } from '../js/core.mjs';
@@ -24,6 +24,20 @@ test('registro único por dia, sem datas futuras', () => {
   assert.deepEqual(added.workouts, [{ date: '2026-09-22' }]);
   assert.deepEqual(toggleWorkout(added, '2026-09-22', today).workouts, []);
   assert.throws(() => toggleWorkout(added, '2026-09-23', today));
+});
+
+test('lançamento retroativo atualiza todas as contagens sem duplicar treinos', () => {
+  const today = at('2026-09-22');
+  const original = withDates('2026-09-20');
+  const updated = toggleWorkout(original, '2026-09-21', today);
+  const dates = workoutDates(updated);
+  assert.equal(original.workouts.length, 1);
+  assert.equal(countWeek(dates, today), 2);
+  assert.equal(countMonth(dates, 2026, 8), 2);
+  assert.equal(countYear(dates, 2026), 2);
+  assert.deepEqual(consistency(dates, 2, today), { current: 1, best: 1 });
+  assert.deepEqual(lastWeeks(dates, 2, today, 1), [{ start: '2026-09-20', count: 2, reached: true }]);
+  assert.deepEqual(toggleWorkout(updated, '2026-09-21', today).workouts, original.workouts);
 });
 
 test('contagens semanais, mensais e anuais atravessam períodos corretamente', () => {
@@ -59,4 +73,18 @@ test('backup inválido não altera dados persistidos', () => {
   assert.throws(() => validateBackup({ ...original, version: 2 }, at('2026-09-22')));
   assert.throws(() => validateBackup({ ...original, workouts: [{ date: '2026-02-30' }] }, at('2026-09-22')));
   assert.throws(() => validateBackup({ ...original, workouts: [{ date: '2026-09-23' }] }, at('2026-09-22')));
+});
+
+test('as oito paletas são válidas no backup sem alterar treinos', () => {
+  assert.equal(COLOR_STYLES.length, 8);
+  for (const colorStyle of COLOR_STYLES) {
+    const source = withDates('2026-09-20');
+    source.settings.colorStyle = colorStyle;
+    const restored = validateBackup(source, at('2026-09-22'));
+    assert.equal(restored.settings.colorStyle, colorStyle);
+    assert.deepEqual(restored.workouts, [{ date: '2026-09-20' }]);
+  }
+  const invalid = withDates('2026-09-20');
+  invalid.settings.colorStyle = 'unknown';
+  assert.throws(() => validateBackup(invalid, at('2026-09-22')));
 });
