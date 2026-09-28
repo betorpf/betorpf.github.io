@@ -290,7 +290,7 @@ async function loadData() {
     state.books = books
       .filter((book) => book && cleanText(book.titulo))
       .map((book) => ({ ...book, titulo: cleanText(book.titulo) }));
-    renderSummary(data.metadata ?? {});
+    renderSummary({ ultimaAtualizacao: data.versao, ...data.metadata });
     renderFilters();
     filterBooks();
     elements.controls.hidden = false;
@@ -306,7 +306,9 @@ async function loadData() {
 }
 
 elements.controls.addEventListener('input', filterBooks);
-elements.controls.addEventListener('change', filterBooks);
+elements.controls.addEventListener('change', (event) => {
+  if (event.target !== elements.search) filterBooks();
+});
 elements.dialogClose.addEventListener('click', closeBookDetails);
 elements.dialog.addEventListener('click', (event) => {
   if (event.target === elements.dialog) closeBookDetails();

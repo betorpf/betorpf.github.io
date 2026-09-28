@@ -1,2 +1,48 @@
 .section-boardgames .type-badge { color: var(--section-accent); background: var(--section-accent-soft); }
 .section-boardgames .quick-facts { font-weight: 600; }
+
+.game-card .card-main { display: flex; align-items: flex-start; gap: var(--space-4); }
+.game-card .card-content { min-width: 0; flex: 1; }
+.game-card .type-badge { margin-bottom: var(--space-2); }
+.game-card__visual, .game-modal__visual {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--section-accent-soft);
+  color: var(--section-accent);
+}
+.game-card__visual svg { display: block; width: 48px; height: 48px; }
+.game-visual--fallback { font-size: 2rem; }
+.game-card__description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--text-soft);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.game-card__base-game { display: block; margin-bottom: var(--space-3); color: var(--text-muted); font-size: .8rem; }
+.game-card__details { display: block; margin-top: var(--space-4); color: var(--section-accent); font-size: .82rem; font-weight: 700; }
+.game-modal__header { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-4); }
+.game-modal__heading { min-width: 0; }
+.game-modal__heading .dialog-title { margin-bottom: 0; overflow-wrap: anywhere; }
+.game-modal__visual { width: 96px; height: 96px; border-radius: var(--radius-lg); }
+.game-modal__visual svg { display: block; width: 64px; height: 64px; }
+.game-modal__description { margin: 0 0 var(--space-5); color: var(--text-soft); font-size: 1rem; line-height: 1.6; }
+@media (max-width: 600px) {
+  .game-card__description { -webkit-line-clamp: 2; }
+}
+@media (max-width: 520px) {
+  .game-card .card-main { gap: var(--space-3); }
+  .game-card__visual { width: 56px; height: 56px; }
+  .game-card__visual svg { width: 38px; height: 38px; }
+  .game-modal__header { align-items: flex-start; }
+  .game-modal__visual { width: 72px; height: 72px; }
+  .game-modal__visual svg { width: 48px; height: 48px; }
+}

@@ -1,8 +1,25 @@
 {
-  "versao": "2026-09-22",
+  "versao": "2026-09-27",
   "fonte": "Biblioteca de Graphic Novels - Notion",
-  "total": 89,
+  "total": 103,
   "itens": [
+    {
+      "titulo": "100 Bullets",
+      "autores": "Brian Azzarello, Eduardo Risso",
+      "generos": [
+        "Crime",
+        "Mistério",
+        "Drama"
+      ],
+      "status": "Backlog",
+      "volumes": null,
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "pais": "Estados Unidos",
+      "porQueQueroLer": "Quero ler pelo DC Universe Infinite.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
     {
       "titulo": "A Adoção",
       "autores": "Zidrou & Arno Monin",
@@ -89,6 +106,27 @@
       "porQueQueroLer": null,
       "similarA": null,
       "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "A Fuga",
+      "autores": "Grégory Mardon",
+      "generos": [
+        "Drama",
+        "Existencial",
+        "Cotidiano"
+      ],
+      "status": "Já li",
+      "volumes": "1",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "França",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026,
+      "observacoes": "Edição brasileira da HQueria, 2024, 226 páginas, ISBN 9786560251441. Título original: L’échappée (Futuropolis, 2015)."
     },
     {
       "titulo": "A Odisseia de Hakim — vols. 1–3",
@@ -284,7 +322,8 @@
       "pais": "Brasil",
       "porQueQueroLer": null,
       "similarA": null,
-      "postViagemEmQuadros": null
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
     },
     {
       "titulo": "Building Stories",
@@ -514,7 +553,8 @@
       "pais": "Chile",
       "porQueQueroLer": null,
       "similarA": null,
-      "postViagemEmQuadros": null
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
     },
     {
       "titulo": "Dois Irmãos",
@@ -659,6 +699,23 @@
       "postViagemEmQuadros": null
     },
     {
+      "titulo": "Fables",
+      "autores": "Bill Willingham e vários artistas",
+      "generos": [
+        "Fantasia",
+        "Drama",
+        "Aventura"
+      ],
+      "status": "Backlog",
+      "volumes": null,
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "pais": "Estados Unidos",
+      "porQueQueroLer": "Quero ler pelo DC Universe Infinite.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
       "titulo": "Feliz aniversário, feliz obituário",
       "autores": "Rafael Calça & Jefferson Costa",
       "generos": [
@@ -730,6 +787,23 @@
       "postViagemEmQuadros": null
     },
     {
+      "titulo": "Hellblazer",
+      "autores": "Vários autores e artistas",
+      "generos": [
+        "Horror",
+        "Fantasia",
+        "Drama"
+      ],
+      "status": "Lendo",
+      "volumes": "Leitura parcial",
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "pais": "Reino Unido",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
       "titulo": "Indivisível",
       "autores": "Marília Marz",
       "generos": [
@@ -744,6 +818,28 @@
       "porQueQueroLer": "Memória negra e transformação urbana de São Paulo.",
       "similarA": null,
       "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "Inesquecíveis Vol 2",
+      "autores": "Fabien Toulmé",
+      "generos": [
+        "Biográfica",
+        "Drama",
+        "Política/Social",
+        "Memória"
+      ],
+      "status": "Já li",
+      "volumes": "Volume 2",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "França",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026,
+      "observacoes": "Edição brasileira da Nemo, 2025, 152 páginas, ISBN 9788582866610. Reúne cinco histórias reais sobre trauma, identidade, violência, envelhecimento e guerra."
     },
     {
       "titulo": "Intrusos",
@@ -793,6 +889,25 @@
       "formato": "Coleção",
       "formatoQuePossuo": [],
       "pais": "Brasil",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "Kick-Ass — Vol. 1",
+      "autores": "Mark Millar & John Romita Jr.",
+      "generos": [
+        "Aventura",
+        "Crime",
+        "Humor"
+      ],
+      "status": "Já li",
+      "volumes": "Volume 1 possuído; volume 1 lido",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "Estados Unidos",
       "porQueQueroLer": null,
       "similarA": null,
       "postViagemEmQuadros": null
@@ -887,6 +1002,24 @@
       "postViagemEmQuadros": null
     },
     {
+      "titulo": "Matei Meu Pai e Foi Estranho",
+      "autores": "André Diniz",
+      "generos": [
+        "Autobiográfica",
+        "Psicológica",
+        "Drama",
+        "Memória"
+      ],
+      "status": "Backlog",
+      "volumes": "1",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "pais": "Brasil",
+      "porQueQueroLer": "Obra autoral, íntima e desconfortável, centrada em relações familiares, memória e conflito emocional.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
       "titulo": "Maus",
       "autores": "Art Spiegelman",
       "generos": [
@@ -936,6 +1069,24 @@
       "formatoQuePossuo": [],
       "pais": "Estados Unidos",
       "porQueQueroLer": "Memória, família, paranoia e identidade em histórias interligadas.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "Morro da Favela",
+      "autores": "André Diniz",
+      "generos": [
+        "Biográfica",
+        "Memória",
+        "Política/Social",
+        "Histórica"
+      ],
+      "status": "Backlog",
+      "volumes": "1",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "pais": "Brasil",
+      "porQueQueroLer": "Memória, território e contexto social brasileiro em uma obra autoral de André Diniz.",
       "similarA": null,
       "postViagemEmQuadros": null
     },
@@ -1010,7 +1161,8 @@
       "pais": "Argentina",
       "porQueQueroLer": null,
       "similarA": null,
-      "postViagemEmQuadros": null
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
     },
     {
       "titulo": "O Fim da Noite",
@@ -1025,6 +1177,23 @@
       "formatoQuePossuo": [],
       "pais": "Brasil",
       "porQueQueroLer": "Fantasia urbana, identidade e questões sociais.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "O Idiota",
+      "autores": "André Diniz",
+      "generos": [
+        "Drama",
+        "Psicológica",
+        "Existencial"
+      ],
+      "status": "Backlog",
+      "volumes": "1",
+      "formato": "Volume único",
+      "formatoQuePossuo": [],
+      "pais": "Brasil",
+      "porQueQueroLer": "Adaptação em quadrinhos de Dostoiévski, com foco em conflitos humanos, moralidade e reflexão existencial.",
       "similarA": null,
       "postViagemEmQuadros": null
     },
@@ -1060,7 +1229,8 @@
       "pais": null,
       "porQueQueroLer": null,
       "similarA": null,
-      "postViagemEmQuadros": null
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
     },
     {
       "titulo": "O Soldador Subaquático",
@@ -1155,6 +1325,45 @@
       "pais": "França",
       "porQueQueroLer": null,
       "similarA": null,
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
+    },
+    {
+      "titulo": "Pigmento",
+      "autores": "Aline Zouvi",
+      "generos": [
+        "Romance",
+        "Psicológica",
+        "Existencial",
+        "Drama"
+      ],
+      "status": "Já li",
+      "volumes": "1 volume",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "Brasil",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
+    },
+    {
+      "titulo": "Preacher",
+      "autores": "Garth Ennis, Steve Dillon",
+      "generos": [
+        "Drama",
+        "Aventura",
+        "Horror"
+      ],
+      "status": "Backlog",
+      "volumes": null,
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "pais": "Estados Unidos",
+      "porQueQueroLer": "Quero ler pelo DC Universe Infinite.",
+      "similarA": null,
       "postViagemEmQuadros": null
     },
     {
@@ -1242,6 +1451,23 @@
       "formatoQuePossuo": [],
       "pais": "Estados Unidos",
       "porQueQueroLer": "Solidão, internet, paranoia e desinformação, com tom seco e contemporâneo.",
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "Sandman",
+      "autores": "Neil Gaiman e vários artistas",
+      "generos": [
+        "Fantasia",
+        "Horror",
+        "Existencial"
+      ],
+      "status": "Backlog",
+      "volumes": null,
+      "formato": "Série",
+      "formatoQuePossuo": [],
+      "pais": "Estados Unidos",
+      "porQueQueroLer": "Quero ler pelo DC Universe Infinite.",
       "similarA": null,
       "postViagemEmQuadros": null
     },
@@ -1449,14 +1675,17 @@
         "Drama",
         "Existencial"
       ],
-      "status": "Backlog",
+      "status": "Já li",
       "volumes": "1",
       "formato": "Volume único",
-      "formatoQuePossuo": [],
+      "formatoQuePossuo": [
+        "Digital"
+      ],
       "pais": "Espanha",
       "porQueQueroLer": null,
       "similarA": null,
-      "postViagemEmQuadros": null
+      "postViagemEmQuadros": null,
+      "anoDaLeitura": 2026
     },
     {
       "titulo": "Tungstênio",
@@ -1531,6 +1760,25 @@
       "postViagemEmQuadros": null
     },
     {
+      "titulo": "Valente",
+      "autores": "Vitor Cafaggi",
+      "generos": [
+        "Humor",
+        "Cotidiano",
+        "Romance"
+      ],
+      "status": "Já li",
+      "volumes": "5 de 5 possuídos; 5 de 5 lidos",
+      "formato": "Série",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "Brasil",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
       "titulo": "Você não me conhece",
       "autores": "Guilherme de Sousa",
       "generos": [
@@ -1545,6 +1793,25 @@
         "Kindle"
       ],
       "pais": "Brasil",
+      "porQueQueroLer": null,
+      "similarA": null,
+      "postViagemEmQuadros": null
+    },
+    {
+      "titulo": "Watchmen",
+      "autores": "Alan Moore & Dave Gibbons",
+      "generos": [
+        "Drama",
+        "Mistério",
+        "Política/Social"
+      ],
+      "status": "Já li",
+      "volumes": "1 (reúne Watchmen #1–12)",
+      "formato": "Volume único",
+      "formatoQuePossuo": [
+        "Físico"
+      ],
+      "pais": "Estados Unidos",
       "porQueQueroLer": null,
       "similarA": null,
       "postViagemEmQuadros": null

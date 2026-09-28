@@ -3,7 +3,7 @@
     "titulo": "7 Wonders",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 7",
     "duracao": "30 min",
     "complexidade": null,
@@ -15,10 +15,21 @@
     "ano": 2010,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/7-wonders",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/7-wonders",
+      "bggId": null,
+      "status": "bgg-image-page-found",
+      "bggImagePage": "https://boardgamegeek.com/image/5652537/7-wonders-second-edition"
+    },
+    "breveDescricao": "Jogo de cartas e estratégia em que cada jogador desenvolve uma civilização, construindo maravilhas e combinando recursos, ciência, comércio e poder militar ao longo de três eras.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 22h44L32 10 10 22Z\"/><path d=\"M14 22v24M24 22v24M40 22v24M50 22v24M10 46h44M8 52h48\"/></svg>",
+    "icon": "temple"
   },
   {
     "titulo": "7 Wonders - Leaders",
@@ -35,17 +46,27 @@
     "editora": null,
     "ano": 2011,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/92539/7-wonders-leaders",
     "observacoes": "Expansão de 7 Wonders.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/92539/7-wonders-leaders",
+      "bggId": 92539,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de 7 Wonders que introduz líderes históricos, adicionando novas decisões estratégicas e formas de especializar a sua civilização.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 24h44L32 12 10 24Z\"/><path d=\"M14 24v22M24 24v22M40 24v22M50 24v22M10 46h44M8 52h48\"/><path d=\"M22 8l4 4 6-6 6 6 4-4\"/></svg>",
+    "icon": "crownTemple"
   },
   {
     "titulo": "A Ilha Proibída",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -57,16 +78,26 @@
     "ano": 2010,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/forbidden-island",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/forbidden-island",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo cooperativo em que o grupo precisa recuperar quatro tesouros e escapar antes que a ilha afunde completamente.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 38c0-8 6-14 14-14s14 6 14 14\"/><path d=\"M18 38c4 4 8 6 14 6s10-2 14-6\"/><path d=\"M26 30l6-8 6 8-6 8-6-8Z\"/><path d=\"M8 50c4-3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 12 0\"/></svg>",
+    "icon": "island"
   },
   {
     "titulo": "A volta ao mundo em 80 dias",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 6",
     "duracao": "50 min",
     "complexidade": "Média",
@@ -78,16 +109,26 @@
     "ano": 2004,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/around-the-world-in-80-days",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/around-the-world-in-80-days",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo familiar de corrida e planejamento inspirado no romance de Júlio Verne, no qual os jogadores tentam completar uma viagem ao redor do mundo com eficiência.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"24\" cy=\"30\" r=\"14\"/><path d=\"M10 30h28M24 16c4 4 6 9 6 14s-2 10-6 14c-4-4-6-9-6-14s2-10 6-14Z\"/><circle cx=\"46\" cy=\"22\" r=\"10\"/><path d=\"M46 16v6l4 2\"/></svg>",
+    "icon": "globeClock"
   },
   {
     "titulo": "Bang! (cartas)",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "4 a 7",
     "duracao": "30 min",
     "complexidade": "Média",
@@ -100,16 +141,26 @@
     "ano": 2002,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/bang",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/bang",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas com identidades secretas ambientado no Velho Oeste. Xerife, foras da lei e renegado usam habilidades e blefes para eliminar seus adversários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 18h18v24H14zM26 22h18v24H26z\"/><path d=\"M50 28l4 4-4 4 2 5-5-2-3 4-2-5-5 2 2-5-4-3 5-2-1-5 5 2 3-4 2 5 5-1Z\"/></svg>",
+    "icon": "cardsBurst"
   },
   {
     "titulo": "Bang! (The Walking Dead)",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "4 a 7",
     "duracao": "30 min",
     "complexidade": "Média",
@@ -121,17 +172,27 @@
     "editora": "DV Games / The Op Games",
     "ano": 2014,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/160567/bang-the-walking-dead",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/160567/bang-the-walking-dead",
+      "bggId": 160567,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão temática de BANG! ambientada em The Walking Dead, mantendo o confronto com papéis ocultos e habilidades especiais entre os jogadores.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22h16v20H12zM22 18h16v20H22z\"/><circle cx=\"47\" cy=\"27\" r=\"8\"/><path d=\"M43 38c2-4 6-6 10-6M42 21v-5M47 19v-6M52 21v-5\"/></svg>",
+    "icon": "zombieCards"
   },
   {
     "titulo": "Bears vs Babies",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "20 min",
     "complexidade": null,
@@ -144,16 +205,26 @@
     "ano": 2017,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/bears-vs-babies",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/bears-vs-babies",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas leve e caótico em que os jogadores montam criaturas absurdas para enfrentar os monstros dos adversários enquanto tentam sobreviver aos bebês.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"24\" cy=\"28\" r=\"12\"/><circle cx=\"17\" cy=\"18\" r=\"4\"/><circle cx=\"31\" cy=\"18\" r=\"4\"/><circle cx=\"24\" cy=\"29\" r=\"3\"/><path d=\"M20 34c2 2 6 2 8 0\"/><circle cx=\"46\" cy=\"34\" r=\"8\"/><circle cx=\"46\" cy=\"34\" r=\"3\"/></svg>",
+    "icon": "bear"
   },
   {
     "titulo": "Black Stories 1",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 99",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -164,17 +235,27 @@
     "editora": null,
     "ano": 2004,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/18803/black-stories",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/18803/black-stories",
+      "bggId": 18803,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de investigação oral com histórias macabras. Uma pessoa conhece a solução e os demais fazem perguntas de sim ou não para descobrir o que aconteceu.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 14h36v28H28l-10 8v-8H14z\"/><path d=\"M27 24c1-5 9-6 11-1 2 5-6 5-6 10\"/><circle cx=\"32\" cy=\"38\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "question"
   },
   {
     "titulo": "Black Stories Funny Death",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 15",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -186,16 +267,26 @@
     "ano": 2011,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/black-stories-funny-death-edition",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/black-stories-funny-death-edition",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Edição de Black Stories focada em mortes absurdas e situações de humor negro, resolvidas por meio de perguntas, dedução e criatividade em grupo.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"27\" r=\"13\"/><circle cx=\"27\" cy=\"25\" r=\"2\"/><circle cx=\"37\" cy=\"25\" r=\"2\"/><path d=\"M27 34h10M24 40v8M32 40v8M40 40v8\"/></svg>",
+    "icon": "skull"
   },
   {
     "titulo": "Carcassone",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "45 min",
     "complexidade": "Média",
@@ -207,16 +298,26 @@
     "ano": 2000,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/carcassonne",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/carcassonne",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Clássico de colocação de peças em que os jogadores constroem cidades, estradas, campos e mosteiros medievais para pontuar com seus seguidores.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 52V28h8v-8h8v8h8v-8h8v8h8v24H12Z\"/><path d=\"M27 52V39h10v13M17 35h4M43 35h4\"/></svg>",
+    "icon": "castle"
   },
   {
     "titulo": "Catan Dice Game",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 4",
     "duracao": "15 min",
     "complexidade": null,
@@ -229,16 +330,26 @@
     "ano": 2007,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/catan-dice-game",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/catan-dice-game",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão compacta de Catan baseada em dados. A cada rodada, os resultados são usados para construir estradas, assentamentos e cidades em busca da melhor pontuação.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 8 48 17v18L32 44 16 35V17L32 8Z\"/><rect x=\"24\" y=\"22\" width=\"16\" height=\"16\" rx=\"3\"/><circle cx=\"28\" cy=\"26\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"36\" cy=\"34\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"32\" cy=\"30\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "diceHex"
   },
   {
     "titulo": "Cidade Dorme",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "7 a 50",
     "duracao": "20 min",
     "complexidade": null,
@@ -251,16 +362,26 @@
     "ano": 2014,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/cidade-dorme",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/cidade-dorme",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de dedução para grupos grandes em que moradores tentam identificar os assassinos escondidos antes de serem eliminados durante as rodadas noturnas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 50V30h10v20M20 50V22h12v28M32 50V34h10v16M42 50V26h12v24\"/><path d=\"M44 10c-5 1-8 5-8 10 0 5 4 9 9 9 4 0 7-2 9-5-2 1-4 2-6 2-6 0-10-4-10-10 0-2 1-4 2-6 1 0 2 0 4 0Z\"/></svg>",
+    "icon": "moonCity"
   },
   {
     "titulo": "Citadels",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 8",
     "duracao": "20–60 min",
     "complexidade": "Média",
@@ -272,60 +393,27 @@
     "editora": null,
     "ano": 2000,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/478/citadels",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
-  },
-  {
-    "titulo": "Concept",
-    "tipo": "Jogo",
-    "status": "Na coleção",
-    "jogoBase": null,
-    "jogadores": null,
-    "duracao": null,
-    "complexidade": null,
-    "categorias": [
-      "Party game",
-      "Família"
-    ],
-    "editora": null,
-    "ano": null,
-    "idioma": null,
-    "ludopedia": "https://ludopedia.com.br/jogo/concept",
-    "bgg": null,
-    "observacoes": null,
-    "fonte": "Minha lista",
-    "imagem": ""
-  },
-  {
-    "titulo": "Coup (+ A Reforma) (+ O Bufão)",
-    "tipo": "Jogo + Expansão",
-    "status": "Na coleção",
-    "jogoBase": "Coup",
-    "jogadores": "2 a 10",
-    "duracao": "15 min",
-    "complexidade": "Leve",
-    "categorias": [
-      "Cartas",
-      "Dedução",
-      "Party game"
-    ],
-    "editora": "Grok Games / Mandala Jogos",
-    "ano": 2012,
-    "idioma": null,
-    "ludopedia": "https://ludopedia.com.br/jogo/coup",
-    "bgg": null,
-    "observacoes": null,
-    "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/478/citadels",
+      "bggId": 478,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas com seleção de personagens e poderes especiais. Os jogadores desenvolvem suas cidades enquanto tentam antecipar as escolhas dos adversários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 52V28h8v-8h8v8h8v-8h8v8h8v24H12Z\"/><path d=\"M27 52V39h10v13M17 35h4M43 35h4\"/></svg>",
+    "icon": "castle"
   },
   {
     "titulo": "Código Secreto - Dueto",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -338,16 +426,153 @@
     "ano": 2017,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/codenames-duet",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/codenames-duet",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão cooperativa de Código Secreto para duas pessoas. A dupla precisa encontrar todos os agentes corretos usando pistas de uma palavra antes que o tempo acabe.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"23\" cy=\"24\" r=\"8\"/><circle cx=\"41\" cy=\"24\" r=\"8\"/><path d=\"M11 48c1-9 6-14 12-14s11 5 12 14M29 48c1-9 6-14 12-14s11 5 12 14M28 16h8\"/></svg>",
+    "icon": "agents"
+  },
+  {
+    "titulo": "Concept",
+    "tipo": "Jogo",
+    "status": "Na coleção",
+    "jogoBase": "",
+    "jogadores": null,
+    "duracao": null,
+    "complexidade": null,
+    "categorias": [
+      "Party game",
+      "Família"
+    ],
+    "editora": null,
+    "ano": null,
+    "idioma": null,
+    "ludopedia": "https://ludopedia.com.br/jogo/concept",
+    "bgg": "",
+    "observacoes": null,
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/concept",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Party game de comunicação visual em que símbolos e ícones são usados para fazer os outros jogadores adivinharem palavras, personagens, objetos e expressões.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"25\" r=\"12\"/><path d=\"M27 36v6h10v-6M28 47h8M32 8V4M17 12l-3-3M47 12l3-3M14 25h-4M50 25h4M27 24l4 4 7-8\"/></svg>",
+    "icon": "bulb"
+  },
+  {
+    "titulo": "Coup",
+    "tipo": "Jogo",
+    "status": "Na coleção",
+    "jogoBase": "",
+    "jogadores": "2 a 10",
+    "duracao": "15 min",
+    "complexidade": "Leve",
+    "categorias": [
+      "Cartas",
+      "Dedução",
+      "Party game"
+    ],
+    "editora": "Grok Games / Mandala Jogos",
+    "ano": 2012,
+    "idioma": null,
+    "ludopedia": "https://ludopedia.com.br/jogo/coup",
+    "bgg": "",
+    "observacoes": null,
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/coup",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo rápido de blefe e dedução com papéis ocultos. Os jogadores usam influência, mentiras e desafios para eliminar os rivais e ser o último sobrevivente.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 18c5-5 23-5 28 0l-3 24c-7 8-15 8-22 0l-3-24Z\"/><path d=\"M22 26c3-2 6-2 9 0M33 26c3-2 6-2 9 0M24 35c5 4 11 4 16 0M32 18v20\"/></svg>",
+    "icon": "mask"
+  },
+  {
+    "titulo": "Coup - Expansão Bufão & Burocrata",
+    "tipo": "Expansão",
+    "status": "Na coleção",
+    "jogoBase": "Coup",
+    "jogadores": null,
+    "duracao": null,
+    "complexidade": null,
+    "categorias": [
+      "Cartas",
+      "Dedução",
+      "Party game"
+    ],
+    "editora": null,
+    "ano": null,
+    "idioma": null,
+    "ludopedia": "https://ludopedia.com.br/jogo/coup-jester-and-bureaucrat-promos",
+    "bgg": "",
+    "observacoes": "Expansão de Coup.",
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/coup-jester-and-bureaucrat-promos",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão promocional de Coup que acrescenta novos personagens e possibilidades de blefe, aumentando a variedade das partidas do jogo-base.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 22c5-5 23-5 28 0l-3 20c-7 8-15 8-22 0l-3-20Z\"/><path d=\"M18 16l7-8 7 8 7-8 7 8\"/><circle cx=\"25\" cy=\"8\" r=\"2\"/><circle cx=\"39\" cy=\"8\" r=\"2\"/></svg>",
+    "icon": "jester"
+  },
+  {
+    "titulo": "Coup: A Reforma",
+    "tipo": "Expansão",
+    "status": "Na coleção",
+    "jogoBase": "Coup",
+    "jogadores": null,
+    "duracao": null,
+    "complexidade": null,
+    "categorias": [
+      "Cartas",
+      "Dedução",
+      "Party game"
+    ],
+    "editora": null,
+    "ano": null,
+    "idioma": null,
+    "ludopedia": "https://ludopedia.com.br/jogo/coup-reformation",
+    "bgg": "",
+    "observacoes": "Expansão de Coup.",
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/coup-reformation",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Coup que introduz facções e novas formas de interação, negociação e ataque entre os jogadores.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 18c5-5 23-5 28 0l-3 24c-7 8-15 8-22 0l-3-24Z\"/><path d=\"M10 50h18M36 50h18M24 46l4 4-4 4M40 46l-4 4 4 4\"/></svg>",
+    "icon": "reform"
   },
   {
     "titulo": "Dixit",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 6",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -359,17 +584,27 @@
     "editora": "Libellud",
     "ano": 2008,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/39856/dixit",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/39856/dixit",
+      "bggId": 39856,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de criatividade e interpretação de imagens. A cada rodada, uma pista é dada para uma carta ilustrada e os demais tentam identificar qual imagem a inspirou.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 10c8 0 15 7 15 15 0 6-4 12-10 14v8l-5 7-5-7v-8c-6-2-10-8-10-14 0-8 7-15 15-15Z\"/><path d=\"M24 25c3-5 13-5 16 0\"/></svg>",
+    "icon": "balloon"
   },
   {
     "titulo": "Dungeon Roll",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 4",
     "duracao": "15 min",
     "complexidade": null,
@@ -381,16 +616,26 @@
     "ano": 2013,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/dungeon-roll",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/dungeon-roll",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo rápido de dados em que aventureiros exploram uma masmorra, enfrentam monstros e decidem até onde arriscar antes de voltar com os tesouros conquistados.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 52V26h8v-8h8v8h8v-8h8v8h4v26H14Z\"/><path d=\"M26 52V40c0-4 2-7 6-7s6 3 6 7v12\"/><rect x=\"25\" y=\"8\" width=\"14\" height=\"14\" rx=\"2\"/><circle cx=\"29\" cy=\"12\" r=\"1.2\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"35\" cy=\"18\" r=\"1.2\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "dungeonDice"
   },
   {
     "titulo": "Emboscada",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3",
     "duracao": "15 min",
     "complexidade": "Leve",
@@ -402,16 +647,26 @@
     "ano": 2013,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/suspense-the-card-game",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/suspense-the-card-game",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas e dedução para três pessoas, com informação escondida e decisões rápidas para descobrir as intenções dos adversários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"32\" r=\"12\"/><path d=\"M32 8v12M32 44v12M8 32h12M44 32h12\"/><circle cx=\"32\" cy=\"32\" r=\"3\"/></svg>",
+    "icon": "crosshair"
   },
   {
     "titulo": "Exploding Kittens",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "20 min",
     "complexidade": null,
@@ -423,10 +678,20 @@
     "ano": 2015,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/exploding-kittens",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/exploding-kittens",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas rápido e caótico em que os jogadores tentam evitar os temidos gatos explosivos usando cartas de ação, defesa e sabotagem.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 26l4-8 8 5 8-5 4 8v12c0 8-5 14-12 14s-12-6-12-14V26Z\"/><circle cx=\"27\" cy=\"33\" r=\"1.5\"/><circle cx=\"37\" cy=\"33\" r=\"1.5\"/><path d=\"M29 40h6\"/><circle cx=\"49\" cy=\"14\" r=\"5\"/><path d=\"M45 18l-5 5\"/></svg>",
+    "icon": "catBomb"
   },
   {
     "titulo": "Exploding Kittens - Imploding Kittens",
@@ -443,17 +708,27 @@
     "editora": null,
     "ano": 2016,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/204053/exploding-kittens-imploding-kittens",
     "observacoes": "Primeira expansão de Exploding Kittens; adiciona 20 cartas e aumenta o limite para até 6 jogadores.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/204053/exploding-kittens-imploding-kittens",
+      "bggId": 204053,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Exploding Kittens que adiciona novas cartas, mais interação e a carta Imploding Kitten, aumentando também o limite de jogadores.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 26l4-8 8 5 8-5 4 8v12c0 8-5 14-12 14s-12-6-12-14V26Z\"/><circle cx=\"27\" cy=\"33\" r=\"1.5\"/><circle cx=\"37\" cy=\"33\" r=\"1.5\"/><path d=\"M29 40h6\"/><circle cx=\"49\" cy=\"14\" r=\"5\"/><path d=\"M45 18l-5 5\"/></svg>",
+    "icon": "catBomb"
   },
   {
     "titulo": "Fits",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 4",
     "duracao": "30–45 min",
     "complexidade": "Leve",
@@ -464,17 +739,27 @@
     "editora": "Ravensburger",
     "ano": 2009,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/44762/fits",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/44762/fits",
+      "bggId": 44762,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de encaixe espacial em que peças geométricas caem em tabuleiros individuais. O objetivo é organizar cada peça para ocupar o máximo de espaço possível.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 14h15v8c0 3 6 3 6 0v-8h15v15h-8c-3 0-3 6 0 6h8v15H35v-8c0-3-6-3-6 0v8H14V35h8c3 0 3-6 0-6h-8V14Z\"/></svg>",
+    "icon": "puzzle"
   },
   {
     "titulo": "Get Bit!",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 6",
     "duracao": "20 min",
     "complexidade": null,
@@ -486,16 +771,26 @@
     "ano": 2007,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/get-bit",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/get-bit",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas leve e bem-humorado em que robôs disputam posições para escapar de um tubarão, tentando não ser o último da fila.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 35c10-12 28-13 40-3l5-6v13l-5-5c-12 10-30 9-40-3l-4 4 4-8Z\"/><circle cx=\"38\" cy=\"29\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "shark"
   },
   {
     "titulo": "Hanabi",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "20–30 min",
     "complexidade": "Leve",
@@ -507,17 +802,27 @@
     "editora": "R&R Games / Cocktail Games / Abacus Spiele",
     "ano": 2010,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/98778/hanabi",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/98778/hanabi",
+      "bggId": 98778,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo cooperativo de cartas em que os participantes montam fogos de artifício sem poder ver a própria mão, dependendo das pistas dadas pelos parceiros.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 36v18M32 18v8M16 26l7 4M48 26l-7 4M20 12l6 8M44 12l-6 8M12 42l11-4M52 42l-11-4\"/><circle cx=\"32\" cy=\"32\" r=\"4\"/></svg>",
+    "icon": "fireworks"
   },
   {
     "titulo": "Kariba",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "15 min",
     "complexidade": "Leve",
@@ -529,16 +834,26 @@
     "ano": 2010,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/kariba",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/kariba",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo rápido de cartas com animais africanos, em que cada jogada empurra cartas menores para fora da sequência e rende pontos ao jogador.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 38c0-10 7-17 17-17 9 0 15 6 15 14v11H39v-8h-9v8H20v-8h-2Z\"/><path d=\"M18 30c-5 0-8 3-8 8 0 4 3 7 7 7\"/><circle cx=\"42\" cy=\"28\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "elephant"
   },
   {
     "titulo": "Lamen Fury",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -549,17 +864,27 @@
     "editora": "Mixlore",
     "ano": 2019,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/265524/ramen-fury",
     "observacoes": "O título da lista aparece como “Lamen Fury”; corresponde a Ramen Fury.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/265524/ramen-fury",
+      "bggId": 265524,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas leve sobre preparar tigelas de ramen. Os jogadores coletam ingredientes, sabotam rivais e tentam montar as combinações mais valiosas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 30h36c-1 13-8 20-18 20s-17-7-18-20Z\"/><path d=\"M18 24c4-5 8 5 12 0s8 5 12 0M24 14v8M32 12v10M40 14v8\"/></svg>",
+    "icon": "ramen"
   },
   {
     "titulo": "Loot Letter",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -571,16 +896,26 @@
     "ano": 2014,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/munchkin-loot-letter",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/munchkin-loot-letter",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão de Love Letter ambientada em Munchkin. Mantém a dedução e eliminação rápida, com personagens e humor característicos da série.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"12\" y=\"18\" width=\"40\" height=\"28\" rx=\"3\"/><path d=\"M12 22l20 15 20-15\"/></svg>",
+    "icon": "letter"
   },
   {
     "titulo": "Love Letter",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "20 min",
     "complexidade": null,
@@ -592,16 +927,26 @@
     "ano": 2012,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/love-letter",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/love-letter",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas minimalista de dedução e risco, em que cada jogador tenta descobrir as cartas dos rivais e manter o personagem de maior valor até o fim.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"12\" y=\"18\" width=\"40\" height=\"28\" rx=\"3\"/><path d=\"M12 22l20 15 20-15\"/></svg>",
+    "icon": "letter"
   },
   {
     "titulo": "Martian Dice",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 99",
     "duracao": "10 min",
     "complexidade": "Leve",
@@ -612,17 +957,27 @@
     "editora": "Tasty Minstrel Games",
     "ano": 2011,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/99875/martian-dice",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/99875/martian-dice",
+      "bggId": 99875,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de dados leve em que os jogadores tentam abduzir humanos, galinhas e vacas sem perder tudo para os tanques terrestres.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 12c10 0 17 7 17 16 0 12-8 22-17 22S15 40 15 28c0-9 7-16 17-16Z\"/><path d=\"M23 27c3-4 6-4 9 0M32 27c3-4 6-4 9 0M27 39h10\"/><rect x=\"44\" y=\"42\" width=\"10\" height=\"10\" rx=\"2\"/></svg>",
+    "icon": "alienDice"
   },
   {
     "titulo": "Masmorra de Dados",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "30 min",
     "complexidade": "Média",
@@ -635,16 +990,26 @@
     "ano": 2014,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/masmorra-de-dados",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/masmorra-de-dados",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de dados com tema de fantasia em que heróis exploram masmorras, enfrentam perigos e buscam tesouros enquanto administram riscos e recursos.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 52V26h8v-8h8v8h8v-8h8v8h4v26H14Z\"/><path d=\"M26 52V40c0-4 2-7 6-7s6 3 6 7v12\"/><rect x=\"25\" y=\"8\" width=\"14\" height=\"14\" rx=\"2\"/><circle cx=\"29\" cy=\"12\" r=\"1.2\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"35\" cy=\"18\" r=\"1.2\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "dungeonDice"
   },
   {
     "titulo": "MetroCity",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -656,16 +1021,26 @@
     "ano": 2014,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/light-rail",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/light-rail",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo compacto de cartas e planejamento em que os participantes constroem linhas ferroviárias urbanas buscando conectar rotas e aproveitar melhor suas cartas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 44V20h36v24\"/><path d=\"M20 20v-6h24v6M18 44h28M22 50l-4 6M42 50l4 6\"/><circle cx=\"24\" cy=\"36\" r=\"3\"/><circle cx=\"40\" cy=\"36\" r=\"3\"/></svg>",
+    "icon": "metro"
   },
   {
     "titulo": "Mottainai",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "30 min",
     "complexidade": null,
@@ -677,16 +1052,26 @@
     "ano": 2015,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/mottainai",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/mottainai",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo estratégico de cartas em que cada carta pode exercer várias funções. O desafio é construir uma economia eficiente com poucos recursos e muitas possibilidades.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 50 14 20c8-7 28-7 36 0L32 50Z\"/><path d=\"M32 50V17M32 50 20 20M32 50 44 20\"/></svg>",
+    "icon": "fan"
   },
   {
     "titulo": "Munchkin",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 6",
     "duracao": "90 min",
     "complexidade": null,
@@ -699,10 +1084,20 @@
     "ano": 2001,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/munchkin",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/munchkin",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas irreverente de exploração de masmorras, equipamentos e combate contra monstros, com muita negociação e sabotagem entre os jogadores.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 52V16h32v36\"/><path d=\"M24 52V28h16v24\"/><path d=\"M44 10 22 32M41 7l6 6M18 36l6-6\"/></svg>",
+    "icon": "doorSword"
   },
   {
     "titulo": "Munchkin 2 - Machado Descomunal",
@@ -719,11 +1114,21 @@
     "editora": null,
     "ano": null,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/3943/munchkin-2-unnatural-axe",
     "observacoes": "Expansão de Munchkin; contém 112 cartas.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/3943/munchkin-2-unnatural-axe",
+      "bggId": 3943,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Munchkin que adiciona novas cartas, classes, monstros, itens e ainda mais possibilidades de combinações e sabotagens.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M38 10 20 48\"/><path d=\"M35 12c8-4 14 1 15 7-7 0-12 3-16 8\"/><path d=\"M18 46l6 3\"/></svg>",
+    "icon": "axe"
   },
   {
     "titulo": "Munchkin 3 - Erros Clérigos",
@@ -741,17 +1146,27 @@
     "editora": null,
     "ano": 2003,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/6606/munchkin-3-clerical-errors",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/6606/munchkin-3-clerical-errors",
+      "bggId": 6606,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Munchkin com novas cartas, monstros, itens e piadas temáticas, ampliando as opções e combinações do jogo-base.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 10v36M20 22h24\"/><path d=\"M18 50h28\"/><circle cx=\"32\" cy=\"16\" r=\"8\"/></svg>",
+    "icon": "cleric"
   },
   {
     "titulo": "Munchkin Cthulhu",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 6",
     "duracao": "90 min",
     "complexidade": "Média",
@@ -763,17 +1178,27 @@
     "editora": null,
     "ano": 2007,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/25071/munchkin-cthulhu",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/25071/munchkin-cthulhu",
+      "bggId": 25071,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão de Munchkin inspirada nos mitos de Cthulhu, misturando humor, monstros cósmicos, cultistas e a tradicional disputa por tesouros e níveis.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"24\" r=\"10\"/><path d=\"M26 33c-9 8-6 18 2 18M32 34c-4 10 3 18 10 14M38 32c9 6 8 16 1 20\"/><circle cx=\"28\" cy=\"23\" r=\"1.5\"/><circle cx=\"36\" cy=\"23\" r=\"1.5\"/></svg>",
+    "icon": "tentacle"
   },
   {
     "titulo": "Nessos",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 6",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -785,17 +1210,27 @@
     "editora": "IELLO",
     "ano": 2018,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/256838/nessos",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/256838/nessos",
+      "bggId": 256838,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas de blefe em que os jogadores oferecem criaturas mitológicas e tentam decidir quando aceitar, recusar ou desafiar as ofertas dos adversários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"16\" width=\"24\" height=\"32\" rx=\"3\"/><rect x=\"26\" y=\"12\" width=\"24\" height=\"32\" rx=\"3\"/></svg>",
+    "icon": "cards"
   },
   {
     "titulo": "Não testamos esse troço",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 10",
     "duracao": "10 min",
     "complexidade": "Leve",
@@ -807,16 +1242,26 @@
     "ano": 2007,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/we-didn-t-playtest-this-at-all",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/we-didn-t-playtest-this-at-all",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Party game propositalmente caótico, com regras simples e cartas absurdas. As partidas são rápidas, imprevisíveis e frequentemente terminam de forma inesperada.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 32h40M32 12v40M18 18l28 28M46 18 18 46\"/><circle cx=\"32\" cy=\"32\" r=\"8\"/></svg>",
+    "icon": "chaos"
   },
   {
     "titulo": "One night ultimate Werewolf",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 10",
     "duracao": "10 min",
     "complexidade": "Leve",
@@ -828,17 +1273,27 @@
     "editora": null,
     "ano": 2014,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/147949/one-night-ultimate-werewolf",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/147949/one-night-ultimate-werewolf",
+      "bggId": 147949,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo rápido de dedução social em que cada participante recebe um papel secreto. Após uma única noite de ações, o grupo debate e tenta identificar o lobisomem.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 26 22 12l10 8 10-8 4 14v12c0 8-6 14-14 14S18 46 18 38V26Z\"/><path d=\"M24 34h5M35 34h5M27 42l5-4 5 4\"/></svg>",
+    "icon": "werewolf"
   },
   {
     "titulo": "Pandemic",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "60 min",
     "complexidade": null,
@@ -851,16 +1306,26 @@
     "ano": 2008,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/pandemic",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/pandemic",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo cooperativo em que especialistas trabalham juntos para conter surtos e descobrir curas antes que doenças se espalhem pelo mundo.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"32\" r=\"10\"/><path d=\"M32 8v10M32 46v10M8 32h10M46 32h10M15 15l7 7M42 42l7 7M49 15l-7 7M22 42l-7 7\"/><circle cx=\"29\" cy=\"29\" r=\"1.5\"/><circle cx=\"36\" cy=\"34\" r=\"1.5\"/></svg>",
+    "icon": "virus"
   },
   {
     "titulo": "Perfil 5",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 99",
     "duracao": "45 min",
     "complexidade": "Leve",
@@ -872,16 +1337,26 @@
     "ano": 2012,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/perfil-5",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/perfil-5",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de perguntas e pistas em que os participantes tentam descobrir pessoas, lugares, objetos e temas usando o menor número possível de dicas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"24\" cy=\"24\" r=\"8\"/><path d=\"M10 50c1-10 7-16 14-16s13 6 14 16\"/><path d=\"M42 20c1-5 9-6 11-1 2 5-6 5-6 10M47 36h.1\"/></svg>",
+    "icon": "profile"
   },
   {
     "titulo": "Pocket Mars",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 4",
     "duracao": "30 min",
     "complexidade": null,
@@ -893,16 +1368,26 @@
     "ano": 2017,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/pocket-mars",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/pocket-mars",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo compacto de cartas sobre colonização de Marte. Os jogadores desenvolvem projetos, constroem instalações e disputam pontos com poucas ações por rodada.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"28\" cy=\"34\" r=\"14\"/><path d=\"M38 24 52 10M44 10h8v8\"/><path d=\"M18 34h20M28 24v20\"/></svg>",
+    "icon": "mars"
   },
   {
     "titulo": "Quarriors",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "30 min",
     "complexidade": null,
@@ -914,16 +1399,26 @@
     "ano": 2011,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/quarriors",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/quarriors",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de construção de dados em que os jogadores compram criaturas e feitiços, rolam seus dados e usam os resultados para atacar, defender e marcar pontos.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 14h20l-4 8c7 5 11 12 11 19 0 8-7 13-17 13S15 49 15 41c0-7 4-14 11-19l-4-8Z\"/><rect x=\"26\" y=\"30\" width=\"12\" height=\"12\" rx=\"2\"/></svg>",
+    "icon": "diceBag"
   },
   {
     "titulo": "Rage (Cards)",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 10",
     "duracao": "45 min",
     "complexidade": "Leve",
@@ -934,17 +1429,27 @@
     "editora": "AMIGO",
     "ano": 1983,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/568/rage",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/568/rage",
+      "bggId": 568,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de vazas com cartas especiais e objetivos variáveis. A pontuação depende de prever e controlar quantas rodadas cada jogador conseguirá vencer.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"16\" width=\"24\" height=\"32\" rx=\"3\"/><rect x=\"26\" y=\"12\" width=\"24\" height=\"32\" rx=\"3\"/></svg>",
+    "icon": "cards"
   },
   {
     "titulo": "Saboteur",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 10",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -957,16 +1462,26 @@
     "ano": 2004,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/saboteur",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/saboteur",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas com papéis ocultos em que mineradores tentam chegar ao ouro enquanto sabotadores escondidos bloqueiam caminhos e confundem o grupo.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 42h40\"/><path d=\"M18 42 28 26h8l10 16\"/><circle cx=\"32\" cy=\"20\" r=\"5\"/></svg>",
+    "icon": "mine"
   },
   {
     "titulo": "Scotland Yard",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 6",
     "duracao": "90 min",
     "complexidade": "Média",
@@ -978,16 +1493,26 @@
     "ano": 1975,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/221b-baker-street-the-master-detective-game",
-    "bgg": null,
+    "bgg": "",
     "observacoes": "Corrigido para a edição 'Scotland Yard' publicada pela Grow (baseada em 221B Baker Street), distinta do Scotland Yard da Ravensburger de 1983.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/221b-baker-street-the-master-detective-game",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de investigação em que os participantes percorrem pistas e tentam solucionar casos antes dos adversários, usando dedução e planejamento.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"27\" cy=\"27\" r=\"14\"/><path d=\"M37 37 52 52\"/><path d=\"M22 27h10M27 22v10\"/></svg>",
+    "icon": "magnify"
   },
   {
     "titulo": "Sociedade dos Salafários",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "45 min",
     "complexidade": "Média",
@@ -1000,16 +1525,26 @@
     "ano": 2015,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/scoundrel-society",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/scoundrel-society",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas sobre ladrões competindo por saques valiosos. Os jogadores planejam golpes, blefam e tentam sair com a maior parte do dinheiro.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"24\" r=\"10\"/><path d=\"M23 23h18M20 52c1-12 5-18 12-18s11 6 12 18\"/><path d=\"M18 18l14-8 14 8\"/></svg>",
+    "icon": "thief"
   },
   {
     "titulo": "Superfight (the loot crate deck)",
-    "tipo": "Jogo",
+    "tipo": "Expansão",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "Superfight",
     "jogadores": null,
     "duracao": null,
     "complexidade": null,
@@ -1020,17 +1555,27 @@
     "editora": null,
     "ano": 2015,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/173875/superfight-the-loot-crate-deck",
     "observacoes": "Deck exclusivo de 100 cartas para Superfight; expande o jogo-base.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/173875/superfight-the-loot-crate-deck",
+      "bggId": 173875,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Deck adicional para Superfight com novos personagens, atributos e situações absurdas, ampliando as possibilidades de debates e confrontos do jogo-base.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 50V30c0-3 4-3 4 0v8M24 38V20c0-3 4-3 4 0v18M28 38V18c0-3 4-3 4 0v20M32 38V20c0-3 4-3 4 0v18M36 38V24c0-3 4-3 4 0v18c0 8-5 12-12 12h-8Z\"/></svg>",
+    "icon": "fist"
   },
   {
     "titulo": "Sushi Go!",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "15 min",
     "complexidade": "Leve",
@@ -1042,16 +1587,26 @@
     "ano": 2013,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/sushi-go",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/sushi-go",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas rápido em que os jogadores escolhem pratos de sushi em rodadas de seleção simultânea, formando combinações para marcar mais pontos.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 38h36c-2 9-9 14-18 14S16 47 14 38Z\"/><ellipse cx=\"24\" cy=\"26\" rx=\"8\" ry=\"5\"/><ellipse cx=\"40\" cy=\"26\" rx=\"8\" ry=\"5\"/></svg>",
+    "icon": "sushi"
   },
   {
     "titulo": "Takenoko",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 4",
     "duracao": "45 min",
     "complexidade": "Média",
@@ -1063,16 +1618,26 @@
     "ano": 2011,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/takenoko",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/takenoko",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo familiar de estratégia em que os jogadores cultivam bambu, irrigam terrenos e alimentam um panda, cumprindo objetivos para marcar pontos.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"32\" r=\"14\"/><circle cx=\"22\" cy=\"18\" r=\"5\"/><circle cx=\"42\" cy=\"18\" r=\"5\"/><ellipse cx=\"27\" cy=\"30\" rx=\"3\" ry=\"4\"/><ellipse cx=\"37\" cy=\"30\" rx=\"3\" ry=\"4\"/><path d=\"M28 40c3 2 5 2 8 0\"/></svg>",
+    "icon": "panda"
   },
   {
     "titulo": "The Lady and The Tiger",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 6",
     "duracao": "15–20 min",
     "complexidade": "Média",
@@ -1084,17 +1649,27 @@
     "editora": "Blue Beard Entertainment",
     "ano": 2017,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/222643/the-lady-and-the-tiger",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/222643/the-lady-and-the-tiger",
+      "bggId": 222643,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Coleção de pequenos jogos de cartas com blefe, dedução e memória, todos inspirados na fábula da dama e do tigre.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 24 22 12l10 8 10-8 4 12v14c0 8-6 14-14 14S18 46 18 38V24Z\"/><path d=\"M24 26h16M26 34h4M34 34h4M28 42h8\"/></svg>",
+    "icon": "tiger"
   },
   {
     "titulo": "The Resistance",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "5 a 10",
     "duracao": "30 min",
     "complexidade": null,
@@ -1107,10 +1682,20 @@
     "ano": 2009,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/the-resistance",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/the-resistance",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de dedução social em equipes secretas. A Resistência tenta completar missões enquanto espiões infiltrados sabotam o grupo sem revelar sua identidade.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 50V30c0-3 4-3 4 0v8M24 38V20c0-3 4-3 4 0v18M28 38V18c0-3 4-3 4 0v20M32 38V20c0-3 4-3 4 0v18M36 38V24c0-3 4-3 4 0v18c0 8-5 12-12 12h-8Z\"/></svg>",
+    "icon": "fist"
   },
   {
     "titulo": "The Resistance - Hidden Agenda",
@@ -1128,11 +1713,21 @@
     "editora": "Indie Boards & Cards",
     "ano": 2014,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/162890/the-resistance-hidden-agenda",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/162890/the-resistance-hidden-agenda",
+      "bggId": 162890,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de The Resistance que acrescenta novos módulos, papéis e informações ocultas, aumentando as possibilidades de blefe e dedução nas partidas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"16\" width=\"24\" height=\"32\" rx=\"3\"/><rect x=\"26\" y=\"12\" width=\"24\" height=\"32\" rx=\"3\"/></svg>",
+    "icon": "cards"
   },
   {
     "titulo": "The Resistance - Intenção Hostil",
@@ -1150,17 +1745,27 @@
     "editora": "Indie Boards & Cards",
     "ano": 2014,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/162889/the-resistance-hostile-intent",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/162889/the-resistance-hostile-intent",
+      "bggId": 162889,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de The Resistance com novos papéis e mecanismos de sabotagem, tornando a disputa entre Resistência e espiões ainda mais imprevisível.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 42h40\"/><path d=\"M18 42 28 26h8l10 16\"/><circle cx=\"32\" cy=\"20\" r=\"5\"/></svg>",
+    "icon": "mine"
   },
   {
     "titulo": "Ticket to Ride - Europa",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 5",
     "duracao": "60 min",
     "complexidade": "Média",
@@ -1172,10 +1777,20 @@
     "ano": 2005,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/ticket-to-ride-europe",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": "https://www.asmodee.co.uk/cdn/shop/files/DOW7202A_1.jpg?v=1776765127&width=2000",
+      "source": "Asmodee UK",
+      "sourcePage": "https://www.asmodee.co.uk/products/dow7202a-ticket-to-ride-europe",
+      "bggId": 14996,
+      "status": "verified-example"
+    },
+    "breveDescricao": "Jogo familiar de estratégia em que os participantes coletam cartas e constroem rotas ferroviárias pelo mapa da Europa, conectando cidades e cumprindo objetivos.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 12h32v30H16Z\"/><path d=\"M20 18h24v12H20Z\"/><circle cx=\"24\" cy=\"46\" r=\"4\"/><circle cx=\"40\" cy=\"46\" r=\"4\"/><path d=\"M12 52h40M20 56l4-4M44 56l-4-4\"/></svg>",
+    "icon": "train"
   },
   {
     "titulo": "Ticket to Ride - Europa 1912",
@@ -1192,17 +1807,27 @@
     "editora": "Days of Wonder",
     "ano": 2009,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/53383/ticket-to-ride-europa-1912",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/53383/ticket-to-ride-europa-1912",
+      "bggId": 53383,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Ticket to Ride: Europa que adiciona novos bilhetes de destino, depósitos e armazéns para ampliar as opções estratégicas do jogo-base.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 20h36v28H14Z\"/><path d=\"M20 14v12M44 14v12M14 28h36\"/><path d=\"M22 36h20\"/><circle cx=\"24\" cy=\"50\" r=\"3\"/><circle cx=\"40\" cy=\"50\" r=\"3\"/></svg>",
+    "icon": "trainCal"
   },
   {
     "titulo": "Tides of Time",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2",
     "duracao": "20 min",
     "complexidade": "Média",
@@ -1213,17 +1838,27 @@
     "editora": null,
     "ano": 2015,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/176229/tides-of-time",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/176229/tides-of-time",
+      "bggId": 176229,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas para duas pessoas em que cada escolha influencia as eras seguintes. O objetivo é montar a combinação mais valiosa ao longo de três rodadas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 10h28M18 54h28M22 10c0 12 5 16 10 22-5 6-10 10-10 22M42 10c0 12-5 16-10 22 5 6 10 10 10 22\"/></svg>",
+    "icon": "hourglass"
   },
   {
     "titulo": "Time Line - Invenções",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 6",
     "duracao": "15 min",
     "complexidade": null,
@@ -1238,13 +1873,23 @@
     "bgg": "https://boardgamegeek.com/boardgameversion/293588/portuguese-first-edition",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgameversion/293588/portuguese-first-edition",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de cartas educativo e rápido em que os participantes tentam posicionar invenções na ordem cronológica correta sem conhecer previamente as datas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 32h48\"/><circle cx=\"16\" cy=\"32\" r=\"4\"/><circle cx=\"32\" cy=\"32\" r=\"4\"/><circle cx=\"48\" cy=\"32\" r=\"4\"/></svg>",
+    "icon": "timeline"
   },
   {
     "titulo": "Time Line - Vários Temas",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": null,
     "duracao": null,
     "complexidade": null,
@@ -1252,17 +1897,27 @@
     "editora": null,
     "ano": null,
     "idioma": null,
-    "ludopedia": null,
-    "bgg": null,
+    "ludopedia": "",
+    "bgg": "",
     "observacoes": "Registro agregado de vários conjuntos/temas de Timeline; não há uma única ficha que represente com segurança todos os conteúdos combinados.",
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": null,
+      "sourcePage": null,
+      "bggId": null,
+      "status": "no-source"
+    },
+    "breveDescricao": "Conjunto de jogos Timeline com diferentes temas. A proposta é posicionar cartas na ordem cronológica correta, criando uma linha do tempo coletiva de forma simples e rápida.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M8 32h48\"/><circle cx=\"14\" cy=\"32\" r=\"4\"/><circle cx=\"26\" cy=\"32\" r=\"4\"/><circle cx=\"38\" cy=\"32\" r=\"4\"/><circle cx=\"50\" cy=\"32\" r=\"4\"/></svg>",
+    "icon": "timeline4"
   },
   {
     "titulo": "Tsuro",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 8",
     "duracao": "15–20 min",
     "complexidade": "Leve",
@@ -1273,17 +1928,27 @@
     "editora": "Calliope Games / WizKids",
     "ano": 2005,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/16992/tsuro",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/16992/tsuro",
+      "bggId": 16992,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo abstrato de colocação de peças em que cada jogador cria um caminho e move sua peça pelo tabuleiro, tentando permanecer em jogo enquanto os trajetos se cruzam.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M10 50c8-18 12-34 24-34 10 0 10 12 18 12\"/><circle cx=\"12\" cy=\"50\" r=\"3\"/><circle cx=\"52\" cy=\"28\" r=\"3\"/></svg>",
+    "icon": "path"
   },
   {
     "titulo": "Uno",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 10",
     "duracao": "30 min",
     "complexidade": "Leve",
@@ -1294,17 +1959,27 @@
     "editora": "Mattel",
     "ano": 1971,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/2223/uno",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/2223/uno",
+      "bggId": 2223,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Clássico jogo de cartas em que os participantes combinam cores e números para se livrar da mão antes dos adversários, usando cartas especiais para mudar o ritmo da partida.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"16\" y=\"10\" width=\"32\" height=\"44\" rx=\"6\"/><path d=\"M24 39c2-10 8-16 16-16\"/></svg>",
+    "icon": "uno"
   },
   {
     "titulo": "Uno Dados",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2",
     "duracao": "15 min",
     "complexidade": "Leve",
@@ -1315,17 +1990,27 @@
     "editora": "Mattel",
     "ano": 2011,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/116593/uno-dice-game",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/116593/uno-dice-game",
+      "bggId": 116593,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão de UNO baseada em dados, mantendo a ideia de combinar cores e números em partidas rápidas e leves.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"14\" width=\"24\" height=\"34\" rx=\"3\"/><rect x=\"34\" y=\"24\" width=\"16\" height=\"16\" rx=\"3\"/><circle cx=\"38\" cy=\"28\" r=\"1\"/><circle cx=\"46\" cy=\"36\" r=\"1\"/><circle cx=\"42\" cy=\"32\" r=\"1\"/></svg>",
+    "icon": "diceCard"
   },
   {
     "titulo": "Uno Stacko",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 10",
     "duracao": "20 min",
     "complexidade": "Leve",
@@ -1335,17 +2020,27 @@
     "editora": "Mattel",
     "ano": 1994,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/2821/uno-stacko",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/2821/uno-stacko",
+      "bggId": 2821,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão de UNO com uma torre de blocos. Os jogadores retiram e empilham peças seguindo cores e números sem derrubar a estrutura.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"16\" y=\"42\" width=\"32\" height=\"8\"/><rect x=\"20\" y=\"32\" width=\"28\" height=\"8\"/><rect x=\"16\" y=\"22\" width=\"28\" height=\"8\"/><rect x=\"20\" y=\"12\" width=\"24\" height=\"8\"/></svg>",
+    "icon": "blocks"
   },
   {
     "titulo": "War",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 6",
     "duracao": "120 min",
     "complexidade": "Média",
@@ -1357,16 +2052,26 @@
     "ano": 1972,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/war",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/war",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo clássico de conquista territorial em que exércitos disputam continentes, atacam com dados e tentam cumprir objetivos secretos antes dos adversários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"32\" r=\"18\"/><path d=\"M14 32h36M32 14v36M20 20l24 24M44 20 20 44\"/><circle cx=\"32\" cy=\"32\" r=\"4\"/></svg>",
+    "icon": "war"
   },
   {
     "titulo": "War Cards",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "3 a 4",
     "duracao": "45 min",
     "complexidade": null,
@@ -1378,16 +2083,26 @@
     "ano": 2010,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/war-cards",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/war-cards",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Versão em cartas inspirada em War, com foco em confronto, controle de territórios e decisões estratégicas em partidas mais compactas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"14\" y=\"16\" width=\"24\" height=\"32\" rx=\"3\"/><rect x=\"26\" y=\"12\" width=\"24\" height=\"32\" rx=\"3\"/><path d=\"M20 36h12M32 24h12\"/></svg>",
+    "icon": "warCards"
   },
   {
     "titulo": "WTF (What the fish)",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "2 a 6",
     "duracao": null,
     "complexidade": "Leve",
@@ -1398,17 +2113,27 @@
     "editora": "University Games",
     "ano": 2017,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/230864/wtf-what-the-fish",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/230864/wtf-what-the-fish",
+      "bggId": 230864,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Party game de cartas rápido e caótico, com situações absurdas, ataques e reviravoltas pensadas para gerar partidas leves e bem-humoradas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 32c10-12 27-12 38 0-11 12-28 12-38 0Z\"/><path d=\"M50 32l8-8v16l-8-8Z\"/><circle cx=\"23\" cy=\"29\" r=\"1.5\" fill=\"currentColor\" stroke=\"none\"/></svg>",
+    "icon": "fish"
   },
   {
     "titulo": "Zombicide 1",
     "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": null,
+    "jogoBase": "",
     "jogadores": "1 a 6",
     "duracao": "150 min",
     "complexidade": null,
@@ -1421,16 +2146,26 @@
     "ano": 2012,
     "idioma": null,
     "ludopedia": "https://ludopedia.com.br/jogo/zombicide",
-    "bgg": null,
+    "bgg": "",
     "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "Ludopedia",
+      "sourcePage": "https://ludopedia.com.br/jogo/zombicide",
+      "bggId": null,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo cooperativo de sobrevivência com miniaturas em que os jogadores enfrentam hordas de zumbis, cumprem objetivos e evoluem seus personagens ao longo dos cenários.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"24\" r=\"11\"/><path d=\"M22 36c-5 5-7 12-7 18M42 36c5 5 7 12 7 18M25 24h4M35 24h4M27 32h10M32 35v6\"/></svg>",
+    "icon": "zombie"
   },
   {
-    "titulo": "Zombie Dice (+Double Feature) (+School Bus)",
-    "tipo": "Jogo + Expansão",
+    "titulo": "Zombie Dice",
+    "tipo": "Jogo",
     "status": "Na coleção",
-    "jogoBase": "Zombie Dice",
+    "jogoBase": "",
     "jogadores": "2 a 99",
     "duracao": "10–20 min",
     "complexidade": "Leve",
@@ -1441,10 +2176,82 @@
     "editora": "Steve Jackson Games",
     "ano": 2010,
     "idioma": null,
-    "ludopedia": null,
+    "ludopedia": "",
     "bgg": "https://boardgamegeek.com/boardgame/62871/zombie-dice",
-    "observacoes": "Registro inclui Zombie Dice + Double Feature + School Bus; dados básicos do jogo-base.",
+    "observacoes": null,
     "fonte": "Minha lista",
-    "imagem": ""
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/62871/zombie-dice",
+      "bggId": 62871,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Jogo de dados de sorte e risco em que os jogadores são zumbis tentando comer cérebros sem acumular tiros demais e perder tudo na rodada.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"26\" cy=\"26\" r=\"10\"/><path d=\"M21 24h3M28 24h3M23 31h6\"/><rect x=\"36\" y=\"34\" width=\"16\" height=\"16\" rx=\"3\"/><circle cx=\"40\" cy=\"38\" r=\"1\"/><circle cx=\"48\" cy=\"46\" r=\"1\"/></svg>",
+    "icon": "zombieDice"
+  },
+  {
+    "titulo": "Zombie Dice 2: Double Feature",
+    "tipo": "Expansão",
+    "status": "Na coleção",
+    "jogoBase": "Zombie Dice",
+    "jogadores": null,
+    "duracao": null,
+    "complexidade": null,
+    "categorias": [
+      "Dados",
+      "Party game"
+    ],
+    "editora": null,
+    "ano": null,
+    "idioma": null,
+    "ludopedia": "",
+    "bgg": "https://boardgamegeek.com/boardgame/110279",
+    "observacoes": "Expansão de Zombie Dice.",
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/110279",
+      "bggId": 110279,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Zombie Dice que adiciona três dados temáticos com novos efeitos, aumentando a variedade e as decisões de risco durante as partidas.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"12\" y=\"18\" width=\"28\" height=\"28\" rx=\"3\"/><circle cx=\"18\" cy=\"24\" r=\"2\"/><circle cx=\"34\" cy=\"24\" r=\"2\"/><circle cx=\"18\" cy=\"40\" r=\"2\"/><circle cx=\"34\" cy=\"40\" r=\"2\"/><rect x=\"40\" y=\"28\" width=\"14\" height=\"14\" rx=\"2\"/></svg>",
+    "icon": "filmDice"
+  },
+  {
+    "titulo": "Zombie Dice 3: School Bus",
+    "tipo": "Expansão",
+    "status": "Na coleção",
+    "jogoBase": "Zombie Dice",
+    "jogadores": null,
+    "duracao": null,
+    "complexidade": null,
+    "categorias": [
+      "Dados",
+      "Party game"
+    ],
+    "editora": null,
+    "ano": null,
+    "idioma": null,
+    "ludopedia": "",
+    "bgg": "https://boardgamegeek.com/boardgame/155148",
+    "observacoes": "Expansão de Zombie Dice.",
+    "fonte": "Minha lista",
+    "imagem": "",
+    "referenciaImagem": {
+      "url": null,
+      "source": "BGG",
+      "sourcePage": "https://boardgamegeek.com/boardgame/155148",
+      "bggId": 155148,
+      "status": "needs-direct-image-url"
+    },
+    "breveDescricao": "Expansão de Zombie Dice que introduz o dado School Bus, trazendo novos resultados e efeitos para deixar as rodadas ainda mais imprevisíveis.",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 18h36v26H12Z\"/><path d=\"M18 22h24v10H18Z\"/><circle cx=\"20\" cy=\"48\" r=\"4\"/><circle cx=\"40\" cy=\"48\" r=\"4\"/><rect x=\"44\" y=\"36\" width=\"12\" height=\"12\" rx=\"2\"/></svg>",
+    "icon": "busDice"
   }
 ]
