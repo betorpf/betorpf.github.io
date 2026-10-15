@@ -19,6 +19,13 @@ O site usa uma CSP por elemento `meta`, compatível com a hospedagem estática d
 
 As fontes do Google foram avaliadas e mantidas por enquanto para preservar a tipografia existente sem adicionar vários arquivos de fonte ao repositório. Elas são as únicas dependências visuais carregadas de terceiros e estão limitadas na CSP a `fonts.googleapis.com` e `fonts.gstatic.com`. Se a prioridade passar a ser funcionamento totalmente independente de terceiros, o próximo passo é baixar somente os pesos usados, registrar suas licenças e substituir os links por declarações locais `@font-face`.
 
+O Pomodoro (`pomodoro/index.html`) é um arquivo único com CSS e JS inline. O script é liberado na CSP pelo hash SHA-256 do seu conteúdo, e os estilos inline usam `'unsafe-inline'`. Sempre que o `<script>` da página mudar, atualize o hash:
+
+```bash
+python scripts/csp-hash.py pomodoro/index.html
+python scripts/csp-hash.py --check pomodoro/index.html
+```
+
 O GitHub Pages não permite configurar cabeçalhos HTTP arbitrários diretamente pelo repositório. Diretivas que dependem de cabeçalho, como `frame-ancestors`, e proteções como HSTS exigem um proxy/CDN configurável ou outra hospedagem. A política atual usa `frame-src 'none'`, mas isso não substitui `frame-ancestors` contra incorporação da página por terceiros.
 
 ## Web3Forms

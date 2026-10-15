@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pomodoro RPF</title>
+<meta name="description" content="Timer Pomodoro simples e sem anúncios: tempos configuráveis, temas, alarmes, som de fundo e três idiomas.">
+<meta name="theme-color" content="#c23a2b">
+<!-- O script inline é liberado por hash na CSP. Ao alterar o <script>, recalcule com: python scripts/csp-hash.py pomodoro/index.html -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'sha256-l40t/mqHv/Pngu2oV+UYfZxUBKZL8Ag2x256hiothRs='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://betorpf.com.br/pomodoro/">
+<meta property="og:title" content="Pomodoro RPF">
+<meta property="og:description" content="Timer Pomodoro simples e sem anúncios: tempos configuráveis, temas, alarmes, som de fundo e três idiomas.">
+<meta property="og:image" content="https://betorpf.com.br/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: uma coluna de foco com o anel do timer no centro; ajustes numa gaveta lateral; a cor da página inteira segue o modo atual */
+:root{
+  --h:4; --s:74%;
+  --font-display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --font-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --bg:hsl(var(--h) calc(var(--s) * .5) 95%);
+  --surface:hsl(var(--h) calc(var(--s) * .35) 99%);
+  --fg:hsl(var(--h) 28% 14%);
+  --muted:hsl(var(--h) 12% 36%);
+  --line:hsl(var(--h) calc(var(--s) * .3) 84%);
+  --accent:hsl(var(--h) var(--s) 40%);
+  --accent-ink:hsl(var(--h) 40% 98%);
+  --track:hsl(var(--h) calc(var(--s) * .45) 87%);
+  --shadow:hsl(var(--h) 40% 25% / .12);
+  --backdrop:hsl(var(--h) 30% 10% / .4);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:hsl(var(--h) 20% 9%);
+    --surface:hsl(var(--h) 16% 13%);
+    --fg:hsl(var(--h) 25% 93%);
+    --muted:hsl(var(--h) 10% 66%);
+    --line:hsl(var(--h) 14% 24%);
+    --accent:hsl(var(--h) var(--s) 64%);
+    --accent-ink:hsl(var(--h) 40% 9%);
+    --track:hsl(var(--h) 16% 20%);
+    --shadow:hsl(0 0% 0% / .35);
+    --backdrop:hsl(0 0% 0% / .55);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:hsl(var(--h) 20% 9%);
+  --surface:hsl(var(--h) 16% 13%);
+  --fg:hsl(var(--h) 25% 93%);
+  --muted:hsl(var(--h) 10% 66%);
+  --line:hsl(var(--h) 14% 24%);
+  --accent:hsl(var(--h) var(--s) 64%);
+  --accent-ink:hsl(var(--h) 40% 9%);
+  --track:hsl(var(--h) 16% 20%);
+  --shadow:hsl(0 0% 0% / .35);
+  --backdrop:hsl(0 0% 0% / .55);
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:var(--font-body); font-size:15px; line-height:1.5;
+  transition:background-color .6s ease, color .6s ease;
+}
+*{box-sizing:border-box}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.app{
+  max-width:560px; margin:0 auto; min-height:100%;
+  display:flex; flex-direction:column; gap:22px;
+  padding-block:14px 28px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Cabeçalho */
+.top{display:flex;align-items:center;gap:12px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.mark{width:22px;height:22px;border-radius:50%;background:var(--accent);position:relative;flex:none;transition:background-color .6s}
+.mark::after{content:"";position:absolute;left:50%;top:-4px;width:8px;height:6px;margin-left:-4px;border-radius:0 0 4px 4px;background:var(--fg);opacity:.75}
+.brand b{font-family:var(--font-display);font-weight:800;font-size:1.45rem;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap}
+.top-right{display:flex;align-items:center;gap:8px}
+.clock{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500;white-space:nowrap}
+.icon-btn{
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+  background:var(--surface);display:grid;place-items:center;cursor:pointer;flex:none;
+}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn svg{width:19px;height:19px}
+
+/* Abas de modo */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.modes button{
+  border:0;background:transparent;border-radius:10px;padding:9px 6px;cursor:pointer;
+  font-weight:600;font-size:.92rem;color:var(--muted);line-height:1.2;
+}
+.modes button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+
+/* Anel do timer */
+.dial{width:min(84vw,380px);aspect-ratio:1;max-width:100%;margin:0 auto;position:relative;container-type:inline-size}
+.dial svg{width:100%;height:100%;transform:rotate(-90deg);display:block}
+.dial .track{fill:none;stroke:var(--track);stroke-width:2.6}
+.dial .prog{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;transition:stroke-dashoffset .3s linear, stroke .6s}
+.dial .ticks line{stroke:var(--line);stroke-width:.5}
+.dial-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1cqi}
+.dial-label{font-size:4.4cqi;font-weight:600;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.time{
+  font-family:var(--font-display);font-weight:800;font-size:31cqi;line-height:.9;
+  font-variant-numeric:tabular-nums;letter-spacing:.01em;
+}
+.dial-sub{font-size:4cqi;color:var(--muted);font-variant-numeric:tabular-nums;min-height:1.5em}
+
+/* Controles */
+.controls{display:flex;align-items:center;justify-content:center;gap:12px}
+.primary{
+  min-width:170px;padding:15px 30px;border-radius:999px;border:0;cursor:pointer;
+  background:var(--accent);color:var(--accent-ink);
+  font-family:var(--font-display);font-weight:800;font-size:1.55rem;letter-spacing:.06em;text-transform:uppercase;
+  box-shadow:0 6px 18px var(--shadow);transition:transform .1s, background-color .6s;
+}
+.primary:active{transform:translateY(2px)}
+.ghost{
+  display:flex;align-items:center;gap:6px;padding:10px 14px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:var(--surface);font-weight:500;font-size:.9rem;
+}
+.ghost:hover{border-color:var(--accent)}
+.ghost svg{width:17px;height:17px}
+
+/* Ciclo */
+.cycle{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:.9rem;text-align:center}
+.dots{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+.dots span{width:11px;height:11px;border-radius:50%;border:2px solid var(--accent);transition:background-color .3s}
+.dots span.on{background:var(--accent)}
+
+/* Cartões */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.card h2{margin:0;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px}
+.card h2 svg{width:15px;height:15px}
+.amb-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.amb-row select{flex:1 1 180px;min-width:0}
+.vol{display:flex;align-items:center;gap:8px;flex:1 1 160px;min-width:0}
+.vol input{flex:1;min-width:0}
+.vol svg{width:17px;height:17px;flex:none;color:var(--muted)}
+.hint{font-size:.85rem;color:var(--muted);margin:0}
+select,input[type=number]{
+  background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 10px;
+}
+input[type=range]{accent-color:var(--accent)}
+input[type=checkbox]{accent-color:var(--accent);width:18px;height:18px;flex:none}
+
+.road{background:transparent;border-style:dashed}
+.road ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.road li{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.road li div{min-width:0}
+.road strong{display:block;font-weight:600}
+.road p{margin:0;font-size:.88rem;color:var(--muted)}
+.chip{flex:none;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;border:1px solid var(--accent);color:var(--accent)}
+
+.foot{text-align:center;font-size:.82rem;color:var(--muted);margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.foot p{margin:0}
+.home-link{color:var(--muted);font-weight:500;text-decoration:none;border-bottom:1px solid var(--line)}
+.home-link:hover{color:var(--accent);border-color:var(--accent)}
+kbd{font-family:inherit;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 5px;background:var(--surface)}
+
+/* Gaveta de configurações */
+.backdrop{position:fixed;inset:0;background:var(--backdrop);z-index:20}
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;z-index:21;width:min(430px,100%);
+  background:var(--surface);border-left:1px solid var(--line);overflow-y:auto;
+  padding-top:calc(16px + env(safe-area-inset-top, 0px));
+  padding-bottom:calc(24px + env(safe-area-inset-bottom, 0px));
+  padding-right:max(18px, env(safe-area-inset-right, 0px));
+  padding-left:18px;
+  display:flex;flex-direction:column;gap:22px;box-shadow:-10px 0 40px var(--shadow);
+}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.drawer-head h2{margin:0;font-family:var(--font-display);font-weight:800;font-size:1.7rem;text-transform:uppercase;letter-spacing:.03em}
+.sec{display:flex;flex-direction:column;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.sec h3{margin:0;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.times{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.times label{display:flex;flex-direction:column;gap:5px;font-size:.84rem;font-weight:500;min-width:0}
+.times input{width:100%;font-variant-numeric:tabular-nums}
+.check{display:flex;gap:10px;align-items:center;cursor:pointer;font-size:.93rem}
+.inline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:.93rem}
+.inline input[type=number]{width:72px}
+.field{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:500}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:3px;gap:3px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:6px 12px;border-radius:7px;cursor:pointer;font-weight:500;font-size:.88rem;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.themes{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.theme{
+  display:flex;flex-direction:column;gap:8px;align-items:flex-start;padding:10px;border-radius:12px;
+  border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:.86rem;font-weight:500;text-align:left;
+}
+.theme[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.sw{display:flex;gap:4px}
+.sw i{width:18px;height:18px;border-radius:50%;display:block}
+.row2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.row2 select{flex:1 1 160px;min-width:0}
+
+/* Aviso */
+.toast{
+  position:fixed;left:50%;transform:translateX(-50%);z-index:30;
+  bottom:calc(18px + env(safe-area-inset-bottom, 0px));
+  background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:600;font-size:.92rem;
+  box-shadow:0 8px 24px var(--shadow);max-width:calc(100% - 32px);text-align:center;
+}
+
+@media (max-width:420px){
+  .brand b{font-size:1.2rem}
+  .clock{display:none}
+  .ghost span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ghost{padding:12px}
+  .primary{min-width:150px}
+  .times{grid-template-columns:1fr 1fr 1fr;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><b>Pomodoro RPF</b></div>
+    <div class="top-right">
+      <span class="clock" id="clock"></span>
+      <button class="icon-btn" id="openSettings" data-i18n-aria="settings" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="modes" role="tablist" id="modes">
+    <button role="tab" id="tab-pomodoro" data-mode="pomodoro" data-i18n="mode_pomodoro" type="button"></button>
+    <button role="tab" id="tab-short" data-mode="short" data-i18n="mode_short" type="button"></button>
+    <button role="tab" id="tab-long" data-mode="long" data-i18n="mode_long" type="button"></button>
+  </div>
+
+  <div class="dial" aria-live="off">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <g class="ticks" id="ticks"></g>
+      <circle class="track" cx="50" cy="50" r="44"/>
+      <circle class="prog" id="prog" cx="50" cy="50" r="44"/>
+    </svg>
+    <div class="dial-in">
+      <div class="dial-label" id="dialLabel"></div>
+      <div class="time" id="time" role="timer">25:00</div>
+      <div class="dial-sub" id="dialSub"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="ghost" id="resetBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      <span data-i18n="reset"></span>
+    </button>
+    <button class="primary" id="startBtn" type="button"></button>
+    <button class="ghost" id="skipBtn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l10 8-10 8z"/><path d="M19 5v14"/></svg>
+      <span data-i18n="skip"></span>
+    </button>
+  </div>
+
+  <div class="cycle">
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <div id="cycleText"></div>
+  </div>
+
+  <section class="card" aria-labelledby="ambTitle">
+    <h2 id="ambTitle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span data-i18n="sec_ambient"></span></h2>
+    <div class="amb-row">
+      <select id="ambientSel" data-i18n-aria="sec_ambient"></select>
+      <label class="vol">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+        <input type="range" id="ambientVol" min="0" max="1" step="0.01" data-i18n-aria="volume">
+      </label>
+    </div>
+    <p class="hint" id="ambHint"></p>
+  </section>
+
+  <section class="card road" aria-labelledby="roadTitle">
+    <h2 id="roadTitle" data-i18n="roadmap"></h2>
+    <ul>
+      <li><div><strong data-i18n="road_tasks"></strong><p data-i18n="road_tasks_d"></p></div><span class="chip" data-i18n="soon"></span></li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p id="foot"></p>
+    <p><a class="home-link" href="/">← betorpf.com.br</a></p>
+  </footer>
+</div>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-labelledby="drawerTitle" role="dialog" aria-modal="true">
+  <div class="drawer-head">
+    <h2 id="drawerTitle" data-i18n="settings"></h2>
+    <button class="icon-btn" id="closeSettings" data-i18n-aria="close" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="sec">
+    <h3 data-i18n="sec_timers"></h3>
+    <div class="times">
+      <label><span data-i18n="mode_pomodoro"></span><input type="number" id="durPomodoro" min="1" max="120" inputmode="numeric"></label>
+      <label><span data-i18n="mode_short"></span><input type="number" id="durShort" min="1" max="60" inputmode="numeric"></label>
+      <label><span data-i18n="mode_long"></span><input type="number" id="durLong" min="1" max="90" inputmode="numeric"></label>
+    </div>
+    <label class="inline"><span data-i18n="long_every"></span><input type="number" id="longInterval" min="2" max="12" inputmode="numeric"><span data-i18n="long_every_unit"></span></label>
+  </div>
+
+  <div class="sec">
+    <h3 data-i18n="sec_auto"></h3>
+    <label class="check"><input type="checkbox" id="autoBreaks"><span data-i18n="auto_breaks"></span></label>
+    <label class="check"><input type="checkbox" id="autoPomos"><span data-i18n="auto_pomos"></span></label>
+  </div>
+
+  <div class="sec">
+    <h3 data-i18n="sec_look"></h3>
+    <div class="field"><span data-i18n="theme"></span><div class="themes" id="themes"></div></div>
+    <div class="field"><span data-i18n="time_format"></span>
+      <div class="seg" id="fmtSeg"><button type="button" data-v="24">24 h</button><button type="button" data-v="12">12 h</button></div>
+    </div>
+    <div class="field"><span data-i18n="language"></span>
+      <div class="seg" id="langSeg"><button type="button" data-v="pt">Português (BR)</button><button type="button" data-v="en">English</button><button type="button" data-v="es">Español</button></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h3 data-i18n="sec_alarm"></h3>
+    <div class="row2">
+      <select id="alarmSel" data-i18n-aria="alarm_sound"></select>
+      <button class="ghost" id="testAlarm" type="button"><span data-i18n="test"></span></button>
+    </div>
+    <label class="vol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg><input type="range" id="alarmVol" min="0" max="1" step="0.01" data-i18n-aria="volume"></label>
+    <label class="inline"><span data-i18n="repeat"></span><select id="alarmRepeat"></select><span data-i18n="times"></span></label>
+  </div>
+
+  <div class="sec">
+    <h3 data-i18n="sec_ambient"></h3>
+    <label class="check"><input type="checkbox" id="onlyFocus"><span data-i18n="only_focus"></span></label>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(() => {
+const I18N = {
+  pt: {
+    mode_pomodoro:"Pomodoro", mode_short:"Pausa curta", mode_long:"Pausa longa",
+    start:"Iniciar", pause:"Pausar", resume:"Continuar", reset:"Reiniciar", skip:"Pular",
+    lbl_pomodoro:"Hora de focar", lbl_short:"Respire um pouco", lbl_long:"Pausa longa",
+    ends_at:"Termina às {t}", paused:"Pausado", duration:"{m} min",
+    cycle_pomo:"Pomodoro {n} de {k} até a pausa longa", cycle_short:"Pausa curta · {n} de {k} concluídos", cycle_long:"Ciclo completo, aproveite a pausa",
+    today:"Hoje: {n} pomodoro(s)",
+    settings:"Configurações", close:"Fechar", volume:"Volume",
+    sec_timers:"Tempos (minutos)", long_every:"Pausa longa a cada", long_every_unit:"pomodoros",
+    sec_auto:"Automação", auto_breaks:"Iniciar pausas automaticamente", auto_pomos:"Iniciar pomodoros automaticamente",
+    sec_look:"Aparência", theme:"Tema", time_format:"Formato de hora", language:"Idioma",
+    sec_alarm:"Alarme", alarm_sound:"Som do alarme", test:"Testar", repeat:"Repetir", times:"vez(es)",
+    a_bell:"Sino de mesa", a_kitchen:"Timer de cozinha", a_digital:"Bip digital", a_marimba:"Marimba", a_chime:"Carrilhão suave", a_none:"Sem som",
+    sec_ambient:"Som de fundo", only_focus:"Tocar só durante os pomodoros",
+    s_off:"Desligado", s_rain:"Chuva", s_waves:"Ondas do mar", s_brown:"Ruído marrom (grave)", s_white:"Ruído branco", s_pad:"Pad ambiente (acordes calmos)",
+    amb_hint_focus:"Toca enquanto o pomodoro está rodando e para nas pausas.", amb_hint_all:"Toca sempre que o timer está rodando.", amb_hint_off:"Escolha um som para tocar enquanto você foca.",
+    roadmap:"Próximas implementações", road_tasks:"Lista de tarefas", road_tasks_d:"Anotar o que fazer em cada pomodoro, estimar quantos pomodoros e marcar como feito.", soon:"Em breve",
+    foot:"Atalhos: {k1} inicia ou pausa · {k2} reinicia · {k3} pula",
+    toast_pomo:"Pomodoro concluído! Hora da pausa.", toast_break:"Pausa encerrada. Bora focar.",
+    th_classic:"Clássico", th_forest:"Floresta", th_ocean:"Oceano", th_dusk:"Crepúsculo", th_graphite:"Grafite",
+    title_focus:"Foco", title_break:"Pausa"
+  },
+  en: {
+    mode_pomodoro:"Pomodoro", mode_short:"Short break", mode_long:"Long break",
+    start:"Start", pause:"Pause", resume:"Resume", reset:"Reset", skip:"Skip",
+    lbl_pomodoro:"Time to focus", lbl_short:"Take a breath", lbl_long:"Long break",
+    ends_at:"Ends at {t}", paused:"Paused", duration:"{m} min",
+    cycle_pomo:"Pomodoro {n} of {k} before the long break", cycle_short:"Short break · {n} of {k} done", cycle_long:"Cycle complete, enjoy the break",
+    today:"Today: {n} pomodoro(s)",
+    settings:"Settings", close:"Close", volume:"Volume",
+    sec_timers:"Timers (minutes)", long_every:"Long break every", long_every_unit:"pomodoros",
+    sec_auto:"Automation", auto_breaks:"Auto-start breaks", auto_pomos:"Auto-start pomodoros",
+    sec_look:"Appearance", theme:"Theme", time_format:"Time format", language:"Language",
+    sec_alarm:"Alarm", alarm_sound:"Alarm sound", test:"Test", repeat:"Repeat", times:"time(s)",
+    a_bell:"Desk bell", a_kitchen:"Kitchen timer", a_digital:"Digital beep", a_marimba:"Marimba", a_chime:"Soft chime", a_none:"No sound",
+    sec_ambient:"Background sound", only_focus:"Play only during pomodoros",
+    s_off:"Off", s_rain:"Rain", s_waves:"Ocean waves", s_brown:"Brown noise (deep)", s_white:"White noise", s_pad:"Ambient pad (calm chords)",
+    amb_hint_focus:"Plays while a pomodoro is running and stops during breaks.", amb_hint_all:"Plays whenever the timer is running.", amb_hint_off:"Pick a sound to play while you focus.",
+    roadmap:"Coming next", road_tasks:"Task list", road_tasks_d:"Write down what to do in each pomodoro, estimate how many it takes and tick it off.", soon:"Soon",
+    foot:"Shortcuts: {k1} start or pause · {k2} reset · {k3} skip",
+    toast_pomo:"Pomodoro done! Break time.", toast_break:"Break over. Back to focus.",
+    th_classic:"Classic", th_forest:"Forest", th_ocean:"Ocean", th_dusk:"Dusk", th_graphite:"Graphite",
+    title_focus:"Focus", title_break:"Break"
+  },
+  es: {
+    mode_pomodoro:"Pomodoro", mode_short:"Pausa corta", mode_long:"Pausa larga",
+    start:"Iniciar", pause:"Pausar", resume:"Continuar", reset:"Reiniciar", skip:"Saltar",
+    lbl_pomodoro:"Hora de concentrarse", lbl_short:"Respira un poco", lbl_long:"Pausa larga",
+    ends_at:"Termina a las {t}", paused:"En pausa", duration:"{m} min",
+    cycle_pomo:"Pomodoro {n} de {k} antes de la pausa larga", cycle_short:"Pausa corta · {n} de {k} hechos", cycle_long:"Ciclo completo, disfruta la pausa",
+    today:"Hoy: {n} pomodoro(s)",
+    settings:"Configuración", close:"Cerrar", volume:"Volumen",
+    sec_timers:"Tiempos (minutos)", long_every:"Pausa larga cada", long_every_unit:"pomodoros",
+    sec_auto:"Automatización", auto_breaks:"Iniciar pausas automáticamente", auto_pomos:"Iniciar pomodoros automáticamente",
+    sec_look:"Apariencia", theme:"Tema", time_format:"Formato de hora", language:"Idioma",
+    sec_alarm:"Alarma", alarm_sound:"Sonido de alarma", test:"Probar", repeat:"Repetir", times:"vez/veces",
+    a_bell:"Campana de mesa", a_kitchen:"Temporizador de cocina", a_digital:"Pitido digital", a_marimba:"Marimba", a_chime:"Carillón suave", a_none:"Sin sonido",
+    sec_ambient:"Sonido de fondo", only_focus:"Sonar solo durante los pomodoros",
+    s_off:"Apagado", s_rain:"Lluvia", s_waves:"Olas del mar", s_brown:"Ruido marrón (grave)", s_white:"Ruido blanco", s_pad:"Pad ambiental (acordes tranquilos)",
+    amb_hint_focus:"Suena mientras corre el pomodoro y se detiene en las pausas.", amb_hint_all:"Suena siempre que el temporizador está corriendo.", amb_hint_off:"Elige un sonido para acompañar tu concentración.",
+    roadmap:"Próximas funciones", road_tasks:"Lista de tareas", road_tasks_d:"Anotar qué hacer en cada pomodoro, estimar cuántos lleva y marcarlo como hecho.", soon:"Pronto",
+    foot:"Atajos: {k1} inicia o pausa · {k2} reinicia · {k3} salta",
+    toast_pomo:"¡Pomodoro terminado! Hora de la pausa.", toast_break:"Pausa terminada. A concentrarse.",
+    th_classic:"Clásico", th_forest:"Bosque", th_ocean:"Océano", th_dusk:"Crepúsculo", th_graphite:"Grafito",
+    title_focus:"Foco", title_break:"Pausa"
+  }
+};
+const LOCALE = {pt:"pt-BR", en:"en-US", es:"es-ES"};
+
+const THEMES = {
+  classic:  {pomodoro:[4,74],   short:[168,52], long:[212,58]},
+  forest:   {pomodoro:[145,42], short:[38,72],  long:[195,48]},
+  ocean:    {pomodoro:[204,68], short:[178,55], long:[244,46]},
+  dusk:     {pomodoro:[343,60], short:[24,78],  long:[268,42]},
+  graphite: {pomodoro:[220,14], short:[190,12], long:[260,12]}
+};
+const ALARMS = ["bell","kitchen","digital","marimba","chime","none"];
+const AMBIENTS = ["off","rain","waves","brown","white","pad"];
+
+const DEFAULTS = {
+  lang: (navigator.language||"pt").slice(0,2) === "es" ? "es" : (navigator.language||"pt").slice(0,2) === "en" ? "en" : "pt",
+  dur:{pomodoro:25, short:5, long:15}, longInterval:4,
+  autoBreaks:false, autoPomos:false,
+  theme:"classic", hour12:false,
+  alarm:"bell", alarmVol:0.7, alarmRepeat:2,
+  ambient:"off", ambientVol:0.5, onlyFocus:true
+};
+const KEY = "pomodoro-rpf-v1";
+function load(){
+  try{
+    const raw = localStorage.getItem(KEY);
+    if(!raw) return structuredClone(DEFAULTS);
+    const s = JSON.parse(raw);
+    return {...structuredClone(DEFAULTS), ...s, dur:{...DEFAULTS.dur, ...(s.dur||{})}};
+  }catch(e){ return structuredClone(DEFAULTS); }
+}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+const todayKey = () => { const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; };
+function loadToday(){ try{ const d = JSON.parse(localStorage.getItem(KEY+"-today")||"{}"); return d.date===todayKey() ? d.n : 0; }catch(e){ return 0; } }
+function saveToday(n){ try{ localStorage.setItem(KEY+"-today", JSON.stringify({date:todayKey(), n})); }catch(e){} }
+
+const S = load();
+if(!AMBIENTS.includes(S.ambient)) S.ambient = "off";
+const st = { mode:"pomodoro", running:false, endAt:0, remaining:S.dur.pomodoro*60000, total:S.dur.pomodoro*60000, completed:0, today:loadToday(), started:false };
+
+const $ = id => document.getElementById(id);
+const t = (k, v={}) => (I18N[S.lang][k] ?? I18N.pt[k] ?? k).replace(/\{(\w+)\}/g, (_,x)=> v[x] ?? "");
+
+/* ---------- Áudio ---------- */
+let ctx, alarmBus, ambBus, noiseBufs = {}, amb = null, ambType = null, previewTimer = null;
+function ensureAudio(){
+  if(!ctx){
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return null;
+    ctx = new AC();
+    alarmBus = ctx.createGain(); alarmBus.connect(ctx.destination);
+    ambBus = ctx.createGain(); ambBus.connect(ctx.destination);
+  }
+  if(ctx.state === "suspended") ctx.resume();
+  return ctx;
+}
+function tone(f, type, at, dur, peak, attack=0.005, dest=alarmBus){
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.value = f;
+  g.gain.setValueAtTime(0.0001, at);
+  g.gain.exponentialRampToValueAtTime(peak, at+attack);
+  g.gain.exponentialRampToValueAtTime(0.0001, at+dur);
+  o.connect(g); g.connect(dest); o.start(at); o.stop(at+dur+0.05);
+}
+const PATTERNS = {
+  bell(at){ [[1,.5],[2.76,.18],[5.4,.08]].forEach(([m,p])=>tone(880*m,"sine",at,2.2,p)); return 1.7; },
+  kitchen(at){ for(let i=0;i<14;i++){ tone(2050,"triangle",at+i*.075,.06,.28,.002); tone(2600,"sine",at+i*.075,.05,.12,.002);} return 1.5; },
+  digital(at){ for(let i=0;i<3;i++) tone(1046,"square",at+i*.16,.1,.12,.003); for(let i=0;i<3;i++) tone(1046,"square",at+.6+i*.16,.1,.12,.003); return 1.4; },
+  marimba(at){ [523.25,659.25,783.99,1046.5].forEach((f,i)=>{ tone(f,"sine",at+i*.14,.6,.45,.003); tone(f*4,"sine",at+i*.14,.12,.08,.002);} ); return 1.2; },
+  chime(at){ [659.25,830.61,987.77,1318.5].forEach((f,i)=>tone(f,"sine",at+i*.32,2.6,.3,.02)); return 2.4; },
+  none(){ return 0; }
+};
+function playAlarm(name=S.alarm, reps=S.alarmRepeat){
+  if(!ensureAudio() || name==="none") return;
+  alarmBus.gain.value = S.alarmVol;
+  let at = ctx.currentTime + .05;
+  for(let i=0;i<reps;i++) at += PATTERNS[name](at) + .25;
+}
+function noiseBuf(kind){
+  if(noiseBufs[kind]) return noiseBufs[kind];
+  const len = ctx.sampleRate*6, b = ctx.createBuffer(2,len,ctx.sampleRate);
+  for(let c=0;c<2;c++){
+    const d = b.getChannelData(c);
+    let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0,last=0;
+    for(let i=0;i<len;i++){
+      const w = Math.random()*2-1;
+      if(kind==="white") d[i]=w*.5;
+      else if(kind==="pink"){ b0=.99886*b0+w*.0555179; b1=.99332*b1+w*.0750759; b2=.969*b2+w*.153852; b3=.8665*b3+w*.3104856; b4=.55*b4+w*.5329522; b5=-.7616*b5-w*.016898; d[i]=(b0+b1+b2+b3+b4+b5+b6+w*.5362)*.11; b6=w*.115926; }
+      else { last=(last+.02*w)/1.02; d[i]=last*3.5; }
+    }
+    // suaviza a emenda do loop
+    const fade = 2000; for(let i=0;i<fade;i++){ const k=i/fade; d[len-fade+i] = d[len-fade+i]*(1-k) + d[i]*k; }
+  }
+  return noiseBufs[kind]=b;
+}
+function src(kind){ const s = ctx.createBufferSource(); s.buffer = noiseBuf(kind); s.loop = true; s.start(); return s; }
+function filt(type,f,q=.7){ const x = ctx.createBiquadFilter(); x.type=type; x.frequency.value=f; x.Q.value=q; return x; }
+function lfo(rate, depth, param){ const o = ctx.createOscillator(), g = ctx.createGain(); o.frequency.value=rate; g.gain.value=depth; o.connect(g); g.connect(param); o.start(); return o; }
+
+function buildAmbient(type){
+  const out = ctx.createGain(); out.gain.value = 0.0001; out.connect(ambBus);
+  const stops = [];
+  const chain = (...n) => { for(let i=0;i<n.length-1;i++) n[i].connect(n[i+1]); return n[n.length-1]; };
+  if(type==="white"){ const s=src("white"); const g=ctx.createGain(); g.gain.value=.35; chain(s,filt("lowpass",9000),g,out); stops.push(s); }
+  if(type==="brown"){ const s=src("brown"); const g=ctx.createGain(); g.gain.value=1; chain(s,g,out); stops.push(s); }
+  if(type==="rain"){
+    const s1=src("white"), g1=ctx.createGain(); g1.gain.value=.35; chain(s1,filt("highpass",600),filt("lowpass",7000),g1,out);
+    const s2=src("pink"), g2=ctx.createGain(); g2.gain.value=.5; chain(s2,filt("lowpass",1400),g2,out);
+    stops.push(s1,s2, lfo(.13,.08,g1.gain));
+  }
+  if(type==="waves"){
+    const s=src("brown"), f=filt("lowpass",650), g=ctx.createGain(); g.gain.value=.65;
+    chain(s,f,g,out);
+    const s2=src("pink"), f2=filt("bandpass",900,.6), g2=ctx.createGain(); g2.gain.value=.12; chain(s2,f2,g2,out);
+    stops.push(s,s2, lfo(.075,.45,g.gain), lfo(.075,.1,g2.gain), lfo(.075,300,f.frequency));
+  }
+  if(type==="pad"){
+    const f = filt("lowpass",850,.9), g = ctx.createGain(); g.gain.value=.22; chain(f,g,out);
+    stops.push(lfo(.04,350,f.frequency));
+    [110,164.81,220,277.18,329.63,440].forEach((fr,i)=>{
+      [-4,4].forEach(det=>{
+        const o=ctx.createOscillator(), og=ctx.createGain();
+        o.type = i%2 ? "triangle" : "sine"; o.frequency.value=fr; o.detune.value=det; og.gain.value=.07;
+        o.connect(og); og.connect(f); o.start(); stops.push(o);
+        stops.push(lfo(.03+i*.011,.03,og.gain));
+      });
+    });
+  }
+  out.gain.setTargetAtTime(1, ctx.currentTime, .6);
+  return { stop(){ out.gain.setTargetAtTime(0.0001, ctx.currentTime, .3); setTimeout(()=>{ stops.forEach(s=>{try{s.stop()}catch(e){}}); out.disconnect(); }, 1500); } };
+}
+function ambientWanted(){
+  if(S.ambient==="off") return false;
+  if(previewTimer) return true;
+  return st.running && (!S.onlyFocus || st.mode==="pomodoro");
+}
+function syncAmbient(){
+  const want = ambientWanted();
+  const type = want ? S.ambient : null;
+  if(type !== ambType){
+    if(amb){ amb.stop(); amb=null; }
+    ambType = type;
+    if(type && ensureAudio()){ amb = buildAmbient(type); }
+  }
+  if(ambBus) ambBus.gain.setTargetAtTime(S.ambientVol*S.ambientVol, ctx.currentTime, .1);
+}
+function preview(){
+  if(st.running){ syncAmbient(); return; }
+  clearTimeout(previewTimer); previewTimer = null; syncAmbient();
+  if(S.ambient==="off") return;
+  previewTimer = setTimeout(()=>{ previewTimer=null; syncAmbient(); }, 5000);
+  syncAmbient();
+}
+
+/* ---------- Timer ---------- */
+let wakeLock = null;
+async function lockScreen(){ try{ if("wakeLock" in navigator) wakeLock = await navigator.wakeLock.request("screen"); }catch(e){} }
+function unlockScreen(){ try{ wakeLock && wakeLock.release(); }catch(e){} wakeLock=null; }
+document.addEventListener("visibilitychange", ()=>{ if(document.visibilityState==="visible" && st.running) lockScreen(); });
+
+const durMs = m => S.dur[m]*60000;
+function applyColors(){
+  const [h,s] = THEMES[S.theme][st.mode];
+  document.documentElement.style.setProperty("--h", h);
+  document.documentElement.style.setProperty("--s", s+"%");
+}
+function setMode(m, autostart=false){
+  st.mode=m; st.running=false; st.started=false; st.total=durMs(m); st.remaining=st.total;
+  applyColors(); render(); syncAmbient();
+  if(autostart) start(); else unlockScreen();
+}
+function start(){
+  ensureAudio();
+  clearTimeout(previewTimer); previewTimer=null;
+  st.endAt = Date.now()+st.remaining; st.running=true; st.started=true;
+  lockScreen(); render(); syncAmbient();
+}
+function pause(){
+  st.remaining = Math.max(0, st.endAt-Date.now()); st.running=false;
+  unlockScreen(); render(); syncAmbient();
+}
+function reset(){ setMode(st.mode); }
+function nextAfterPomodoro(){ return st.completed % S.longInterval === 0 ? "long" : "short"; }
+function skip(){
+  if(st.mode==="pomodoro") setMode((st.completed+1) % S.longInterval === 0 ? "long" : "short");
+  else { if(st.mode==="long") st.completed = 0; setMode("pomodoro"); }
+}
+function complete(){
+  st.running=false; st.remaining=0;
+  playAlarm();
+  if(st.mode==="pomodoro"){
+    st.completed++; st.today++; saveToday(st.today);
+    toast(t("toast_pomo"));
+    setMode(nextAfterPomodoro(), S.autoBreaks);
+  } else {
+    if(st.mode==="long") st.completed = 0;
+    toast(t("toast_break"));
+    setMode("pomodoro", S.autoPomos);
+  }
+}
+setInterval(()=>{
+  if(st.running){
+    st.remaining = st.endAt-Date.now();
+    if(st.remaining<=0){ complete(); return; }
+    renderTime();
+  }
+  renderClock();
+}, 250);
+
+/* ---------- Render ---------- */
+const C = 2*Math.PI*44;
+$("prog").style.strokeDasharray = C;
+(function ticks(){
+  const g=$("ticks"); let h="";
+  for(let i=0;i<60;i++){ const a=i/60*2*Math.PI, r1=i%5?48.2:47.2, r2=49.4;
+    h+=`<line x1="${50+r1*Math.cos(a)}" y1="${50+r1*Math.sin(a)}" x2="${50+r2*Math.cos(a)}" y2="${50+r2*Math.sin(a)}"/>`; }
+  g.innerHTML=h;
+})();
+const fmtTime = d => new Intl.DateTimeFormat(LOCALE[S.lang], {hour:"2-digit", minute:"2-digit", hour12:S.hour12}).format(d);
+function mmss(ms){ const s=Math.max(0,Math.ceil(ms/1000)); return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0"); }
+function renderTime(){
+  const txt = mmss(st.remaining);
+  $("time").textContent = txt;
+  $("prog").style.strokeDashoffset = C*(1 - Math.max(0,st.remaining)/st.total);
+  document.title = (st.running||st.started) ? `${txt} · ${t(st.mode==="pomodoro"?"title_focus":"title_break")}` : "Pomodoro RPF";
+}
+function renderClock(){ $("clock").textContent = fmtTime(new Date()); }
+function render(){
+  document.querySelectorAll("#modes button").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode===st.mode));
+  $("dialLabel").textContent = t("lbl_"+st.mode);
+  $("startBtn").textContent = st.running ? t("pause") : st.started ? t("resume") : t("start");
+  $("dialSub").textContent = st.running ? t("ends_at",{t:fmtTime(new Date(st.endAt))}) : st.started ? t("paused") : t("duration",{m:S.dur[st.mode]});
+  const k=S.longInterval, inSet = st.completed % k, full = st.mode==="long" && st.completed>0 && inSet===0;
+  $("dots").innerHTML = Array.from({length:k},(_,i)=>`<span class="${(full||i<inSet)?"on":""}"></span>`).join("");
+  $("cycleText").textContent =
+    (st.mode==="pomodoro" ? t("cycle_pomo",{n:inSet+1,k}) : st.mode==="short" ? t("cycle_short",{n:inSet,k}) : t("cycle_long"))
+    + " · " + t("today",{n:st.today});
+  renderTime(); renderClock(); renderAmbHint();
+}
+function renderAmbHint(){
+  $("ambHint").textContent = S.ambient==="off" ? t("amb_hint_off") : t(S.onlyFocus?"amb_hint_focus":"amb_hint_all");
+}
+function fillSelect(el, items, prefix, val){
+  el.innerHTML = items.map(v=>`<option value="${v}">${t(prefix+v)}</option>`).join(""); el.value = val;
+}
+function applyI18n(){
+  document.documentElement.lang = LOCALE[S.lang];
+  document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-aria]").forEach(el=>el.setAttribute("aria-label", t(el.dataset.i18nAria)));
+  fillSelect($("ambientSel"), AMBIENTS, "s_", S.ambient);
+  fillSelect($("alarmSel"), ALARMS, "a_", S.alarm);
+  $("alarmRepeat").innerHTML = [1,2,3,4,5].map(n=>`<option value="${n}">${n}</option>`).join(""); $("alarmRepeat").value=S.alarmRepeat;
+  $("foot").innerHTML = t("foot",{k1:"<kbd>Espaço</kbd>".replace("Espaço", S.lang==="en"?"Space":S.lang==="es"?"Espacio":"Espaço"), k2:"<kbd>R</kbd>", k3:"<kbd>S</kbd>"});
+  renderThemes(); renderSegs(); render();
+}
+function renderThemes(){
+  $("themes").innerHTML = Object.entries(THEMES).map(([k,v])=>{
+    const sw = ["pomodoro","short","long"].map(m=>`<i style="background:hsl(${v[m][0]} ${v[m][1]}% 52%)"></i>`).join("");
+    return `<button type="button" class="theme" data-theme-key="${k}" aria-pressed="${S.theme===k}"><span class="sw">${sw}</span>${t("th_"+k)}</button>`;
+  }).join("");
+}
+function renderSegs(){
+  document.querySelectorAll("#fmtSeg button").forEach(b=>b.setAttribute("aria-pressed", (b.dataset.v==="12")===S.hour12));
+  document.querySelectorAll("#langSeg button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.v===S.lang));
+}
+let toastT;
+function toast(msg){ const el=$("toast"); el.textContent=msg; el.hidden=false; clearTimeout(toastT); toastT=setTimeout(()=>el.hidden=true, 3500); }
+
+/* ---------- Eventos ---------- */
+$("startBtn").onclick = ()=> st.running ? pause() : start();
+$("resetBtn").onclick = reset;
+$("skipBtn").onclick = skip;
+document.querySelectorAll("#modes button").forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+document.addEventListener("keydown", e=>{
+  if(!$("drawer").hidden){ if(e.key==="Escape") closeDrawer(); return; }
+  if(e.target.closest("input,select,textarea")) return;
+  if(e.code==="Space"){ e.preventDefault(); st.running?pause():start(); }
+  else if(e.key==="r"||e.key==="R") reset();
+  else if(e.key==="s"||e.key==="S") skip();
+});
+
+let lastFocus;
+function openDrawer(){ lastFocus=document.activeElement; $("drawer").hidden=false; $("backdrop").hidden=false; $("closeSettings").focus(); }
+function closeDrawer(){ $("drawer").hidden=true; $("backdrop").hidden=true; lastFocus && lastFocus.focus(); }
+$("openSettings").onclick=openDrawer; $("closeSettings").onclick=closeDrawer; $("backdrop").onclick=closeDrawer;
+
+function bindNum(id, get, set, min, max){
+  const el=$(id); el.value=get();
+  el.addEventListener("change", ()=>{
+    let v=Math.round(Number(el.value)); if(!isFinite(v)) v=get();
+    v=Math.min(max,Math.max(min,v)); el.value=v; set(v); save();
+    if(!st.started) setMode(st.mode); else render();
+  });
+}
+bindNum("durPomodoro", ()=>S.dur.pomodoro, v=>S.dur.pomodoro=v, 1, 120);
+bindNum("durShort", ()=>S.dur.short, v=>S.dur.short=v, 1, 60);
+bindNum("durLong", ()=>S.dur.long, v=>S.dur.long=v, 1, 90);
+bindNum("longInterval", ()=>S.longInterval, v=>S.longInterval=v, 2, 12);
+[["autoBreaks","autoBreaks"],["autoPomos","autoPomos"],["onlyFocus","onlyFocus"]].forEach(([id,k])=>{
+  $(id).checked=S[k]; $(id).onchange=()=>{ S[k]=$(id).checked; save(); renderAmbHint(); syncAmbient(); };
+});
+$("themes").onclick = e=>{ const b=e.target.closest("[data-theme-key]"); if(!b) return; S.theme=b.dataset.themeKey; save(); applyColors(); renderThemes(); };
+$("fmtSeg").onclick = e=>{ const b=e.target.closest("button"); if(!b) return; S.hour12=b.dataset.v==="12"; save(); renderSegs(); render(); };
+$("langSeg").onclick = e=>{ const b=e.target.closest("button"); if(!b) return; S.lang=b.dataset.v; save(); applyI18n(); };
+$("alarmSel").onchange = ()=>{ S.alarm=$("alarmSel").value; save(); playAlarm(S.alarm,1); };
+$("testAlarm").onclick = ()=>playAlarm(S.alarm,1);
+$("alarmVol").value=S.alarmVol; $("alarmVol").oninput=()=>{ S.alarmVol=Number($("alarmVol").value); save(); };
+$("alarmVol").onchange=()=>playAlarm(S.alarm,1);
+$("alarmRepeat").onchange=()=>{ S.alarmRepeat=Number($("alarmRepeat").value); save(); };
+$("ambientSel").onchange = ()=>{ S.ambient=$("ambientSel").value; save(); renderAmbHint(); preview(); };
+$("ambientVol").value=S.ambientVol; $("ambientVol").oninput=()=>{ S.ambientVol=Number($("ambientVol").value); save(); syncAmbient(); };
+
+applyColors();
+applyI18n();
+})();
+</script>
+</body>
+</html>
