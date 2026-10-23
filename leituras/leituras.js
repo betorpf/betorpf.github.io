@@ -12,6 +12,7 @@ const elements = {
   status: document.getElementById('status-filter'),
   country: document.getElementById('country-filter'),
   type: document.getElementById('type-filter'),
+  readingYear: document.getElementById('reading-year-filter'),
   sort: document.getElementById('sort'),
   loading: document.getElementById('loading-state'),
   error: document.getElementById('error-state'),
@@ -57,8 +58,8 @@ function getBookType(book) {
   return cleanText(book.tipo) || cleanText(book.formato);
 }
 
-function getBookYear(book) {
-  const value = book.ano ?? book.anoDaLeitura;
+function getReadingYear(book) {
+  const value = book.anoDaLeitura;
   const year = Number(value);
   return Number.isFinite(year) && year > 0 ? year : null;
 }
@@ -116,7 +117,8 @@ function createBookCard(book) {
   const facts = createElement('div', 'facts');
   appendPill(facts, cleanText(book.status), true);
   appendPill(facts, cleanText(book.pais));
-  appendPill(facts, getBookYear(book));
+  const readingYear = getReadingYear(book);
+  appendPill(facts, readingYear ? `Leitura: ${readingYear}` : '');
   appendPill(facts, getBookType(book));
   if (facts.childElementCount) body.append(facts);
 
@@ -156,8 +158,8 @@ function sortBooks(books, sortKey) {
 
   const direction = sortKey === 'year-asc' ? 1 : -1;
   return sorted.sort((a, b) => {
-    const yearA = getBookYear(a);
-    const yearB = getBookYear(b);
+    const yearA = getReadingYear(a);
+    const yearB = getReadingYear(b);
     if (yearA === null) return yearB === null ? collator.compare(a.titulo, b.titulo) : 1;
     if (yearB === null) return -1;
     return (yearA - yearB) * direction || collator.compare(a.titulo, b.titulo);
@@ -169,6 +171,7 @@ function filterBooks() {
   const status = elements.status.value;
   const country = elements.country.value;
   const type = elements.type.value;
+  const readingYear = elements.readingYear.value;
 
   const filtered = state.books.filter((book) => {
     const searchable = [
@@ -182,7 +185,8 @@ function filterBooks() {
     return (!query || normalizeText(searchable).includes(query))
       && (!status || cleanText(book.status) === status)
       && (!country || cleanText(book.pais) === country)
-      && (!type || getBookType(book) === type);
+      && (!type || getBookType(book) === type)
+      && (!readingYear || String(getReadingYear(book)) === readingYear);
   });
 
   state.filteredBooks = sortBooks(filtered, elements.sort.value);
@@ -206,6 +210,13 @@ function renderFilters() {
   renderFilter(elements.status, state.books.map((book) => cleanText(book.status)));
   renderFilter(elements.country, state.books.map((book) => cleanText(book.pais)));
   renderFilter(elements.type, state.books.map(getBookType));
+  const years = [...new Set(state.books.map(getReadingYear).filter(Boolean))].sort((a, b) => b - a);
+  years.forEach((year) => {
+    const option = document.createElement('option');
+    option.value = String(year);
+    option.textContent = String(year);
+    elements.readingYear.append(option);
+  });
 }
 
 function formatUpdateDate(value) {
@@ -253,7 +264,7 @@ function openBookDetails(book, opener) {
   const details = document.createElement('dl');
   details.className = 'details-list';
   appendDetail(details, 'Status', cleanText(book.status));
-  appendDetail(details, 'Ano', getBookYear(book));
+  appendDetail(details, 'Ano de leitura', getReadingYear(book));
   appendDetail(details, 'País', cleanText(book.pais));
   appendDetail(details, 'Tipo', cleanText(book.tipo));
   appendDetail(details, 'Editora', cleanText(book.editora));
